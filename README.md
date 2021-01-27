@@ -1,2 +1,24 @@
-# WebPemiluHMIF2020
-Sebuah website untuk memberikan informasi terkait timeline pemilu, tata cara pemilu, data calon ketua himpunan serta calon senator, dan e-voting
+# web_pemilu_hmif_2020
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
