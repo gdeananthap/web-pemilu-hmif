@@ -1,0 +1,24 @@
+{
+    "01": [
+        {
+            "status": "CASENAT - 01",
+            "nama": "Gde Anantha",
+            "jurusan": "IF'19", 
+            "visi": "Terwujudnya pendidikan tinggi yang bermutu serta kemampuan iptek dan inovasi untuk mendukung daya saing bangsa",
+            "misi": ["Meningkatkan akses, relevansi, dan mutu pendidikan tinggi untuk menghasilkan SDM yang berkualitas", "Meningkatkan kemampuan Iptek dan inovasi untuk menghasilkan nilai tambah produk inovasi."],
+            "foto": "yena.jpg",
+            "organogram": "organogram.jpg"
+        }
+    ],
+    "02": [
+        {
+            "status": "CASENAT - 02",
+            "nama": "Gde Anantha",
+            "jurusan": "IF'19", 
+            "visi": "Terwujudnya pendidikan tinggi yang bermutu serta kemampuan iptek dan inovasi untuk mendukung daya saing bangsa",
+            "misi": ["Meningkatkan akses, relevansi, dan mutu pendidikan tinggi untuk menghasilkan SDM yang berkualitas", "Meningkatkan kemampuan Iptek dan inovasi untuk menghasilkan nilai tambah produk inovasi."],
+            "foto": "yena.jpg",
+            "organogram": "organogram.jpg"
+        }
+    ]
+}
