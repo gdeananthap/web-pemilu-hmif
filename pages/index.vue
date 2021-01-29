@@ -25,81 +25,89 @@
             Timeline
           </div>
           <b-row class="justify-content-center">
-            <b-col cols="12" md="7">
-              <ul class="timeline">
-                <li>
-                  <div class="timeline-badge success" data-aos="zoom-in" data-aos-delay="300"></div>
-                  <div class="timeline-panel" data-aos="fade-right" data-aos-delay="300">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Hearing 1</h4>
-                      <p> 8 Februari 2021</p>
+            <b-col cols="12" md="10">
+              <div class="timeline">
+                <div class="container-left left" data-aos="fade-right" data-aos-delay="300">
+                  <div class="content-right">
+                    <div class="timeline-info">
+                      <p>Hearing-1</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>8 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li class="timeline-inverted text-right">
-                  <div class="timeline-badge danger" data-aos="zoom-in" data-aos-delay="400"></div>
-                  <div class="timeline-panel" data-aos="fade-left" data-aos-delay="400">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Hearing 2</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-right right" data-aos="fade-left" data-aos-delay="400">
+                  <div class="content-left">
+                    <div class="timeline-info">
+                      <p>Hearing-2</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>11 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div class="timeline-badge success" data-aos="zoom-in" data-aos-delay="500"></div>
-                  <div class="timeline-panel" data-aos="fade-right" data-aos-delay="500">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Hearing 3</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-left left" data-aos="fade-right" data-aos-delay="500">
+                  <div class="content-right">
+                    <div class="timeline-info">
+                      <p>Hearing-3</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>15 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li class="timeline-inverted text-right">
-                  <div class="timeline-badge danger" data-aos="zoom-in" data-aos-delay="600"></div>
-                  <div class="timeline-panel" data-aos="fade-left" data-aos-delay="600">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Debat</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-right right" data-aos="fade-left" data-aos-delay="600">
+                  <div class="content-left">
+                    <div class="timeline-info">
+                      <p>Debat</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>18 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div class="timeline-badge success" data-aos="zoom-in" data-aos-delay="700"></div>
-                  <div class="timeline-panel" data-aos="fade-right" data-aos-delay="700">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Masa Tenang</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-left left" data-aos="fade-right" data-aos-delay="700">
+                  <div class="content-right">
+                    <div class="timeline-info">
+                      <p>Masa Tenang</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>19-21 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li class="timeline-inverted text-right">
-                  <div class="timeline-badge danger" data-aos="zoom-in" data-aos-delay="800"></div>
-                  <div class="timeline-panel" data-aos="fade-left" data-aos-delay="800">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Pemungutan Suara</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-right right" data-aos="fade-left" data-aos-delay="800">
+                  <div class="content-left">
+                    <div class="timeline-info">
+                      <p>Pemungutan Suara</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>22-24 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div class="timeline-badge success" data-aos="zoom-in" data-aos-delay="900"></div>
-                  <div class="timeline-panel" data-aos="fade-right" data-aos-delay="900">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Perhitungan Suara</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-left left" data-aos="fade-right" data-aos-delay="900">
+                  <div class="content-right">
+                    <div class="timeline-info">
+                      <p>Penghitungan Suara</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>26 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-                <li class="timeline-inverted text-right">
-                  <div class="timeline-badge danger" data-aos="zoom-in" data-aos-delay="1000"></div>
-                  <div class="timeline-panel" data-aos="fade-left" data-aos-delay="1000">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Pengumuman</h4>
-                      <p> 8 Februari 2021</p>
+                </div>
+                <div class="container-right right" data-aos="fade-left" data-aos-delay="1000">
+                  <div class="content-left">
+                    <div class="timeline-info">
+                      <p>Pengumuman</p>
+                    </div>
+                    <div class="timeline-time">
+                      <p>27 Februari 2021</p>
                     </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </b-col>
           </b-row>
         </b-container>
@@ -122,184 +130,209 @@ export default {
 <style lang="scss">
 .hero-pemilu {
   .hero-logo {
-      margin-top: 25px;
+      margin-top: 10px;
   }
 }
 
 .section-timeline {
-  p {
-    margin-bottom: 0rem;
+	color: black !important;
 
-    @media (max-width: 768px) {
-        font-size: 9px;
-    }
-  }
+	.timeline-info {
+		font-size: 36px;
+		line-height: 42px;
 
-  .timeline-word {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 54px;
-    line-height: 83px;
-  }
+		p {
+			margin-bottom: 6px;
+		}
 
-  .timeline {
-    list-style: none;
-    padding: 20px 0 20px;
-    position: relative;
-  }
+	}
 
-  .timeline:before {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    content: " ";
-    width: 6px;
-    background-color: #666666;
-    left: 50%;
-    margin-left: -1.5px;
-  }
+	.timeline-time {
+		font-size: 18px;
+		line-height: 31px;
 
-  .timeline>li {
-    margin-bottom: 20px;
-    position: relative;
-  }
+		p {
+			margin-bottom: 6px;
+		}
 
-  .timeline>li:before,
-  .timeline>li:after {
-    content: " ";
-    display: table;
-  }
+	}
 
-  .timeline>li:after {
-    clear: both;
-  }
+	.timeline-word {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 300;
+		font-size: 54px;
+		line-height: 83px;
+	}
 
-  .timeline>li:before,
-  .timeline>li:after {
-    content: " ";
-    display: table;
-  }
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 
-  .timeline>li:after {
-    clear: both;
-  }
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+		content: '';
+		position: absolute;
+		width: 8px;
+		background-color: #666666;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+		z-index: -1;
+	}
 
-  .timeline>li>.timeline-panel {
-    font-family: Roboto;
-    color: black;
-    width: 50%;
-    float: left;
-    border: 1px solid #d4d4d4;
-    background-color: #44B4C2;
-    border-radius: 2px;
-    padding: 10px;
-    position: relative;
-    margin-bottom: 40px;
-  }
+	/* Container around content */
+	.container-right {
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
 
-  .timeline>li.timeline-inverted+li:not(.timeline-inverted),
-  .timeline>li:not(.timeline-inverted)+li.timeline-inverted {
-    margin-top: -60px;
-  }
+	.container-left {
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
 
-  .timeline>li:not(.timeline-inverted) {
-    padding-right: 90px;
-  }
+	/* The circles on the timeline */
+	.container-left::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		right: -14.5px;
+		background-color: #D04C3D;
+		border: 4px solid #D04C3D;
+		top: 42px;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
-  .timeline>li.timeline-inverted {
-    padding-left: 90px;
-  }
+	.container-right::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		right: -14.5px;
+		background-color: #3EA0AD;
+		border: 4px solid #3EA0AD;
+		top: 42px;
+		border-radius: 50%;
+		z-index: 1;
+	}
 
+	/* Place the container to the left */
+	.left {
+		left: 0;
+	}
 
+	/* Place the container to the right */
+	.right {
+		left: 50%;
+	}
 
-  .timeline>li>.timeline-panel:after {
-    position: absolute;
-    top: 27px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid #3EA0AD;
-    border-right: 0 solid #3EA0AD;
-    border-bottom: 14px solid transparent;
-    content: " ";
-  }
+	/* Add arrows to the left container (pointing right) */
+	.left::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 13.3px;
+		width: 0;
+		z-index: 1;
+		right: 15px;
+		border: medium solid #D04C3D;
+		border-width: 45px 0 45px 25px;
+		border-color: transparent transparent transparent #D04C3D;
+	}
 
-  .timeline>li>.timeline-badge {
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.4em;
-    text-align: center;
-    position: absolute;
-    top: 26px;
-    left: 50%;
-    margin-left: -13px;
-    background-color: #999999;
-    z-index: 100;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-  }
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 13.3px;
+		width: 0;
+		z-index: 1;
+		left: 15px;
+		border: medium solid #3EA0AD;
+		border-width: 45px 25px 45px 0;
+		border-color: transparent#3EA0AD transparent transparent;
+	}
 
-  .timeline>li.timeline-inverted>.timeline-panel {
-    float: right;
-    background-color: #E45642;
-  }
+	/* Fix the circle for containers on the right side */
+	.right::after {
+		left: -16px;
+	}
 
-  .timeline>li.timeline-inverted>.timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    border-left-color: #D04C3D;
-    left: -15px;
-    right: auto;
-  }
+	/* The actual content */
+	.content-left {
+		font-family: Roboto;
+		padding: 5px 15px;
+		background-color: #44B4C2;
+		position: relative;
+		border-radius: 6px;
+	}
 
-  .timeline>li.timeline-inverted>.timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    border-right-color: #D04C3D;
-    left: -14px;
-    right: auto;
-  }
+	.content-right {
+		font-family: Roboto;
+		padding: 5px 15px;
+		background-color: #E45642;
+		position: relative;
+		border-radius: 6px;
+	}
 
-  .timeline-badge.primary {
-    background-color: #2e6da4 !important;
-  }
+	/* Media queries - Responsive timeline on screens less than 600px wide */
+	@media screen and (max-width: 600px) {
 
-  .timeline-badge.success {
-    background-color: #3EA0AD !important;
-  }
+		/* Place the timelime to the left */
+		.timeline::after {
+			left: 31px;
+		}
 
-  .timeline-badge.warning {
-    background-color: #f0ad4e !important;
-  }
+		/* Full-width containers */
+		.container-right {
+			width: 100%;
+			padding-left: 70px;
+			padding-right: 25px;
+		}
 
-  .timeline-badge.danger {
-    background-color: #D04C3D !important;
-  }
+		.container-left {
+			width: 100%;
+			padding-left: 70px;
+			padding-right: 25px;
+		}
 
-  .timeline-badge.info {
-    background-color: #5bc0de !important;
-  }
+		/* Make sure that all arrows are pointing leftwards */
+		.container-left::before {
+			left: 47px;
+			border: medium solid #D04C3D;
+			border-width: 45px 25px 45px 0;
+			border-color: transparent #D04C3D transparent transparent;
+		}
 
-  .timeline-title {
-    @media (max-width: 768px) {
-        font-size: 18px;
-    }
-    margin-top: 0;
-    color: inherit;
-  }
+		.container-right::before {
+			left: 47px;
+			border: medium solid #3EA0AD;
+			border-width: 45px 25px 45px 0;
+			border-color: transparent #3EA0AD transparent transparent;
+		}
 
-  .timeline-body>p,
-  .timeline-body>ul {
-    margin-bottom: 0;
-  }
+		/* Make sure all circles are at the same spot */
+		.left::after,
+		.right::after {
+			left: 15px;
+		}
 
-  .timeline-body>p+p {
-    margin-top: 5px;
-  }
+		/* Make all right containers behave like the left ones */
+		.right {
+			left: 0%;
+		}
+	}
 }
 </style>
