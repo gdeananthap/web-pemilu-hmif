@@ -1,0 +1,76 @@
+<template>
+  <div data-aos="fade-down">
+    <b-navbar toggleable="lg"  fixed="top" class="navbar-pemilu">
+      <b-container>
+        <b-navbar-brand class="logo-navbar"> 
+          <NuxtLink to="/">
+            <img src="@/public/images/navbar-logo-pemilu.png" alt="Logo Pemilu" class="w-25">
+          </NuxtLink>
+        </b-navbar-brand>
+        <b-navbar-toggle target="navbarNav"></b-navbar-toggle>
+        <b-collapse class="text-center" id="navbarNav" is-nav>
+          <b-navbar-nav class="ml-auto d-flex">
+            <b-nav-item href="/" class="my-auto" :class="{'active': home}" > 
+              Home 
+            </b-nav-item>
+            <b-nav-item href="/info" class="my-auto" :class="{'active': info}">
+              Informasi Calon 
+            </b-nav-item>
+            <b-nav-item href="/vote" class="my-auto" :class="{'active': vote}">
+              Tata Cara
+            </b-nav-item>
+            <b-nav-item href="/tatacara" class="my-auto" :class="{'active': tatacara}"> 
+              Vote
+            </b-nav-item>
+            <b-nav-item href="/" class="my-auto">
+              <b-button block variant="success" class="px-3 text-white" size="lg">Login</b-button>
+            </b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-container>
+    </b-navbar>
+  </div>
+</template>
+
+<script>
+export default {
+  name : "NavbarComponent",
+  data(){
+    return{
+      home : this.$route.fullPath == "/",
+      info : this.$route.fullPath == "/info",
+      vote : this.$route.fullPath == "/vote",
+      tatacara : this.$route.fullPath == "/tatacara"
+    }
+  },
+  
+}
+</script>
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+.navbar-pemilu {
+  font-family: "Poppins", sans-serif;
+  background-color: #FFC801 !important;
+  padding-top: 10px;
+  .logo-navbar {
+    max-height: 60px;
+  }
+
+  .nav-item {
+    .nav-link {
+      font-size: 18px;
+    }
+    .active {
+      color: black !important;
+      background: black !important;
+    }
+    :hover {
+      color: black !important;
+    }
+    margin-left: 30px;
+    font-weight: 500;
+  }
+}
+</style>
