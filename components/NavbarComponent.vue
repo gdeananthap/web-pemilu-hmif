@@ -16,10 +16,10 @@
             <b-nav-item href="/info" class="my-auto" :class="{'active': info}">
               Informasi Calon 
             </b-nav-item>
-            <b-nav-item href="/vote" class="my-auto" :class="{'active': vote}">
+            <b-nav-item href="/tatacara" class="my-auto" :class="{'active': tatacara}">
               Tata Cara
             </b-nav-item>
-            <b-nav-item href="/tatacara" class="my-auto" :class="{'active': tatacara}"> 
+            <b-nav-item href="/vote" class="my-auto" :class="{'active': vote}"> 
               Vote
             </b-nav-item>
             <b-nav-item href="/" class="my-auto">
