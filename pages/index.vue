@@ -25,10 +25,10 @@
             Timeline
           </div>
           <b-row class="justify-content-center">
-            <b-col cols="12" md="10">
+            <b-col cols="12" xl="10">
               <div class="timeline">
                 <div class="container-left left" data-aos="fade-right" data-aos-delay="300">
-                  <div class="content-right">
+                  <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Hearing-1</p>
                     </div>
@@ -38,7 +38,7 @@
                   </div>
                 </div>
                 <div class="container-right right" data-aos="fade-left" data-aos-delay="400">
-                  <div class="content-left">
+                  <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Hearing-2</p>
                     </div>
@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <div class="container-left left" data-aos="fade-right" data-aos-delay="500">
-                  <div class="content-right">
+                  <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Hearing-3</p>
                     </div>
@@ -58,7 +58,7 @@
                   </div>
                 </div>
                 <div class="container-right right" data-aos="fade-left" data-aos-delay="600">
-                  <div class="content-left">
+                  <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Debat</p>
                     </div>
@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 <div class="container-left left" data-aos="fade-right" data-aos-delay="700">
-                  <div class="content-right">
+                  <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Masa Tenang</p>
                     </div>
@@ -78,7 +78,7 @@
                   </div>
                 </div>
                 <div class="container-right right" data-aos="fade-left" data-aos-delay="800">
-                  <div class="content-left">
+                  <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Pemungutan Suara</p>
                     </div>
@@ -88,7 +88,7 @@
                   </div>
                 </div>
                 <div class="container-left left" data-aos="fade-right" data-aos-delay="900">
-                  <div class="content-right">
+                  <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Penghitungan Suara</p>
                     </div>
@@ -98,7 +98,7 @@
                   </div>
                 </div>
                 <div class="container-right right" data-aos="fade-left" data-aos-delay="1000">
-                  <div class="content-left">
+                  <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Pengumuman</p>
                     </div>
@@ -287,8 +287,57 @@ export default {
 		border-radius: 6px;
 	}
 
-	/* Media queries - Responsive timeline on screens less than 600px wide */
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 985px) {
+
+		.timeline-info {
+			padding-top: 4px;
+			font-size: 26px;
+			line-height: 30px;
+		}
+		.timeline-time {
+			font-size: 18px;
+			line-height: 31px;
+			padding-bottom: 4px;
+		}
+	}
+
+
+	@media screen and (max-width: 500px) {
+
+		.timeline-info {
+			padding-top: 4px;
+			font-size: 22px;
+			line-height: 31px;
+		}
+		.timeline-time {
+			font-size: 18px;
+			line-height: 31px;
+			padding-bottom: 4px;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+
+		.timeline-info {
+			padding-top: 4px;
+			font-size: 18px;
+			line-height: 31px;
+		}
+		.timeline-time {
+			font-size: 18px;
+			line-height: 31px;
+			padding-bottom: 4px;
+		}
+	}
+
+	/* Media queries - Responsive timeline on screens less than 768px wide */
+	@media screen and (max-width: 768px) {
+		.timeline-info {
+			text-align: left !important;
+		}
+		.timeline-time {
+			text-align: left !important;
+		}
 
 		/* Place the timelime to the left */
 		.timeline::after {
