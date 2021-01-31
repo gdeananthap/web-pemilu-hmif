@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-down">
+  <div>
     <b-navbar toggleable="lg"  fixed="top" class="navbar-pemilu">
       <b-container>
         <b-navbar-brand class="logo-navbar"> 
@@ -10,19 +10,19 @@
         <b-navbar-toggle target="navbarNav"></b-navbar-toggle>
         <b-collapse class="text-center" id="navbarNav" is-nav>
           <b-navbar-nav class="ml-auto d-flex">
-            <b-nav-item href="/" class="my-auto" :class="{'active': home}" > 
+            <b-nav-item to="/" exact active-class="active" class="my-auto" > 
               Home 
             </b-nav-item>
-            <b-nav-item href="/info" class="my-auto" :class="{'active': info}">
+            <b-nav-item to="/info" class="my-auto" active-class="active">
               Informasi Calon 
             </b-nav-item>
-            <b-nav-item href="/vote" class="my-auto" :class="{'active': vote}">
+            <b-nav-item to="/tatacara" class="my-auto" active-class="active">
               Tata Cara
             </b-nav-item>
-            <b-nav-item href="/tatacara" class="my-auto" :class="{'active': tatacara}"> 
+            <b-nav-item to="/vote" class="my-auto" active-class="active"> 
               Vote
             </b-nav-item>
-            <b-nav-item href="/" class="my-auto">
+            <b-nav-item to="/" class="my-auto">
               <b-button block variant="success" class="px-3 text-white" size="lg">Login</b-button>
             </b-nav-item>
           </b-navbar-nav>
@@ -35,20 +35,18 @@
 <script>
 export default {
   name : "NavbarComponent",
-  data(){
-    return{
-      home : this.$route.fullPath == "/",
-      info : this.$route.fullPath == "/info",
-      vote : this.$route.fullPath == "/vote",
-      tatacara : this.$route.fullPath == "/tatacara"
-    }
-  },
   
 }
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+a.nuxt-link-exact-active {
+  color: #00c58e;
+}
+a.nuxt-link-active {
+  color: #00c58e;
+}
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
   color: black;
