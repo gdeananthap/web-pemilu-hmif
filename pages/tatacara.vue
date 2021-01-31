@@ -84,8 +84,6 @@ export default {
 </script>
 <style lang="scss">
 
-
-
 /* Judul Utama */
 h1{
     font-family: Roboto;
