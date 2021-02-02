@@ -1,30 +1,32 @@
 <template>
   <div>
-    <b-navbar toggleable="lg"  fixed="top" class="navbar-pemilu">
+    <b-navbar toggleable="lg" fixed="top" class="navbar-pemilu">
       <b-container>
-        <b-navbar-brand class="logo-navbar"> 
+        <b-navbar-brand class="logo-navbar">
           <NuxtLink to="/">
-            <img src="@/public/images/navbar-logo-pemilu.png" alt="Logo Pemilu" class="w-25">
+            <img
+              src="@/public/images/navbar-logo-pemilu.png"
+              alt="Logo Pemilu"
+              class="w-25"
+            />
           </NuxtLink>
         </b-navbar-brand>
         <b-navbar-toggle target="navbarNav"></b-navbar-toggle>
         <b-collapse class="text-center" id="navbarNav" is-nav>
           <b-navbar-nav class="ml-auto d-flex">
-            <b-nav-item to="/" exact active-class="active" class="my-auto" > 
-              Home 
+            <b-nav-item to="/" exact active-class="active" class="my-auto">
+              Home
             </b-nav-item>
             <b-nav-item to="/info" class="my-auto" active-class="active">
-              Informasi Calon 
+              Informasi Calon
             </b-nav-item>
             <b-nav-item to="/tatacara" class="my-auto" active-class="active">
               Tata Cara
             </b-nav-item>
-            <b-nav-item to="/vote" class="my-auto" active-class="active"> 
+            <b-nav-item to="/vote" class="my-auto" active-class="active">
               Vote
             </b-nav-item>
-            <b-nav-item to="/" class="my-auto">
-              <b-button block variant="success" class="px-3 text-white" size="lg">Login</b-button>
-            </b-nav-item>
+            <login-button />
           </b-navbar-nav>
         </b-collapse>
       </b-container>
@@ -33,10 +35,12 @@
 </template>
 
 <script>
+import LoginButton from "./LoginButton";
+
 export default {
-  name : "NavbarComponent",
-  
-}
+  components: { LoginButton },
+  name: "NavbarComponent"
+};
 </script>
 
 <style lang="scss">
@@ -48,13 +52,16 @@ a.nuxt-link-active {
   color: #00c58e;
 }
 
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
   color: black;
 }
 
 .navbar-pemilu {
   font-family: "Poppins", sans-serif;
-  background-color: #FFC801 !important;
+  background-color: #ffc801 !important;
   padding-top: 10px;
   .logo-navbar {
     max-height: 60px;
