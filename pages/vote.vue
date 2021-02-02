@@ -100,7 +100,7 @@ import AlertNonDPT from '@/components/AlertNonDPT'
 
 export default {
     data : () => ({
-        isVotingStarted :false,
+        isVotingStarted :true,
         isVoted : false,
         isNonDPT : false,
         showModal : false,

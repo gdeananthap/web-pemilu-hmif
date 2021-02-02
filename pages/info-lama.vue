@@ -11,35 +11,44 @@
                 <div class="nav-calon" v-for="calon in casenat" :key="calon"> <a :href="'#'+calon.status">{{calon.nama}}</a> </div>
             </div>
         </div>
-        <!-- <div v-for="calon in cakahim" :key="calon" :id="calon.status" class="calon">
-        </div> -->
-        <div>
-            <card-calon 
-                v-for="calon in cakahim" 
-                :key="calon" 
-                :id="calon.status"
-                :status="calon.status"
-                :foto="calon.foto"
-                :nama="calon.nama"
-                :jurusan="calon.jurusan"
-                :visi="calon.visi"
-                :misi="calon.misi"
-                :organogram="calon.organogram"
-            />
+        <div v-for="calon in cakahim" :key="calon" :id="calon.status" class="calon">
+            <div class="space"></div>
+            <h1 class="nomor-calon" > <span class="highlight">{{calon.status}}</span> </h1>
+            <div class="foto-calon"> <img :src="calon.foto" :alt="calon.nama" class="foto"> </div>
+            <div class="identitas">
+                <div class="nama-calon"> {{calon.nama}} </div>
+                <div class="jurusan-calon">{{calon.jurusan}}</div>
+            </div>
+            <div class="visi-misi">
+                <h2 class="subheading">Visi</h2>
+                <div class="content">{{calon.visi}}</div>
+                <h2 class="subheading">Misi</h2>
+                <div v-for="(misi, id) in calon.misi" :key="id" class="content">{{id + 1}}. {{misi}}</div>
+            </div>
+            <div class="organogram">
+                <h2 class="subheading">Organogram</h2>
+                <div class="content"> <img :src="calon.organogram" alt="organogram" class="foto"> </div>
+            </div>
         </div>
-        <div>
-            <card-calon 
-                v-for="calon in casenat" 
-                :key="calon" 
-                :id="calon.status"
-                :status="calon.status"
-                :foto="calon.foto"
-                :nama="calon.nama"
-                :jurusan="calon.jurusan"
-                :visi="calon.visi"
-                :misi="calon.misi"
-                :organogram="calon.organogram"
-            />
+        <hr id="casenat">
+        <div v-for="calon in casenat" :key="calon" class="calon" :id="calon.status">
+            <div class="space"></div>
+            <h1 class="nomor-calon" > <span class="highlight">{{calon.status}}</span> </h1>
+            <div class="foto-calon"> <img :src="calon.foto" :alt="calon.nama" class="foto"> </div>
+            <div class="identitas">
+                <div class="nama-calon"> {{calon.nama}} </div>
+                <div class="jurusan-calon">{{calon.jurusan}}</div>
+            </div>
+            <div class="visi-misi">
+                <h2 class="subheading">Visi</h2>
+                <div class="content">{{calon.visi}}</div>
+                <h2 class="subheading">Misi</h2>
+                <div v-for="(misi, id) in calon.misi" :key="id" class="content">{{id + 1}}. {{misi}}</div>
+            </div>
+            <div class="organogram">
+                <h2 class="subheading">Organogram</h2>
+                <div class="content"> <img :src="calon.organogram" alt="organogram" class="foto"> </div>
+            </div>
         </div>
     </div>
 </template>
@@ -48,12 +57,7 @@
 import cakahim from '~/assets/calon/cakahim.json'
 import casenat from '~/assets/calon/casenat.json'
 
-import CardCalon from '~/components/CardCalon'
-
 export default {
-    components: {
-        CardCalon
-    },
     data() {
         return {
             cakahim: [],
@@ -150,7 +154,6 @@ hr {
 }
 .nav-calon {
     padding: 3px;
-    background-color: white;
 }
 a {
     color: black;
@@ -173,11 +176,5 @@ a:hover{
 #nav-list {
     transition: all 0.3s linear;
     display: block;
-}
-@media only screen and (max-width: 768px) {
-    .sidebar{
-        display: none;
-        opacity: 0; 
-    }
 }
 </style>
