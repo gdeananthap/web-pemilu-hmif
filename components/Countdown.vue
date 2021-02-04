@@ -1,11 +1,11 @@
 <template>
     <div v-if="loaded" class="page-content">
-        <div class="coming-soon">
+        <div v-if="!expired" class="coming-soon">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <h2>Countdown to Election Day</h2>
-                        <p>Pemungutan Suara akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
+                        <p>Pemungutan suara akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
                         <div class="timer">
                             <div class="days-wrapper">
                                 <span class="days">{{displayDays}}</span> <br>days
@@ -27,6 +27,30 @@
                 </div>
             </div>
         </div>
+        <div v-else class="coming-soon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Vote Now!</h2>
+                        <p>Pemungutan suara telah dimulai. Login untuk menggunakan hak suara Anda!</p>
+                        <div class="timer">
+                            <div class="days-wrapper">
+                                <span class="days">{{displayDays}}</span> <br>days
+                            </div>
+                            <div class="hours-wrapper">
+                                <span class="hours">{{displayHours}}</span> <br>hours
+                            </div>
+                            <div class="minutes-wrapper">
+                                <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                            </div>
+                            <div class="seconds-wrapper">
+                                <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -38,6 +62,7 @@ export default {
         displayMinutes:0,
         displaySeconds:0,
         loaded :false,
+        expired : false,
     }),
     computed: {
         _seconds : () => 1000,
@@ -66,6 +91,8 @@ export default {
                 if(distance<=0){
                     clearInterval(timer);
                     this.$emit('start-vote');
+                    this.expired = true;
+                    this.loaded = true;
                     return
                 }
 

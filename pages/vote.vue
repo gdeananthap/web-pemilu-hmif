@@ -2,13 +2,13 @@
     <div class="page-content">
         
         <!-- user sudah memilih -->
-        <AlertVoteDone v-if="isVoted"/>
+        <AlertVoteDone v-if="isVoted && isLogin"/>
 
         <!-- user bukan dpt -->
-        <AlertNonDPT v-if="isNonDPT" />
+        <AlertNonDPT v-if="isNonDPT && isLogin" />
         
         <!-- countdown telah selesai -->
-        <div v-if="isVotingStarted" class="vote">
+        <div v-if="isVotingStarted && isLogin" class="vote">
             <div class="calonKetua">
                 <div class="container">
                     <h1>CALON KETUA</h1>
@@ -19,7 +19,7 @@
                                     <h3>Gde Anantha</h3>
                                 </div>
                                 <img src="@/public/images/1.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
@@ -28,7 +28,7 @@
                                     <h3>Kotak Kosong</h3>
                                 </div>
                                 <img src="@/public/images/2.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                                     <h3>Gde Anantha</h3>
                                 </div>
                                 <img src="@/public/images/1.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                         <div class="col-sm-2 col-md-6 col-lg-4">
@@ -54,7 +54,7 @@
                                     <h3>Kotak Kosong</h3>
                                 </div>
                                 <img src="@/public/images/2.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                     </div>
@@ -83,6 +83,11 @@
             </div>
         </div>
 
+        <!-- countdown sudah selesai tapi belum login -->
+        <div v-if = "isVotingStarted">
+            <Countdown />
+        </div> 
+
         <!-- countdown masih berlangsung -->
         <div v-else class="countdown">
             <Countdown v-on:start-vote="startVote"/>
@@ -97,9 +102,10 @@ import AlertNonDPT from '@/components/AlertNonDPT'
 
 export default {
     data : () => ({
-        isVotingStarted :true,
+        isVotingStarted :false,
         isVoted : false,
         isNonDPT : false,
+        isLogin : true,
         showModal : false,
     }),
     components :{
@@ -172,8 +178,6 @@ export default {
         border:2px solid#ffc801;
     }
 
-
-
     .nama-calon{
         justify-content: center;
         h3{
@@ -240,9 +244,5 @@ export default {
             margin: auto;
         }
 
-        // .modal-wrapper{
-        //     display: flex;
-        //     justify-content: center;
-        // }
     }
 </style>

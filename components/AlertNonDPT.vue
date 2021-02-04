@@ -5,7 +5,7 @@
 			<div class="alert alert-success-nondpt" role="alert">
 				<div class="row">
 					<div class="col-10 d-flex">
-						<p class="my-auto alert-message-nondpt">! Anda tidak bisa vote karena bukan DPT</p>
+						<p class="my-auto alert-message-nondpt">Anda tidak bisa vote karena bukan DPT !</p>
 					</div>
 					<div class="col-2 ml-auto">
 						<a @click="changeComplete" class="d-block"><img src="@/public/images/icon-cross.png" class="icon-cross"></a>
@@ -41,7 +41,7 @@ export default {
     border-color: #E45642;
     margin-bottom: 0px;
     .alert-message-nondpt {
-      font-size: 24px;
+      font-size: 36;
       font-family: Roboto;
     }
     .icon-cross {

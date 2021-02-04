@@ -5,7 +5,7 @@
 			<div class="alert alert-success-vote" role="alert">
 				<div class="row">
 					<div class="col-10 d-flex">
-						<p class="my-auto alert-message">Suaramu telah terkirim</p>
+						<p class="my-auto alert-message">Suaramu telah terkirim.</p>
 					</div>
 					<div class="col-2 ml-auto">
 						<a @click="changeComplete" class="d-block"><img src="@/public/images/icon-cross.png" class="icon-cross"></a>
@@ -29,7 +29,7 @@ export default {
 		changeComplete(){
 			this.clicked = !this.clicked;
 		}
-	},
+	}, 
 }
 </script>
 
@@ -41,7 +41,7 @@ export default {
     border-color: #44B4C2;
     margin-bottom: 0px;
     .alert-message {
-      font-size: 24px;
+      font-size: 36;
       font-family: Roboto;
     }
     .icon-cross {
