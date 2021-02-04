@@ -2,11 +2,11 @@
     <div class="page-content text-center">
       	<h1>TATA CARA</h1>
 		<div class="container">
-        	<div class="mx-auto w-50 accordion" role="tablist">
+        	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
-							Bagian I
+							<h2>Bagian I</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -85,7 +85,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
-							Bagian II
+							<h2>Bagian II</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -113,7 +113,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
-							Bagian III
+							<h2>Bagian III</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -193,7 +193,7 @@
 				<b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
-							Bagian IV
+							<h2>Bagian IV</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -235,7 +235,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
-							Bagian V
+							<h2>Bagian V</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -262,7 +262,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
-							Bagian VI
+							<h2>Bagian VI</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -290,7 +290,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
-							Bagian VII
+							<h2>Bagian VII</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -320,7 +320,7 @@
         	    <b-card no-body class="mb-1">
         	      	<b-card-header header-tag="header" class="p-1" role="tab">
         	        	<b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
-							Bagian VIII
+							<h2>Bagian VIII</h2>
 							<span class="when-open">
 								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 							</span>
@@ -419,19 +419,23 @@ export default {
     	line-height: 44px;
     	font-weight: 700;
     	text-transform: uppercase;
-    	//text-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
 	    text-align: center;
 		padding-bottom: 20px;
 	}
 
 	/* Subjudul per Bab */
 	.title{
-	    font-family: Roboto;
-	    font-size: 24px;
-	    line-height: 41px;
-	    text-align: left;
-	    color: #000000;
-		border-radius: 1rem;	
+		h2{
+			margin-top: 10px;
+	    	font-family: Roboto;
+	    	font-size: 24px;
+	    	line-height: 20px;
+	    	text-align: left;
+			float: left;
+	    	color: #000000;
+		}	
+
+		border-radius: 1rem;
 	}
 
 	/* Isi Bab */
