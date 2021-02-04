@@ -1,54 +1,45 @@
 <template>
     <div class="main-container" id="cakahim">
         <div class="sidebar">
-            <div class="icon-bar" @click="hideList">
+            <div class="icon-bar" v-on:click="isOn = !isOn">
                 <font-awesome-icon :icon="['fas', 'bars']" class="fa-2x icon"/>
             </div>
-            <div class="hidden" id="nav-list">
-                <div class="nav-title"><a href="#cakahim">CaKahim</a></div>
-                <div class="nav-calon" v-for="calon in cakahim" :key="calon"> <a :href="'#'+calon.status">{{calon.nama}}</a> </div>
-                <div class="nav-title"><a href="#casenat">CaSenat</a></div>
-                <div class="nav-calon" v-for="calon in casenat" :key="calon"> <a :href="'#'+calon.status">{{calon.nama}}</a> </div>
-            </div>
+            <transition-group name="fade" tag="div">
+                <div v-if="isOn" id="nav-list" key="nav-list">
+                    <div key="cakahim" class="nav-title"><a href="#cakahim">CaKahim</a></div>
+                    <div class="nav-calon" v-for="(calon, id) in cakahim" :key="id +'cakahim'"> <a :href="'#'+calon.status">{{calon.nama}}</a> </div>
+                    <div key="casenat" class="nav-title"><a href="#casenat">CaSenat</a></div>
+                    <div class="nav-calon" v-for="(calon, id) in casenat" :key="id + 'casenat'"> <a :href="'#'+calon.status">{{calon.nama}}</a> </div>
+                </div>
+            </transition-group>
         </div>
-        <div v-for="calon in cakahim" :key="calon" :id="calon.status" class="calon">
-            <div class="space"></div>
-            <h1 class="nomor-calon" > <span class="highlight">{{calon.status}}</span> </h1>
-            <div class="foto-calon"> <img :src="calon.foto" :alt="calon.nama" class="foto"> </div>
-            <div class="identitas">
-                <div class="nama-calon"> {{calon.nama}} </div>
-                <div class="jurusan-calon">{{calon.jurusan}}</div>
-            </div>
-            <div class="visi-misi">
-                <h2 class="subheading">Visi</h2>
-                <div class="content">{{calon.visi}}</div>
-                <h2 class="subheading">Misi</h2>
-                <div v-for="(misi, id) in calon.misi" :key="id" class="content">{{id + 1}}. {{misi}}</div>
-            </div>
-            <div class="organogram">
-                <h2 class="subheading">Organogram</h2>
-                <div class="content"> <img :src="calon.organogram" alt="organogram" class="foto"> </div>
-            </div>
+        <div>
+            <card-calon 
+                v-for="(calon, id) in cakahim" 
+                :key="'cakahim' + id" 
+                :id="calon.status"
+                :status="calon.status"
+                :foto="calon.foto"
+                :nama="calon.nama"
+                :jurusan="calon.jurusan"
+                :visi="calon.visi"
+                :misi="calon.misi"
+                :organogram="calon.organogram"
+            />
         </div>
-        <hr id="casenat">
-        <div v-for="calon in casenat" :key="calon" class="calon" :id="calon.status">
-            <div class="space"></div>
-            <h1 class="nomor-calon" > <span class="highlight">{{calon.status}}</span> </h1>
-            <div class="foto-calon"> <img :src="calon.foto" :alt="calon.nama" class="foto"> </div>
-            <div class="identitas">
-                <div class="nama-calon"> {{calon.nama}} </div>
-                <div class="jurusan-calon">{{calon.jurusan}}</div>
-            </div>
-            <div class="visi-misi">
-                <h2 class="subheading">Visi</h2>
-                <div class="content">{{calon.visi}}</div>
-                <h2 class="subheading">Misi</h2>
-                <div v-for="(misi, id) in calon.misi" :key="id" class="content">{{id + 1}}. {{misi}}</div>
-            </div>
-            <div class="organogram">
-                <h2 class="subheading">Organogram</h2>
-                <div class="content"> <img :src="calon.organogram" alt="organogram" class="foto"> </div>
-            </div>
+        <div>
+            <card-calon 
+                v-for="(calon, id) in casenat" 
+                :key="'casenat' + id" 
+                :id="calon.status"
+                :status="calon.status"
+                :foto="calon.foto"
+                :nama="calon.nama"
+                :jurusan="calon.jurusan"
+                :visi="calon.visi"
+                :misi="calon.misi"
+                :organogram="calon.organogram"
+            />
         </div>
     </div>
 </template>
@@ -57,7 +48,12 @@
 import cakahim from '~/assets/calon/cakahim.json'
 import casenat from '~/assets/calon/casenat.json'
 
+import CardCalon from '~/components/CardCalon'
+
 export default {
+    components: {
+        CardCalon
+    },
     data() {
         return {
             cakahim: [],
@@ -85,15 +81,6 @@ export default {
         array.push(nomor)
       })
     },
-    hideList() {
-        if (this.isOn) {
-            document.getElementById("nav-list").classList.add('hidden')
-            this.isOn = false;
-        } else {
-            document.getElementById("nav-list").classList.remove('hidden')
-            this.isOn = true;
-        }
-    }
   }
 }
 </script>
@@ -145,7 +132,7 @@ hr {
 }
 .nav-title {
     background-color: #FFC801;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     text-align: right;
     font-weight: bold;
     font-size: 18px;
@@ -154,6 +141,7 @@ hr {
 }
 .nav-calon {
     padding: 3px;
+    background-color: white;
 }
 a {
     color: black;
@@ -176,5 +164,17 @@ a:hover{
 #nav-list {
     transition: all 0.3s linear;
     display: block;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+@media only screen and (max-width: 768px) {
+    .sidebar{
+        display: none;
+        opacity: 0; 
+    }
 }
 </style>
