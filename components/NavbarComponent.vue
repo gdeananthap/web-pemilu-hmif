@@ -11,7 +11,7 @@
         <b-collapse class="text-center" id="navbarNav" is-nav>
           <b-navbar-nav class="ml-auto d-flex">
             <b-nav-item to="/" exact active-class="active" class="my-auto" > 
-              Home 
+              Home
             </b-nav-item>
             <b-nav-item to="/info" class="my-auto" active-class="active">
               Informasi Calon 
@@ -23,7 +23,7 @@
               Vote
             </b-nav-item>
             <b-nav-item to="/" class="my-auto">
-              <b-button block variant="success" class="px-3 text-white" size="lg">Login</b-button>
+              <b-button block variant="success" class="px-3 text-white" size="md">Login</b-button>
             </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
@@ -41,12 +41,6 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
-a.nuxt-link-exact-active {
-  color: #00c58e;
-}
-a.nuxt-link-active {
-  color: #00c58e;
-}
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
   color: black;
@@ -55,19 +49,20 @@ a.nuxt-link-active {
 .navbar-pemilu {
   font-family: "Poppins", sans-serif;
   background-color: #FFC801 !important;
-  padding-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   .logo-navbar {
-    max-height: 60px;
+    max-height: 66px;
   }
 
   .nav-item {
     .nav-link {
-      font-size: 20px;
+      font-size: 16px;
     }
     :hover {
       color: black !important;
     }
-    margin-left: 30px;
+    margin-left: 24px;
     font-weight: 500;
   }
 }
