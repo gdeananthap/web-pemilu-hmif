@@ -237,12 +237,12 @@ export default {
                 text-align: center;
             }
             max-width: 60%;
+            margin: auto;
         }
 
-        .modal-wrapper{
-            display: flex;
-            justify-content: center;
-
-        }
+        // .modal-wrapper{
+        //     display: flex;
+        //     justify-content: center;
+        // }
     }
 </style>
