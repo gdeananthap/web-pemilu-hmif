@@ -45,12 +45,6 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
-a.nuxt-link-exact-active {
-  color: #00c58e;
-}
-a.nuxt-link-active {
-  color: #00c58e;
-}
 
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
@@ -62,19 +56,20 @@ a.nuxt-link-active {
 .navbar-pemilu {
   font-family: "Poppins", sans-serif;
   background-color: #ffc801 !important;
-  padding-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   .logo-navbar {
-    max-height: 60px;
+    max-height: 66px;
   }
 
   .nav-item {
     .nav-link {
-      font-size: 20px;
+      font-size: 16px;
     }
     :hover {
       color: black !important;
     }
-    margin-left: 30px;
+    margin-left: 24px;
     font-weight: 500;
   }
 }

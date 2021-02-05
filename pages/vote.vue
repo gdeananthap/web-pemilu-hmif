@@ -2,33 +2,33 @@
     <div class="page-content">
         
         <!-- user sudah memilih -->
-        <AlertVoteDone v-if="isVoted"/>
+        <AlertVoteDone v-if="isVoted && isLogin"/>
 
         <!-- user bukan dpt -->
-        <AlertNonDPT v-if="isNonDPT" />
+        <AlertNonDPT v-if="isNonDPT && isLogin" />
         
         <!-- countdown telah selesai -->
-        <div v-if="isVotingStarted" class="vote">
+        <div v-if="isVotingStarted && isLogin" class="vote">
             <div class="calonKetua">
                 <div class="container">
                     <h1>CALON KETUA</h1>
                     <div class="row justify-content-center">
-                        <div class="col-sm-4 col-md-4 ">
+                        <div class="col-md-6 col-lg-4">
                             <div class="calon">
                                 <div class="nama-calon">
                                     <h3>Gde Anantha</h3>
                                 </div>
                                 <img src="@/public/images/1.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
-                        <div class="col-sm-4 col-md-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="calon">
                                 <div class="nama-calon">
                                     <h3>Kotak Kosong</h3>
                                 </div>
                                 <img src="@/public/images/2.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                     </div>
@@ -39,22 +39,22 @@
                 <div class="container">
                     <h1>CALON SENATOR</h1>
                     <div class="row justify-content-center">
-                        <div class="col-sm-4 col-md-4 ">
+                        <div class="col-sm-2 col-md-6 col-lg-4">
                             <div class="calon">
                                 <div class="nama-calon">
                                     <h3>Gde Anantha</h3>
                                 </div>
                                 <img src="@/public/images/1.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
-                        <div class="col-sm-4 col-md-4">
+                        <div class="col-sm-2 col-md-6 col-lg-4">
                             <div class="calon">
                                 <div class="nama-calon">
                                     <h3>Kotak Kosong</h3>
                                 </div>
                                 <img src="@/public/images/2.png" alt="">
-                                <a  class="btn btn-warning btn-lg" @click="showModal = true">VOTE</a>
+                                <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                             </div>
                         </div>
                     </div>
@@ -66,16 +66,13 @@
                 <transition name="modal">
                 <div class="modal-mask">
                     <div class="modal-wrapper">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-sm" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Apakah Anda Yakin?</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" @click="showModal = false">&times;</span>
-                            </button>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" @click="isVoted = true, showModal = True">Ya</button>
+                            <button type="button" class="btn btn-primary" @click="isVoted = true, showModal = True">Yakin</button>
                             <button type="button" class="btn btn-secondary" @click="showModal = false">Tidak</button>
                         </div>
                         </div>
@@ -85,6 +82,11 @@
                 </transition>
             </div>
         </div>
+
+        <!-- countdown sudah selesai tapi belum login -->
+        <div v-if = "isVotingStarted">
+            <Countdown />
+        </div> 
 
         <!-- countdown masih berlangsung -->
         <div v-else class="countdown">
@@ -103,6 +105,7 @@ export default {
         isVotingStarted :false,
         isVoted : false,
         isNonDPT : false,
+        isLogin : true,
         showModal : false,
     }),
     components :{
@@ -175,11 +178,12 @@ export default {
         border:2px solid#ffc801;
     }
 
-    @media only screen and (max-width: 990px){
-        .calon{ margin-bottom:20px; }
+    .nama-calon{
+        justify-content: center;
+        h3{
+            text-align: center;
+        }
     }
-
-
 
     .modal-mask {
         position: fixed;
@@ -197,15 +201,48 @@ export default {
         display: table-cell;
         vertical-align: middle;
     }
-    .modal-header, .modal-body, .modal-footer{
+    .modal-header, .modal-body{
         background-color: #ffc801;
         justify-content: center;
+        border-bottom :0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
+
+    .modal-footer{
+        background-color: #ffc801;
+        justify-content: center;
+        border-top:0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .modal-content{
+        border-radius:100px;
+    }
+    
+
     .btn-primary {
         background-color: #3EA0AD;
     }
 
     .btn-secondary{
         background-color: #D04C3D;
+    }
+
+    @media only screen and (max-width: 990px){
+        .calon{ margin-bottom:20px; }
+    }
+
+
+    @media only screen and (max-width:576px){
+        .modal-dialog{
+            h5{
+                text-align: center;
+            }
+            max-width: 60%;
+            margin: auto;
+        }
+
     }
 </style>
