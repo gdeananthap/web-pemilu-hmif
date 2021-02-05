@@ -67,7 +67,16 @@ export default {
           databaseURL: ""
         },
         services: {
-          auth: true,
+          auth: {
+            static: true,
+            preload: true,
+            persistence: "local", // default
+            initialize: {
+              onAuthStateChangedMutation: "auth/ON_AUTH_STATE_CHANGED_MUTATION",
+              subscribeManually: false
+            },
+            ssr: false // default
+          },
           firestore: true
         }
       }

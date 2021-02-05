@@ -1,6 +1,7 @@
 <template>
   <b-nav-item to="/" class="my-auto">
     <b-button
+      v-if="loggedIn == false"
       block
       variant="success"
       class="px-3 text-white"
@@ -8,34 +9,58 @@
       v-on:click="login()"
       >Login</b-button
     >
+    <b-button
+      v-else
+      block
+      variant="danger"
+      class="px-3 text-white"
+      size="lg"
+      v-on:click="logout()"
+      >Logout</b-button
+    >
   </b-nav-item>
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
-
 export default {
   name: "LoginButton",
+  data() {
+    return {
+      loggedIn: false,
+      error: false
+    };
+  },
   methods: {
     login() {
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase
-        .auth()
+      var provider = new this.$fireModule.auth.GoogleAuthProvider();
+      this.$fire.auth
         .signInWithPopup(provider)
         .then(result => {
-          const credential = result.credential;
-          const token = credential.accessToken;
           const user = result.user;
+          if (!!user) {
+            this.loggedIn = true;
+          } else {
+            this.error = true;
+          }
         })
         .catch(error => {
           console.error(error);
-          const errorCode = error.code;
-          const errorMessage = error.errorMessage;
-          const email = error.email;
-          const credential = error.credential;
         });
+    },
+    async logout() {
+      try {
+        const res = await this.$fire.auth.signOut();
+        console.log("logged out successfully");
+      } catch (err) {
+        this.error = true;
+      }
     }
+  },
+  created() {
+    this.$fire.auth.onAuthStateChanged(user => {
+      const isLoggedIn = !!user;
+      this.loggedIn = isLoggedIn;
+    });
   }
 };
 </script>
