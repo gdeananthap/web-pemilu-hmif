@@ -208,7 +208,7 @@
 								<h2>Debat dan Uji Publik</h2>
 								<ol type="1">
 									<li>Debat dan uji publik dilakukan secara daring.</li>
-									<li>Debat dan uji publik dilakukan sendiri oleh calon. Jika calon berhalangan hadir dengan alasan yang tidak dapat diterima Panitia Pemilu HMIF 2021, calon akan dikenakan pelanggaran berat. Bila calon tidak menghadiri debat dan uji publik dengan alasan yang dapat diterima Panitia Pemilu HMIF 2021, debat tetap dilaksanakan dengan tidak melibatkan calon yang berhalangan hadir. </li>
+									<li>Debat dan uji publik dilakukan sendiri oleh calon. Jika calon berhalangan hadir dengan alasan yang tidak dapat diterima Panitia Pemilu HMIF 2021, calon akan dikenakan pelanggaran berat. Bila calon tidak menghadiri debat dan uji publik dengan alasan yang dapat diterima Panitia Pemilu HMIF 2021, debat tetap dilaksanakan dengan tidak melibatkan calon yang berhalangan hadir.</li>
 									<li>Alasan yang dapat diterima:</li>
 									<ol type="a">
 										<li>Bertambah atau berkurangnya anggota keluarga dekat (maksimal sampai sepupu satu kakek / nenek).</li>
@@ -222,7 +222,7 @@
 									<li>Debat dan uji publik calon ketua HMIF dan calon senator HMIF diadakan dalam sesi yang telah disediakan panitia.</li>
 									<li>Debat dan uji publik calon ketua dan calon senator HMIF wajib dihadiri oleh minimal 1 orang promotor dan minimal 5 orang tim sukses selama <i>hearing</i> berlangsung. </li>
 									<li>Debat dan uji publik calon ketua dan calon senator HMIF dapat berlangsung jika kuorum debat dan uji publik telah terpenuhi. Kuorum debat dan uji publik adalah ⅓ (satu pertiga) dari kuorum setiap angkatan. Kuorum angkatan 2019 adalah 162 orang anggota angkatan 2019, kuorum angkatan 2018 orang 95 anggota angkatan 2018, dan kuorum angkatan 2017 dan angkatan sebelumnya adalah 45 orang anggota angkatan 2017 dan angkatan sebelumnya.</li>
-									<li>Kuorum berjalan yang ditentukan adalah setengah dari jumlah kuorum yang telah diberikan. Kuorum berjalan didefinisikan sebagai jumlah anggota minimal yang harus ada setelah debat dan uji publik dimulai. Jika kuorum berjalan tidak terpenuhi, debat dan uji publik akan dihentikan sementara (maksimal 10 menit) sebelum dilanjutkan. Jika kuorum berjalan tidak dapat terpenuhi dalam batas waktu tersebut, debat dan uji publik dihentika</li>n.
+									<li>Kuorum berjalan yang ditentukan adalah setengah dari jumlah kuorum yang telah diberikan. Kuorum berjalan didefinisikan sebagai jumlah anggota minimal yang harus ada setelah debat dan uji publik dimulai. Jika kuorum berjalan tidak terpenuhi, debat dan uji publik akan dihentikan sementara (maksimal 10 menit) sebelum dilanjutkan. Jika kuorum berjalan tidak dapat terpenuhi dalam batas waktu tersebut, debat dan uji publik dihentikan.</li>
 									<li>Jika debat dan uji publik calon ketua HMIF atau calon senator HMIF pada hari tertentu dibatalkan, tidak boleh ada debat dan uji publik yang difasilitasi oleh Panitia Pemilu HMIF 2021 pada hari yang sama.</li>
 									<li>Jika debat dan uji publik calon ketua HMIF atau calon senator HMIF pada hari tertentu dibatalkan karena tidak terpenuhinya kuorum, maka seluruh calon ketua HMIF dan calon senator HMIF akan dikenakan pelanggaran sedang.</li>
 									<li>Calon yang terlambat datang debat dan uji publik tanpa memberitahu panitia maksimal 1 jam sebelum waktu <i>hearing</i> akan dikenakan pelanggaran sedang.</li>
@@ -385,7 +385,7 @@
 										<br>Bagi siapapun yang melihat pelanggaran aturan pemilu yang dilakukan oleh calon dan/atau timnya, berhak melaporkan pelanggaran tersebut kepada Komisi Disiplin Pemilu HMIF 2021 yang ditunjuk berikut:
 										<br>
 										<br>Nama	: Rayhan Alghifari Fauzta
-										<br>NIM	: 13519039
+										<br>NIM : 13519039
 										<br>	
 										<br>Pelaporan bisa melalui salah satu media pelaporan berikut: 
 										<br>	
@@ -444,10 +444,11 @@ export default {
 			margin-top: 0;
 			margin-bottom: 10px;
 			text-align: left;
+			font-size: 24px;
 		}
 
 	    font-family: Roboto;
-	    font-size: 18px;
+	    font-size: 16px;
 	    line-height: 24px;
 	    text-align: justify;
 	    color: #000000;
