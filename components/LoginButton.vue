@@ -33,6 +33,9 @@ export default {
   methods: {
     login() {
       var provider = new this.$fireModule.auth.GoogleAuthProvider();
+      provider.setCustomParameters({
+        'hd': 'std.stei.itb.ac.id'
+      });
       this.$fire.auth
         .signInWithPopup(provider)
         .then(result => {
