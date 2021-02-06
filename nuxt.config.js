@@ -34,10 +34,19 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
 
+  serverMiddleware: [
+    {
+      path: "/api",
+      handler: "~/api/index.js"
+    }
+  ],
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    "@nuxtjs/pwa",
     "bootstrap-vue/nuxt",
+    "@nuxtjs/axios", // for communicating with api
     [
       "nuxt-fontawesome",
       {

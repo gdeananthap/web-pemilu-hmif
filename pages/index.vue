@@ -159,7 +159,7 @@
 </template>
 
 <script>
-import AlertNimComponent from "../components/AlertNimComponent";
+import AlertNimComponent from "@/components/AlertNimComponent";
 
 export default {
   name: "landing-page",
@@ -175,7 +175,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .hero-pemilu {
   .hero-logo {
     margin-top: 10px;
