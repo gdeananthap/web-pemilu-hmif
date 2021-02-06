@@ -5,6 +5,7 @@
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
 					<h2>Bagian I</h2>
+					<h2 class="laptop">&nbsp:&nbsp Pendaftaran</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -17,7 +18,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Pendaftaran</h2>
+								<h2 class="mobile">Pendaftaran</h2>
 								<ol type="1">
 									<li>Pendaftaran calon ketua himpunan dan senator dilakukan secara daring.</li>
 									<li>Waktu dan <i>platform</i> pendaftaran akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
@@ -83,7 +84,8 @@
         	    
 
         		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
-					<h2>Bagian II</h2>
+					<h2>Bagian II</h2> 
+					<h2 class="laptop">&nbsp:&nbsp Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -96,7 +98,7 @@
         	    	<b-card no-body class="mb-1">
 						<b-card-body>						
         	      			<b-card-text class="text">
-								<h2>Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
+								<h2 class="mobile">Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
 								<ol type="1">
 									<li>Pengembalian berkas dilakukan secara daring.</li>
 									<li>Waktu dan <i>platform</i> pengembalian berkas akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021. Berkas dikembalikan oleh bakal calon ketua himpunan/bakal calon senator dan tidak dapat diwakilkan.</li>
@@ -112,6 +114,7 @@
 
         	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
 					<h2>Bagian III</h2>
+					<h2 class="laptop">&nbsp:&nbsp Kampanye</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -124,7 +127,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Kampanye</h2>
+								<h2 class="mobile">Kampanye</h2>
 								<ol type="1">
 									<li>Seluruh kegiatan kampanye dilakukan secara daring.</li>
 									<li>Kampanye dapat dilakukan sejak nama calon diumumkan hingga sebelum masa reses.</li>
@@ -192,6 +195,7 @@
 
         	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
 					<h2>Bagian IV</h2>
+					<h2 class="laptop">&nbsp:&nbsp Debat dan Uji Publik</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -204,7 +208,7 @@
         	    	<b-card no-body class="mb-1">
 						<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Debat dan Uji Publik</h2>
+								<h2 class="mobile">Debat dan Uji Publik</h2>
 								<ol type="1">
 									<li>Debat dan uji publik dilakukan secara daring.</li>
 									<li>Debat dan uji publik dilakukan sendiri oleh calon. Jika calon berhalangan hadir dengan alasan yang tidak dapat diterima Panitia Pemilu HMIF 2021, calon akan dikenakan pelanggaran berat. Bila calon tidak menghadiri debat dan uji publik dengan alasan yang dapat diterima Panitia Pemilu HMIF 2021, debat tetap dilaksanakan dengan tidak melibatkan calon yang berhalangan hadir.</li>
@@ -234,6 +238,7 @@
 
         	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
 					<h2>Bagian V</h2>
+					<h2 class="laptop">&nbsp:&nbsp Masa Reses</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -246,7 +251,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Masa Reses</h2>
+								<h2 class="mobile">Masa Reses</h2>
 								<ol type="1">
 									<li>Masa reses dilakukan 3 hari sebelum hari pemungutan suara dilaksanakan.</li>
 									<li>Pukul 00.01 pada masa reses dimulai, publikasi calon telah bersih.</li>
@@ -261,6 +266,7 @@
         	    
         	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
 					<h2>Bagian VI</h2>
+					<h2 class="laptop">&nbsp:&nbsp Pemungutan Suara</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -273,7 +279,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Pemungutan Suara</h2>
+								<h2 class="mobile">Pemungutan Suara</h2>
 								<ol type="1">
 									<li>Proses pemungutan suara dilakukan secara daring.</li>
 									<li>Waktu pemungutan suara akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
@@ -289,6 +295,7 @@
 
         	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
 					<h2>Bagian VII</h2>
+					<h2 class="laptop">&nbsp:&nbsp Perhitungan Suara</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -301,7 +308,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Perhitungan Suara</h2>
+								<h2 class="mobile">Perhitungan Suara</h2>
 								<ol type="1">
 									<li>Waktu penghitungan suara akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
 									<li>Tata cara penghitungan suara adalah sebagai berikut:</li>
@@ -319,6 +326,7 @@
 
         	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
 					<h2>Bagian VIII</h2>
+					<h2 class="laptop">&nbsp:&nbsp Pelanggaran</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -331,7 +339,7 @@
 					<b-card no-body class="mb-1">
         	    		<b-card-body>
         	      			<b-card-text class="text">
-								<h2>Pelanggaran</h2>
+								<h2 class="mobile">Pelanggaran</h2>
 								<ol type="1">
 									<li>Jenis Pelanggaran</li>
 									<ol type="a">
@@ -420,6 +428,7 @@ export default {
     	text-transform: uppercase;
 	    text-align: center;
 		padding-bottom: 20px;
+		
 	}
 
 	/* Subjudul per Bab */
@@ -427,7 +436,6 @@ export default {
 		h2{
 			margin-top: 10px;
 	    	font-family: Roboto;
-	    	font-size: 24px;
 	    	line-height: 20px;
 	    	text-align: left;
 			float: left;
@@ -438,13 +446,45 @@ export default {
 		margin-bottom: 6px;
 	}
 
+	/* Responsive judul Bab */
+	@media only screen and (max-width: 767px){
+		.title{
+			h2{
+				font-size: 18px;
+			}
+		}
+		.laptop{
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 768px){
+		.title{
+			h2{
+				font-size: 18px;
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 1024px){
+		.title{
+			h2{
+				font-size: 24px;
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}
+
 	/* Isi Bab */
 	.text{
 		h2{
 			margin-top: 0;
 			margin-bottom: 10px;
 			text-align: left;
-			font-size: 24px;
+			font-size: 20px;
 		}
 
 	    font-family: Roboto;
@@ -464,5 +504,16 @@ export default {
 	.collapsed > .when-open,
 	.not-collapsed > .when-closed {
   		display: none;
+	}
+
+	/* Theme color */
+	.btn-outline-warning{
+		color: #ffc801;
+		border-color: #ffc801;
+	}
+
+	.btn-outline-warning:hover{
+		background-color: #ffc801;
+		border-color: #ffc801;
 	}
 </style>
