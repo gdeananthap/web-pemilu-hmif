@@ -20,7 +20,7 @@
               Tata Cara
             </b-nav-item>
             <b-nav-item to="/peraturan" class="my-auto" active-class="active">
-              Peraturan Pemilu
+              Peraturan
             </b-nav-item>
             <b-nav-item to="/vote" class="my-auto" active-class="active"> 
               Vote
