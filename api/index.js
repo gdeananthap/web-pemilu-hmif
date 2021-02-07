@@ -20,15 +20,17 @@ firebase.default.initializeApp({
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  console.log(admin.app().name);
+app.get("/", async (req, res) => {
+  const claims = admin.auth().verifyIdToken(req);
   res.send("Go away Awoo! don't try to hack the server!");
 });
 
 const voteRouter = require("./routes/vote");
 const dptRouter = require("./routes/dpt");
+const authRouter = require("./routes/auth");
 
 app.use("/vote", voteRouter);
 app.use("/dpt", dptRouter);
+app.use("/auth", authRouter);
 
 module.exports = app;

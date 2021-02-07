@@ -1,21 +1,24 @@
 export const state = () => ({
-  email: null
+  email: null,
+  uid: null
 });
 
 export const mutations = {
   ON_AUTH_STATE_CHANGED_MUTATION: (state, { authUser, claims }) => {
-    function login({ email }) {
+    function login({ email, uid }) {
       state.email = email;
+      state.uid = uid;
     }
     function logout() {
       state.email = null;
+      state.uid = null;
     }
 
     if (!!authUser) {
-      console.log("tunak tun");
-      login({ email: authUser.email });
+      const { email, uid } = authUser;
+      console.log("user uid is: " + uid);
+      login({ email, uid });
     } else {
-      console.log("tunak tun");
       logout();
     }
   }

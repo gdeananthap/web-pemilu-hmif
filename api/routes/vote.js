@@ -14,6 +14,7 @@ const {
   createSuccessMessage,
   createFailureMessage
 } = require("../utils/response-message");
+const { authMiddleware } = require("../middleware/auth");
 
 // too lazy to seperate this to a file
 const candidates = ["13518042", "18218005"]; // bagas, alim
@@ -23,10 +24,9 @@ router.get("/candidates", (req, res, next) => {
   res.send(createSuccessMessage({ data: candidates }));
 });
 
-router.post("/", async (req, res, next) => {
-  const { toBeVotedNim, idToken } = req.body;
-
-  // TODO : make idToken validation a middleware (and probably make it to request header instead of request body)
+router.post("/", authMiddleware, async (req, res, next) => {
+  const { toBeVotedNim } = req.body;
+  const idToken = req.headers.idtoken;
 
   // check if the one he want to vote is a candidate
   if (!isVotedNimValid(toBeVotedNim)) {
@@ -38,20 +38,9 @@ router.post("/", async (req, res, next) => {
     return;
   }
 
-  // verify uid token
-  const userInfo = await admin.auth().verifyIdToken(idToken);
-  if (!userInfo) {
-    res.status(300).send(
-      createFailureMessage({
-        status: 300,
-        message: "uid token not valid, make sure you have logged in"
-      })
-    );
-    return;
-  }
-
   // verify email
-  const { email } = userInfo;
+  const claims = await admin.auth().verifyIdToken(idToken);
+  const { email } = claims;
   const nim = extractNimFromEmail(email);
   if (!isEmailValid(email)) {
     res.status(300).send(
@@ -65,8 +54,6 @@ router.post("/", async (req, res, next) => {
 
   // check if user is dpt
   const dptDetail = await dptDatabase.getDpt(nim);
-  console.log("Detail DPT:");
-  console.log(dptDetail);
   if (!dptDetail) {
     res.status(400).send(
       createFailureMessage({
@@ -90,7 +77,7 @@ router.post("/", async (req, res, next) => {
   const voter = new Voter(nim);
   try {
     // ! the most important code: voting process
-    const res = await voter.vote(toBeVotedNim);
+    await voter.vote(toBeVotedNim);
   } catch (error) {
     res.status(500).send(
       createFailureMessage({
