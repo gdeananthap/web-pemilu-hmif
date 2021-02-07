@@ -224,10 +224,11 @@ export default {
 <style lang="scss" scoped>
     .col-lg-8{
         margin:auto;
-        font-family : roboto;   
+        font-family : Roboto, sans-serif;   
         button{
             background: #f7f7f7;
             color: black;
+            font-size: 18px;
         }
         .btn{
             text-align: justify;
@@ -258,10 +259,11 @@ export default {
 
         .card-text{
             text-align:justify;
+            color: black;
         }
 
         .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show>.btn-info.dropdown-toggle {
-            color: #616161;
+            color: black !important;
             background-color: #f7f7f7;
             border-color: #f7f7f7;
             box-shadow: 0 0 0 0;
@@ -274,6 +276,7 @@ export default {
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        font-family: Roboto, sans-serif;
 
         button {
             padding: 5px 10px;
