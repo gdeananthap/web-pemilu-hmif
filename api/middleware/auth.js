@@ -4,9 +4,6 @@ const { createFailureMessage } = require("../utils/response-message");
 async function adminMiddleware(req, res, next) {
   const claims = await getClaims(req.headers.idtoken);
 
-  console.log("The claim:");
-  console.log(claims);
-
   if (claims.admin) {
     next();
   } else {

@@ -75,7 +75,6 @@ export default {
     async getDpt() {
       const data = await this.$axios.$get("/api/dpt");
       this.dptList = data.data;
-      console.log(this.dptList);
     }
   },
 

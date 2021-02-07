@@ -11,67 +11,35 @@ class Voter {
     if (!this.dpt) {
       throw new Error("Set the voter first!");
     }
-
     try {
-      (await this.incrementVote(nimToBeVoted))(
-        await this.setVoterHasVotedToTrue()
-      );
-    } catch (error) {
-      if (error.name == "voter") {
-        // if this also error, pray to God
-        await this.decrementVote(nimToBeVoted);
-      }
+      const toBeVotedRef = await db
+        .collection("suara")
+        .doc(nimToBeVoted.toString());
+      const voterRef = await db.collection("dpt").doc(this.dpt);
+      this.beginVoteTransaction(toBeVotedRef, voterRef);
+    } catch (err) {
+      throw err;
     }
     return true;
   }
 
-  async incrementVote(nimToBeVoted) {
+  async beginVoteTransaction(toBeVotedRef, voterRef) {
     try {
-      // increment vote
-      const toBeVotedDoc = await db
-        .collection("suara")
-        .doc(nimToBeVoted.toString());
-      const latestTotalVote = (await toBeVotedDoc.get()).data().totalVote;
-      toBeVotedDoc.update({
-        totalVote: latestTotalVote + 1
+      await db.runTransaction(async transaction => {
+        const toBeVotedDoc = await transaction.get(toBeVotedRef);
+        const latestTotalVote = toBeVotedDoc.data().totalVote;
+        transaction.update(toBeVotedRef, {
+          totalVote: latestTotalVote + 1
+        });
+        transaction.update(voterRef, {
+          hasVoted: true
+        });
       });
     } catch (err) {
+      console.log("transaction failed");
       throw {
-        name: "voting",
-        message: "Error while incrementing the vote count"
-      };
-    }
-  }
-
-  async decrementVote(nimToBeVoted) {
-    try {
-      // increment vote
-      const toBeVotedDoc = await db
-        .collection("suara")
-        .doc(nimToBeVoted.toString());
-      const latestTotalVote = (await toBeVotedDoc.get()).data().totalVote;
-      toBeVotedDoc.update({
-        totalVote: latestTotalVote - 1
-      });
-    } catch (err) {
-      throw {
-        name: "voting",
-        message: "Error while decrementing the vote count"
-      };
-    }
-  }
-
-  async setVoterHasVotedToTrue() {
-    try {
-      // set hasvoted for user = true
-      const voterDoc = await db.collection("dpt").doc(this.dpt.toString());
-      voterDoc.update({
-        hasVoted: true
-      });
-    } catch (err) {
-      throw {
-        name: "voter",
-        message: "Error while setting hasvoted = true for voter"
+        name: "Voting error",
+        message: "Something bad happened while voting"
       };
     }
   }
