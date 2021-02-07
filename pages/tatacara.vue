@@ -447,27 +447,27 @@ export default {
 	}
 
 	/* Responsive judul Bab */
-	@media only screen and (max-width: 767px){
+	@media only screen and (max-width: 1023px){
 		.title{
 			h2{
-				font-size: 18px;
+				font-size: 20px;
 			}
 		}
 		.laptop{
 			display: none;
 		}
 	}
-	@media only screen and (min-width: 768px){
+	@media only screen and (min-width: 1024px){
 		.title{
 			h2{
-				font-size: 18px;
+				font-size: 20px;
 			}
 		}
 		.mobile{
 			display: none;
 		}
 	}
-	@media only screen and (min-width: 1024px){
+	@media only screen and (min-width: 1440px){
 		.title{
 			h2{
 				font-size: 24px;

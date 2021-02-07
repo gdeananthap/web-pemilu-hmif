@@ -388,6 +388,16 @@ export default {
 			display: none;
 		}
 	}
+	@media only screen and (min-width: 1440px){
+		.title{
+			h2{
+				font-size: 24px;
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}	
 
 	/* Isi Bab */
 	.text{
