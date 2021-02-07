@@ -20,9 +20,6 @@
                                 <span class="seconds">{{displaySeconds}}</span> <br>seconds
                             </div>
                         </div>
-                        <div class="infocalon">
-                            <NuxtLink to="/info" class="btn btn-primary btn-lg">Lihat Informasi CaKahim dan CaSenat</NuxtLink>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -116,7 +113,6 @@ export default {
         margin-top : 0px;
     }
 
-
 	.coming-soon {
     margin: 0 auto;
     text-align: center;
@@ -162,7 +158,7 @@ export default {
     .timer .hours-wrapper:hover,
     .timer .minutes-wrapper:hover,
     .timer .seconds-wrapper:hover {
-        background: #e45642;
+        background: #ffc801 ;
         text-shadow: none;
     }
 

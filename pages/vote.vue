@@ -10,19 +10,19 @@
                     Surat Suara
                 </button>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-8 col-lg-8">
                 <div class="accordion" role="tablist">
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-1 variant="info">1. Pahami aturan dan tata cara Pemilu HMIF 2021</b-button>
+                        <b-button block v-b-toggle.accordion-1 variant="info">1. Pahami peraturan dan tata cara Pemilu HMIF 2021</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
                         <b-card-text>
                             Pemilu HMIF 2021 berbeda dari tahun-tahun sebelumnya. Terlebih lagi pada tahun ini
-                            Pemilu dilaksanakan secara daring. Sehingga terdapat beberapa penyesuaian pada aturan
-                            dan tata cara pemilu pada tahun ini. Pastikan anda memahami aturan dan tata cara Pemilu HMIF
-                            dengan membacanya pada halaman dan halaman tata cara terlebih dahulu. 
+                            Pemilu dilaksanakan secara daring. Sehingga terdapat beberapa penyesuaian pada peraturan
+                            dan tata cara pemilu pada tahun ini. Pastikan anda memahami peraturan dan tata cara Pemilu HMIF
+                            dengan membacanya pada halaman <a href="/peraturan">peraturan</a> dan halaman <a href="/tatacara">tata cara</a> terlebih dahulu. 
                         </b-card-text>
                         </b-card-body>
                     </b-collapse>
@@ -36,7 +36,7 @@
                         <b-card-body>
                         <b-card-text>
                             Sebelum Anda menetapkan pilihan Anda pada salah satu calon, pastikan anda telah mengetahui 
-                            dan memahami nama, visi, dan misi dari setiap calon.
+                            dan memahami nama, visi, dan misi dari <a href="/calon">setiap calon.</a>
                         </b-card-text>
                         </b-card-body>
                     </b-collapse>
@@ -138,7 +138,7 @@
                                     </div>
                                     <img src="@/public/images/1.png" alt="">
                                     <div class="nama-calon">
-                                        <h4>Bagas Setyo Wicaksono</h4>
+                                        <h4>Bagas Setya Wicaksono</h4>
                                     </div>
                                     <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                                 </div>
@@ -182,12 +182,12 @@
             </div>
 
             <!-- countdown sudah selesai tapi belum login -->
-            <div v-if = "isVotingStarted && !isLogin">
+            <div v-if="isVotingStarted && !isLogin">
                 <Countdown />
             </div> 
 
             <!-- countdown masih berlangsung -->
-            <div v-if = "!isVotingStarted" class="countdown">
+            <div v-if ="!isVotingStarted" class="countdown">
                 <Countdown v-on:start-vote="startVote"/>
             </div>        
         </div>
@@ -222,12 +222,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .col-lg-6{
+    .col-lg-8{
         margin:auto;
         font-family : roboto;   
         button{
             background: #f7f7f7;
             color: black;
+        }
+        .btn{
+            text-align: justify;
         }
         .btn-info{
             border-color: #f7f7f7;
@@ -240,6 +243,7 @@ export default {
             display: flex;
         }
 
+
         .card{
             border:0px;
         }
@@ -251,6 +255,11 @@ export default {
         .card-body{
             background-color: #fff;
         }
+
+        .card-text{
+            text-align:justify;
+        }
+
         .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show>.btn-info.dropdown-toggle {
             color: #616161;
             background-color: #f7f7f7;
