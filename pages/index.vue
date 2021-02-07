@@ -33,7 +33,7 @@
                       <p>Hearing-1</p>
                     </div>
                     <div class="timeline-time">
-                      <p>11 Februari 2021</p>
+                      <p>11 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
                       <p>Hearing-2</p>
                     </div>
                     <div class="timeline-time">
-                      <p>15 Februari 2021</p>
+                      <p>15 Feb 2021 </p>
                     </div>
                   </div>
                 </div>
@@ -53,7 +53,7 @@
                       <p>Hearing-3</p>
                     </div>
                     <div class="timeline-time">
-                      <p>18 Februari 2021</p>
+                      <p> 18 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -63,7 +63,7 @@
                       <p>Debat</p>
                     </div>
                     <div class="timeline-time">
-                      <p>22 Februari 2021</p>
+                      <p>22 Feb 2021 </p>
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@
                       <p>Masa Tenang</p>
                     </div>
                     <div class="timeline-time">
-                      <p>23-25 Februari 2021</p>
+                      <p> 23-25 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
                       <p>Pemungutan Suara</p>
                     </div>
                     <div class="timeline-time">
-                      <p>26 Feb - 1 Mar 2021</p>
+                      <p>26 Feb - 1 Mar 2021 </p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +93,7 @@
                       <p>Penghitungan Suara</p>
                     </div>
                     <div class="timeline-time">
-                      <p>2 Maret 2021</p>
+                      <p> 2 Mar 2021</p>
                     </div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@
                       <p>Pengumuman</p>
                     </div>
                     <div class="timeline-time">
-                      <p>3 Maret 2021</p>
+                      <p>3 Mar 2021 <i class="d-sm-none fa fa-calendar"></i></p>
                     </div>
                   </div>
                 </div>
