@@ -108,7 +108,7 @@ export default {
 }
 
 </script>
-<style lang="scss" scooped>
+<style lang="scss" scoped>
 
 	/* Judul Utama */
 	h1{

@@ -4,8 +4,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2>Countdown to Election Day</h2>
-                        <p>Pemungutan suara akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
+                        <h2>Countdown</h2>
+                        <p>Pemungutan suara baru akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
                         <div class="timer">
                             <div class="days-wrapper">
                                 <span class="days">{{displayDays}}</span> <br>days
@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2>Vote Now!</h2>
+                        <h2>Voting Sekarang!</h2>
                         <p>Pemungutan suara telah dimulai. Login untuk menggunakan hak suara Anda!</p>
                         <div class="timer">
                             <div class="days-wrapper">
@@ -112,6 +112,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .page-content{
+        margin-top : 0px;
+    }
+
+
 	.coming-soon {
     margin: 0 auto;
     text-align: center;
