@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="infocalon">
-                            <a href="/info" class="btn btn-primary btn-lg">Lihat Informasi CaKahim dan CaSenat</a>
+                            <NuxtLink to="/info" class="btn btn-primary btn-lg">Lihat Informasi CaKahim dan CaSenat</NuxtLink>
                         </div>
                     </div>
                 </div>

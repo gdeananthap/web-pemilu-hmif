@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavbarComponent />
-    <Nuxt />
+    <div class="wrapss">
+      <Nuxt />
+    </div>
     <FooterComponent />
   </div>
 </template>
@@ -22,6 +24,9 @@ export default {
 </script>
 
 <style lang="scss">
+.wrapss {
+  min-height: calc(75vh - 70px);
+}
 @media (max-width: 768px) {
   html,
   body {
