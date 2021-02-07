@@ -4,7 +4,7 @@
 		<div class="container">
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
-					<h2>Bagian I</h2>
+					<h2>Bagian 1</h2>
 					<h2 class="laptop">&nbsp:&nbsp Definisi dan Penjelasan Umum </h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -33,7 +33,7 @@
         	    
 
         		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
-					<h2>Bagian II</h2> 
+					<h2>Bagian 2</h2> 
 					<h2 class="laptop">&nbsp:&nbsp Definisi Pemilihan Umum (Pemilu) HMIF ITB</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -63,7 +63,7 @@
         	    
 
         	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
-					<h2>Bagian III</h2>
+					<h2>Bagian 3</h2>
 					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon ketua HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -102,7 +102,7 @@
         	    
 
         	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
-					<h2>Bagian IV</h2>
+					<h2>Bagian 4</h2>
 					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -141,7 +141,7 @@
         	    
 
         	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
-					<h2>Bagian V</h2>
+					<h2>Bagian 5</h2>
 					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi promotor calon ketua HMIF atau calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -173,7 +173,7 @@
 
         	    
         	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
-					<h2>Bagian VI</h2>
+					<h2>Bagian 6</h2>
 					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi tim sukses calon ketua HMIF atau calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -205,7 +205,7 @@
         	    
 
         	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
-					<h2>Bagian VII</h2>
+					<h2>Bagian 7</h2>
 					<h2 class="laptop">&nbsp:&nbsp Ketentuan Daftar Pemilih Tetap</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -235,7 +235,7 @@
         	    
 
         	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
-					<h2>Bagian VIII</h2>
+					<h2>Bagian 8</h2>
 					<h2 class="laptop">&nbsp:&nbsp Rangkaian Acara</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
@@ -254,46 +254,46 @@
 									<li>Pendaftaran</li>
                                     <ol type="a">
                                         <li>Tata cara pendaftaran diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        <li>Pengembalian Kit, Verifikasi, dan Pengumuman Calon Terpilih</li>
-                                        <ol type="i">
-                                            <li>Kit berisi lembar dukungan, data diri, nama promotor, nama tim sukses. Dokumen kit lainnya ditentukan oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                            <li>Tata cara Pengembalian Kit, Verifikasi, dan Pengumuman Calon Terpilih diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        </ol>
-                                        <li>Kampanye</li>
-                                        <ol type="i">
-                                            <li>Kampanye dilakukan secara daring.</li>
-                                            <li>Kampanye yang dilakukan calon tidak boleh merusak nama baik  ITB, STEI, Prodi IF dan STI, KM ITB, dan HMIF.</li>
-                                            <li>Kampanye tidak boleh berisi hal-hal yang dinilai menjatuhkan pihak tertentu dan tidak menyinggung SARA dan fisik.</li>
-                                            <li>Calon ketua HMIF dan calon senator HMIF bertanggung jawab atas kampanye yang dilakukan oleh timnya.</li>
-                                            <li>Tata cara kampanye yang tidak dijelaskan pada peraturan ini diatur  oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        </ol>
-                                        <li>Masa Reses</li>
-                                        <ol type="i">
-                                            <li>Tata cara masa reses diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        </ol>
-                                        <li>Pemungutan Suara</li>
-                                        <ol type="i">
-                                            <li>Abstain adalah keputusan DPT untuk tidak memilih calon manapun, namun suara tetap sah.</li>
-                                            <li>DPT dapat memilih salah satu calon atau memilih abstain.</li>
-                                            <li>Tata cara pemungutan suara diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        </ol>
-                                        <li>Perhitungan Suara</li>
-                                        <ol type="i">
-                                            <li>Penghitungan suara harus dihadiri oleh ketua HMIF 2020, Koordinator DPP 2020, ketua Panitia Pemilu HMIF 2021, dan semua calon.</li>
-                                            <li>Tata cara penghitungan suara diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
-                                        </ol>
-                                        <li>Ketentuan Pemenang</li>
-                                        <ol type="i">
-                                            <li>Calon ketua HMIF terpilih jika mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk.</li>
-                                            <li>Calon senator HMIF terpilih jika mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk.</li>
-                                            <li>Apabila jumlah calon lebih dari dua dan tidak ada calon yang mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk, maka diadakan pemungutan suara putaran kedua untuk dua calon dengan suara terbanyak. Putaran kedua berarti melakukan 3 hari masa kampanye, 1 hari masa reses, dan 2 hari pemungutan suara.</li>
-                                            <li>Putaran kedua dimulai pada hari setelah hari penghitungan suara putaran pertama. Apabila jumlah calon sama dengan dua dan tidak ada calon yang mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk, maka keputusan dikembalikan ke DPP.</li>
-                                        </ol>
-                                        <li>Pelanggaran</li>
-                                        <ol type="i">
-                                            <li>Pelanggaran adalah hal-hal yang dilakukan kandidat, promotor, maupun tim sukses yang tidak sesuai dengan aturan pemilu atau tata cara yang ditetapkan oleh Panitia Pemilu HMIF 2021.</li>
-                                            <li>Jenis pelanggaran lain ditetapkan oleh Panitia Pemilu HMIF 2021 dan disetujui oleh DPP. </li>
-                                        </ol>
+                                    </ol>
+									<li>Pengembalian Kit, Verifikasi, dan Pengumuman Calon Terpilih</li>
+                                    <ol type="a">
+                                        <li>Kit berisi lembar dukungan, data diri, nama promotor, nama tim sukses. Dokumen kit lainnya ditentukan oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                        <li>Tata cara Pengembalian Kit, Verifikasi, dan Pengumuman Calon Terpilih diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                    </ol>
+                                    <li>Kampanye</li>
+                                    <ol type="a">
+                                        <li>Kampanye dilakukan secara daring.</li>
+                                        <li>Kampanye yang dilakukan calon tidak boleh merusak nama baik  ITB, STEI, Prodi IF dan STI, KM ITB, dan HMIF.</li>
+                                        <li>Kampanye tidak boleh berisi hal-hal yang dinilai menjatuhkan pihak tertentu dan tidak menyinggung SARA dan fisik.</li>
+                                        <li>Calon ketua HMIF dan calon senator HMIF bertanggung jawab atas kampanye yang dilakukan oleh timnya.</li>
+                                        <li>Tata cara kampanye yang tidak dijelaskan pada peraturan ini diatur  oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                    </ol>
+                                    <li>Masa Reses</li>
+                                    <ol type="a">
+                                        <li>Tata cara masa reses diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                    </ol>
+                                    <li>Pemungutan Suara</li>
+                                    <ol type="a">
+                                        <li>Abstain adalah keputusan DPT untuk tidak memilih calon manapun, namun suara tetap sah.</li>
+                                        <li>DPT dapat memilih salah satu calon atau memilih abstain.</li>
+                                        <li>Tata cara pemungutan suara diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                    </ol>
+                                    <li>Perhitungan Suara</li>
+                                    <ol type="a">
+                                        <li>Penghitungan suara harus dihadiri oleh ketua HMIF 2020, Koordinator DPP 2020, ketua Panitia Pemilu HMIF 2021, dan semua calon.</li>
+                                        <li>Tata cara penghitungan suara diatur oleh Panitia Pemilu HMIF 2021 dengan persetujuan dari DPP.</li>
+                                    </ol>
+                                    <li>Ketentuan Pemenang</li>
+                                    <ol type="a">
+                                        <li>Calon ketua HMIF terpilih jika mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk.</li>
+                                        <li>Calon senator HMIF terpilih jika mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk.</li>
+                                        <li>Apabila jumlah calon lebih dari dua dan tidak ada calon yang mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk, maka diadakan pemungutan suara putaran kedua untuk dua calon dengan suara terbanyak. Putaran kedua berarti melakukan 3 hari masa kampanye, 1 hari masa reses, dan 2 hari pemungutan suara.</li>
+                                        <li>Putaran kedua dimulai pada hari setelah hari penghitungan suara putaran pertama. Apabila jumlah calon sama dengan dua dan tidak ada calon yang mendapatkan lebih dari sama dengan 50% + 1 suara dari total suara yang masuk, maka keputusan dikembalikan ke DPP.</li>
+                                    </ol>
+                                    <li>Pelanggaran</li>
+                                    <ol type="a">
+                                        <li>Pelanggaran adalah hal-hal yang dilakukan kandidat, promotor, maupun tim sukses yang tidak sesuai dengan aturan pemilu atau tata cara yang ditetapkan oleh Panitia Pemilu HMIF 2021.</li>
+                                        <li>Jenis pelanggaran lain ditetapkan oleh Panitia Pemilu HMIF 2021 dan disetujui oleh DPP. </li>
                                     </ol>
 								</ol>
 							</b-card-text>
@@ -303,7 +303,7 @@
         	    
 
                 <b-button block v-b-toggle.accordion-9 variant="outline-warning" class="title">
-					<h2>Bagian IX</h2>
+					<h2>Bagian 9</h2>
 					<h2 class="laptop">&nbsp:&nbsp Aturan Tambahan</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
