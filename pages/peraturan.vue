@@ -5,7 +5,7 @@
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
 					<h2>Bagian 1</h2>
-					<h2 class="laptop">&nbsp:&nbsp Definisi dan Penjelasan Umum </h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Definisi dan Penjelasan Umum </h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -34,7 +34,7 @@
 
         		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
 					<h2>Bagian 2</h2> 
-					<h2 class="laptop">&nbsp:&nbsp Definisi Pemilihan Umum (Pemilu) HMIF ITB</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Definisi Pemilihan Umum (Pemilu) HMIF ITB</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -64,7 +64,7 @@
 
         	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
 					<h2>Bagian 3</h2>
-					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon ketua HMIF</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Prasyarat untuk menjadi calon ketua HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -103,7 +103,7 @@
 
         	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
 					<h2>Bagian 4</h2>
-					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon senator HMIF</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Prasyarat untuk menjadi calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -142,7 +142,7 @@
 
         	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
 					<h2>Bagian 5</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi promotor calon ketua HMIF atau calon senator HMIF</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan untuk menjadi promotor calon ketua HMIF atau calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -174,7 +174,7 @@
         	    
         	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
 					<h2>Bagian 6</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi tim sukses calon ketua HMIF atau calon senator HMIF</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan untuk menjadi tim sukses calon ketua HMIF atau calon senator HMIF</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -206,7 +206,7 @@
 
         	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
 					<h2>Bagian 7</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan Daftar Pemilih Tetap</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan Daftar Pemilih Tetap</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -236,7 +236,7 @@
 
         	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
 					<h2>Bagian 8</h2>
-					<h2 class="laptop">&nbsp:&nbsp Rangkaian Acara</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Rangkaian Acara</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>
@@ -304,7 +304,7 @@
 
                 <b-button block v-b-toggle.accordion-9 variant="outline-warning" class="title">
 					<h2>Bagian 9</h2>
-					<h2 class="laptop">&nbsp:&nbsp Aturan Tambahan</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Aturan Tambahan</h2>
 					<span class="when-open">
 						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
 					</span>

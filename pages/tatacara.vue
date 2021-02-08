@@ -10,7 +10,7 @@
           class="title"
         >
           <h2>Bagian 1</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Pendaftaran</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Pendaftaran</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -266,7 +266,7 @@
         >
           <h2>Bagian 2</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Pengembalian Berkas, Verifikasi, dan Pengumuman Calon
+            &nbsp;:&nbsp; Pengembalian Berkas, Verifikasi, dan Pengumuman Calon
             Terpilih
           </h2>
           <span class="when-open">
@@ -331,7 +331,7 @@
           class="title"
         >
           <h2>Bagian 3</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Kampanye</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Kampanye</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -615,7 +615,7 @@
           class="title"
         >
           <h2>Bagian 4</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Debat dan Uji Publik</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Debat dan Uji Publik</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -732,7 +732,7 @@
           class="title"
         >
           <h2>Bagian 5</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Masa Reses</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Masa Reses</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -791,7 +791,7 @@
           class="title"
         >
           <h2>Bagian 6</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Pemungutan Suara</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Pemungutan Suara</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -843,7 +843,7 @@
           class="title"
         >
           <h2>Bagian 7</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Perhitungan Suara</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Perhitungan Suara</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -902,7 +902,7 @@
           class="title"
         >
           <h2>Bagian 8</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Pelanggaran</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Pelanggaran</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
