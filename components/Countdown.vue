@@ -1,11 +1,11 @@
 <template>
     <div v-if="loaded" class="page-content">
-        <div class="coming-soon">
+        <div v-if="!expired" class="coming-soon">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2>Countdown to Election Day</h2>
-                        <p>Pemungutan Suara akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
+                        <h2>Countdown</h2>
+                        <p>Pemungutan suara baru akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
                         <div class="timer">
                             <div class="days-wrapper">
                                 <span class="days">{{displayDays}}</span> <br>days
@@ -20,8 +20,29 @@
                                 <span class="seconds">{{displaySeconds}}</span> <br>seconds
                             </div>
                         </div>
-                        <div class="infocalon">
-                            <a href="/info" class="btn btn-primary btn-lg">Lihat Informasi CaKahim dan CaSenat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-else class="coming-soon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Voting Sekarang!</h2>
+                        <p>Pemungutan suara telah dimulai. Login untuk menggunakan hak suara Anda!</p>
+                        <div class="timer">
+                            <div class="days-wrapper">
+                                <span class="days">{{displayDays}}</span> <br>days
+                            </div>
+                            <div class="hours-wrapper">
+                                <span class="hours">{{displayHours}}</span> <br>hours
+                            </div>
+                            <div class="minutes-wrapper">
+                                <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                            </div>
+                            <div class="seconds-wrapper">
+                                <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,6 +59,7 @@ export default {
         displayMinutes:0,
         displaySeconds:0,
         loaded :false,
+        expired : false,
     }),
     computed: {
         _seconds : () => 1000,
@@ -66,6 +88,8 @@ export default {
                 if(distance<=0){
                     clearInterval(timer);
                     this.$emit('start-vote');
+                    this.expired = true;
+                    this.loaded = true;
                     return
                 }
 
@@ -85,6 +109,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .page-content{
+        margin-top : 0px;
+    }
+
 	.coming-soon {
     margin: 0 auto;
     text-align: center;
@@ -130,7 +158,7 @@ export default {
     .timer .hours-wrapper:hover,
     .timer .minutes-wrapper:hover,
     .timer .seconds-wrapper:hover {
-        background: #e45642;
+        background: #ffc801 ;
         text-shadow: none;
     }
 
