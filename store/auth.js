@@ -1,10 +1,12 @@
 export const state = () => ({
   email: null,
-  uid: null
+  uid: null,
+  loading: true
 });
 
 export const mutations = {
   ON_AUTH_STATE_CHANGED_MUTATION: (state, { authUser, claims }) => {
+    state.loading = false;
     function login({ email, uid }) {
       state.email = email;
       state.uid = uid;

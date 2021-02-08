@@ -1,7 +1,10 @@
 <template>
   <div>
     <!-- Main Content -->
-    <div class="page-content">
+    <div v-if="loading">
+      Loading...
+    </div>
+    <div class="page-content" v-if="!loading">
       <!-- Alert Component if login -->
       <AlertNimComponent />
 
@@ -61,7 +64,7 @@
                       <p>Hearing-2</p>
                     </div>
                     <div class="timeline-time">
-                      <p>15 Feb 2021 </p>
+                      <p>15 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -75,7 +78,7 @@
                       <p>Hearing-3</p>
                     </div>
                     <div class="timeline-time">
-                      <p> 18 Feb 2021</p>
+                      <p>18 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +92,7 @@
                       <p>Debat</p>
                     </div>
                     <div class="timeline-time">
-                      <p>22 Feb 2021 </p>
+                      <p>22 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -103,7 +106,7 @@
                       <p>Masa Tenang</p>
                     </div>
                     <div class="timeline-time">
-                      <p> 23-25 Feb 2021</p>
+                      <p>23-25 Feb 2021</p>
                     </div>
                   </div>
                 </div>
@@ -117,7 +120,7 @@
                       <p>Pemungutan Suara</p>
                     </div>
                     <div class="timeline-time">
-                      <p>26 Feb - 1 Mar 2021 </p>
+                      <p>26 Feb - 1 Mar 2021</p>
                     </div>
                   </div>
                 </div>
@@ -131,7 +134,7 @@
                       <p>Penghitungan Suara</p>
                     </div>
                     <div class="timeline-time">
-                      <p> 2 Mar 2021</p>
+                      <p>2 Mar 2021</p>
                     </div>
                   </div>
                 </div>
@@ -167,8 +170,9 @@ export default {
     AlertNimComponent
   },
   computed: {
-    email() {
-      return this.$store.state.auth.email;
+    loading() {
+      console.log(this.$store.state.auth.loading);
+      return this.$store.state.auth.loading;
     }
   }
 };

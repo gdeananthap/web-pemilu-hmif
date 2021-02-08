@@ -36,7 +36,6 @@ class Voter {
         });
       });
     } catch (err) {
-      console.log("transaction failed");
       throw {
         name: "Voting error",
         message: "Something bad happened while voting"

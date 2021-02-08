@@ -9,7 +9,8 @@
                 Halo, {{ email }}
               </p>
               <p class="my-auto alert-message" v-else>
-                Anda belum login, silahkan login di kanan atas
+                Anda belum login, silahkan login dengan menakan tombol di pojok
+                kanan atas
               </p>
             </div>
             <div class="col-2 ml-auto">
