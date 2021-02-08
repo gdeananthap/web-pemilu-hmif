@@ -24,6 +24,12 @@
           <b-button v-on:click="vote(18218005)">vote</b-button>
         </b-card-body>
       </b-card>
+      <b-card>
+        <b-card-body>
+          Kotak kosong
+          <b-button v-on:click="vote('kosong')">vote</b-button>
+        </b-card-body>
+      </b-card>
     </div>
   </div>
 </template>
@@ -39,7 +45,7 @@ export default {
   },
   methods: {
     async vote(nim) {
-      const validNims = (await this.$axios.$get("/api/vote/candidates")).data;
+      const validNims = ["13518042", "18218005", "kosong"];
       const idToken = await this.$fire.auth.currentUser.getIdToken(true);
       this.$axios.setHeader("idtoken", idToken);
       if (!validNims.find(validNim => validNim == nim)) {

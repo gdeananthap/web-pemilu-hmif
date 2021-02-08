@@ -17,7 +17,7 @@ const {
 const { authMiddleware } = require("../middleware/auth");
 
 // too lazy to seperate this to a file
-const candidates = ["13518042", "18218005"]; // bagas, alim
+const candidates = ["13518042", "18218005", "kosong"]; // bagas, alim
 
 // get all candidates
 router.get("/candidates", (req, res, next) => {
