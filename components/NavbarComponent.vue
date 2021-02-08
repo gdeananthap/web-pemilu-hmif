@@ -25,9 +25,6 @@
             <b-nav-item to="/vote" class="my-auto" active-class="active"> 
               Vote
             </b-nav-item>
-            <b-nav-item to="/" class="my-auto">
-              <b-button block variant="success" class="px-3 text-white" size="md">Login</b-button>
-            </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>

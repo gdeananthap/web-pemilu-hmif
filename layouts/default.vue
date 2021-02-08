@@ -49,7 +49,7 @@ html {
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
-    Roboto,
+    Poppins,
     'Helvetica Neue',
     Arial,
     sans-serif;

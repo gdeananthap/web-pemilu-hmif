@@ -1,5 +1,5 @@
 <template>
-    <div v-if="loaded" class="page-content">
+    <div class="page-content">
         <div v-if="!expired" class="coming-soon">
             <div class="container">
                 <div class="row">
@@ -8,16 +8,24 @@
                         <p>Pemungutan suara baru akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
                         <div class="timer">
                             <div class="days-wrapper">
-                                <span class="days">{{displayDays}}</span> <br>days
+                                <div v-if="loaded">
+                                    <span class="days">{{displayDays}}</span> <br>days
+                                </div>
                             </div>
                             <div class="hours-wrapper">
-                                <span class="hours">{{displayHours}}</span> <br>hours
+                                <div v-if="loaded">
+                                    <span class="hours">{{displayHours}}</span> <br>hours
+                                </div>
                             </div>
                             <div class="minutes-wrapper">
-                                <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                                <div v-if="loaded">
+                                    <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                                </div>
                             </div>
                             <div class="seconds-wrapper">
-                                <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                               <div v-if="loaded">
+                                    <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                                </div>
                             </div>
                         </div>
                     </div>

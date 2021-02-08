@@ -224,14 +224,14 @@ export default {
 <style lang="scss" scoped>
     .col-lg-8{
         margin:auto;
-        font-family : Roboto, sans-serif;   
+        font-family : Poppins, sans-serif;   
         button{
             background: #f7f7f7;
             color: black;
             font-size: 18px;
         }
         .btn{
-            text-align: justify;
+            text-align: left;
         }
         .btn-info{
             border-color: #f7f7f7;
@@ -276,7 +276,7 @@ export default {
         margin: 0 auto;
         display: flex;
         justify-content: center;
-        font-family: Roboto, sans-serif;
+        font-family: Poppins, sans-serif;
 
         button {
             padding: 5px 10px;

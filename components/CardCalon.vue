@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
     text-align: center;
 }
@@ -116,12 +116,12 @@ img {
 }
 .nama-calon {
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin-top: 0px;

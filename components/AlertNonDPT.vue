@@ -42,7 +42,7 @@ export default {
     margin-bottom: 0px;
     .alert-message-nondpt {
       font-size: 36;
-      font-family: Roboto;
+      font-family: Poppins;
     }
     .icon-cross {
         max-width: 40px;

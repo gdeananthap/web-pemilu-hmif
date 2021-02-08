@@ -1,6 +1,6 @@
 <template>
     <div class="page-content text-center">
-      	<h1>TATA CARA</h1>
+      	<h1>TATA CARA PEMILU</h1>
 		<div class="container">
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
@@ -421,7 +421,7 @@ export default {
 
 	/* Judul Utama */
 	h1{
-	    font-family: Roboto;
+	    font-family: Poppins;
 		font-size: 40px;
     	line-height: 44px;
     	font-weight: 700;
@@ -435,7 +435,7 @@ export default {
 	.title{
 		h2{
 			margin-top: 10px;
-	    	font-family: Roboto;
+	    	font-family: Poppins;
 	    	line-height: 20px;
 	    	text-align: left;
 			float: left;
@@ -450,7 +450,7 @@ export default {
 	@media only screen and (max-width: 1023px){
 		.title{
 			h2{
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 		.laptop{
@@ -460,7 +460,7 @@ export default {
 	@media only screen and (min-width: 1024px){
 		.title{
 			h2{
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 		.mobile{
@@ -470,7 +470,7 @@ export default {
 	@media only screen and (min-width: 1440px){
 		.title{
 			h2{
-				font-size: 24px;
+				font-size: 22px;
 			}
 		}
 		.mobile{
@@ -487,7 +487,7 @@ export default {
 			font-size: 20px;
 		}
 
-	    font-family: Roboto;
+	    font-family: Poppins;
 	    font-size: 16px;
 	    line-height: 32px;
 	    text-align: justify;

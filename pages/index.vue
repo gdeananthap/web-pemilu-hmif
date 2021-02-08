@@ -4,9 +4,6 @@
     <!-- Main Content -->
     <div class="page-content">
 
-      <!-- Alert Component if login -->
-        <AlertNimComponent/>
-
       <!-- Logo Besar Pemilu -->
       <section class="hero-pemilu">
         <b-container>
@@ -128,7 +125,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .hero-pemilu {
   .hero-logo {
       margin-top: 10px;
@@ -139,7 +136,7 @@ export default {
 	color: black !important;
 
 	.timeline-info {
-		font-size: 36px;
+		font-size: 32px;
 		line-height: 42px;
 
 		p {
@@ -273,7 +270,7 @@ export default {
 
 	/* The actual content */
 	.content-left {
-		font-family: Roboto;
+		font-family: Poppins;
 		padding: 5px 15px;
 		background-color: #44B4C2;
 		position: relative;
@@ -281,7 +278,7 @@ export default {
 	}
 
 	.content-right {
-		font-family: Roboto;
+		font-family: Poppins;
 		padding: 5px 15px;
 		background-color: #E45642;
 		position: relative;
@@ -321,11 +318,11 @@ export default {
 
 		.timeline-info {
 			padding-top: 4px;
-			font-size: 18px;
+			font-size: 15px;
 			line-height: 31px;
 		}
 		.timeline-time {
-			font-size: 18px;
+			font-size: 15px;
 			line-height: 31px;
 			padding-bottom: 4px;
 		}
