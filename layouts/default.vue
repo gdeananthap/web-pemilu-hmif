@@ -16,9 +16,6 @@ export default {
   components: {
     NavbarComponent,
     FooterComponent
-  },
-  created() {
-    console.log(this.$route.fullPath);
   }
 };
 </script>

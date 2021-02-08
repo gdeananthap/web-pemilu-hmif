@@ -18,7 +18,6 @@ export const mutations = {
 
     if (!!authUser) {
       const { email, uid } = authUser;
-      console.log("user uid is: " + uid);
       login({ email, uid });
     } else {
       logout();

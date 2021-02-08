@@ -171,7 +171,6 @@ export default {
   },
   computed: {
     loading() {
-      console.log(this.$store.state.auth.loading);
       return this.$store.state.auth.loading;
     }
   }

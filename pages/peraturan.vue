@@ -10,7 +10,7 @@
           class="title"
         >
           <h2>Bagian 1</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Definisi dan Penjelasan Umum</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Definisi dan Penjelasan Umum</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -75,7 +75,7 @@
         >
           <h2>Bagian 2</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Definisi Pemilihan Umum (Pemilu) HMIF ITB
+            &nbsp;:&nbsp; Definisi Pemilihan Umum (Pemilu) HMIF ITB
           </h2>
           <span class="when-open">
             <img
@@ -138,7 +138,7 @@
         >
           <h2>Bagian 3</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Prasyarat untuk menjadi calon ketua HMIF
+            &nbsp;:&nbsp; Prasyarat untuk menjadi calon ketua HMIF
           </h2>
           <span class="when-open">
             <img
@@ -221,7 +221,7 @@
         >
           <h2>Bagian 4</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Prasyarat untuk menjadi calon senator HMIF
+            &nbsp;:&nbsp; Prasyarat untuk menjadi calon senator HMIF
           </h2>
           <span class="when-open">
             <img
@@ -306,7 +306,7 @@
         >
           <h2>Bagian 5</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Ketentuan untuk menjadi promotor calon ketua HMIF atau
+            &nbsp;:&nbsp; Ketentuan untuk menjadi promotor calon ketua HMIF atau
             calon senator HMIF
           </h2>
           <span class="when-open">
@@ -354,7 +354,7 @@
         >
           <h2>Bagian 6</h2>
           <h2 class="laptop">
-            &nbsp;&nbsp; Ketentuan untuk menjadi tim sukses calon ketua HMIF
+            &nbsp;:&nbsp; Ketentuan untuk menjadi tim sukses calon ketua HMIF
             atau calon senator HMIF
           </h2>
           <span class="when-open">
@@ -401,7 +401,7 @@
           class="title"
         >
           <h2>Bagian 7</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Ketentuan Daftar Pemilih Tetap</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Ketentuan Daftar Pemilih Tetap</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -464,7 +464,7 @@
           class="title"
         >
           <h2>Bagian 8</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Rangkaian Acara</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Rangkaian Acara</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
@@ -614,7 +614,7 @@
           class="title"
         >
           <h2>Bagian 9</h2>
-          <h2 class="laptop">&nbsp;&nbsp; Aturan Tambahan</h2>
+          <h2 class="laptop">&nbsp;:&nbsp; Aturan Tambahan</h2>
           <span class="when-open">
             <img
               src="@/public/images/icon-triangle-down.png"
