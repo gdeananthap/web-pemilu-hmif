@@ -36,7 +36,7 @@
                         <b-card-body>
                         <b-card-text>
                             Sebelum Anda menetapkan pilihan Anda pada salah satu calon, pastikan anda telah mengetahui 
-                            dan memahami nama, visi, dan misi dari <a href="/calon">setiap calon.</a>
+                            dan memahami nama, visi, dan misi dari <a href="/info">setiap calon.</a>
                         </b-card-text>
                         </b-card-body>
                     </b-collapse>
