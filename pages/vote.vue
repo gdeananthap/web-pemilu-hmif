@@ -126,7 +126,7 @@
                                     </div>
                                     <img src="bagas.webp" alt="">
                                     <div class="nama-calon">
-                                        <h4>Bagas Setya Wicaksono</h4>
+                                        <h4>Bagas Setyo Wicaksono</h4>
                                     </div>
                                     <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
                                 </div>
