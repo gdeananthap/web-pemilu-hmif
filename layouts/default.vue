@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="allscreen">
     <NavbarComponent />
     <div class="wrapss">
       <Nuxt />
@@ -24,8 +24,12 @@ export default {
 </script>
 
 <style lang="scss">
+.allscreen{
+  background-image: url('~@/assets/BGWebE.jpg');
+}
 .wrapss{
-  min-height: calc(75vh - 70px);
+  min-height: calc(100vh - 70px);
+
 }
 @media (max-width: 768px) {
   html,
@@ -40,7 +44,7 @@ body {
 }
 
 .page-content {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 html {
@@ -60,6 +64,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  
 }
 
 *,

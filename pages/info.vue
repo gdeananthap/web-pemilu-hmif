@@ -1,6 +1,7 @@
 <template>
     <div class="main-container" id="cakahim">
-        <div class="content-cakahim">
+        <div class="container">
+          <div class="content-cakahim">
             <card-calon 
                 v-for="(calon, id) in cakahim" 
                 :key="'cakahim' + id" 
@@ -13,6 +14,7 @@
                 :misi="calon.misi"
                 :organogram="calon.organogram"
             />
+          </div>
         </div>
     </div>
 </template>

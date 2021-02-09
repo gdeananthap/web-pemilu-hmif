@@ -9,7 +9,7 @@
         <b-container>
           <b-row class="text-center">
             <b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
-              <img src="@/public/images/hero-pemilu.jpg" class="image-hero" alt="">
+              <img src="@/public/images/hero-pemilu.png" class="image-hero" alt="">
             </b-col>
           </b-row>
         </b-container>
@@ -186,7 +186,7 @@ export default {
 		bottom: 0;
 		left: 50%;
 		margin-left: -3px;
-		z-index: -1;
+		z-index: 0;
 	}
 
 	/* Container around content */
@@ -195,6 +195,7 @@ export default {
 		position: relative;
 		background-color: inherit;
 		width: 50%;
+		z-index: 1;
 	}
 
 	.container-left {
@@ -202,6 +203,8 @@ export default {
 		position: relative;
 		background-color: inherit;
 		width: 50%;
+		z-index: 1;
+
 	}
 
 	/* The circles on the timeline */

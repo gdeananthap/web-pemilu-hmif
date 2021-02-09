@@ -14,7 +14,7 @@
                 <div class="accordion" role="tablist">
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-1 variant="info">1. Pahami peraturan dan tata cara Pemilu HMIF 2021</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-1 variant="info">1. Pahami peraturan dan tata cara Pemilu HMIF 2021</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -30,7 +30,7 @@
 
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-2 variant="info">2. Kenali calon Ketua Himpunan Mahasiswa Informatika ITB 2021</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-2 variant="info">2. Kenali calon Ketua Himpunan Mahasiswa Informatika ITB 2021</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -44,7 +44,7 @@
 
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-3 variant="info">3. Tunggu waktu pemungutan suara dimulai</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-3 variant="info">3. Tunggu waktu pemungutan suara dimulai</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -57,7 +57,7 @@
                     </b-card>
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-4 variant="info">4. Login untuk menggunakan hak suara Anda</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-4 variant="info">4. Login untuk menggunakan hak suara Anda</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -70,7 +70,7 @@
                     </b-card>
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-5 variant="info">5. Buka surat suara dengan mengklik menu surat suara</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-5 variant="info">5. Buka surat suara dengan mengklik menu surat suara</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -83,7 +83,7 @@
                     </b-card>
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button block v-b-toggle.accordion-6 variant="info">6. Pilih calon Ketua HMIF 2021/2020 pilihan Anda!</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-6 variant="info">6. Pilih calon Ketua HMIF 2021/2020 pilihan Anda!</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -222,24 +222,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .p-1 {
+        padding: 0rem !important;
+    }
+
+    .tatacara{
+        padding-top : 40px;
+    }
+    .suratsuara{
+        padding-top: 40px;
+    }
+
     .col-lg-8{
         margin:auto;
-        font-family : Poppins, sans-serif;   
+        font-family : Poppins, sans-serif;
+       
         button{
-            background: #f7f7f7;
+            background-color : #ffc801;   
             color: black;
             font-size: 18px;
         }
         .btn{
             text-align: left;
         }
+        .btn:focus{
+            outline : none !important;
+        }
         .btn-info{
-            border-color: #f7f7f7;
+            background-color : #ffc801;
+            border-color:#ffc801;   
         }
         .btn-info:hover{
-            border-color: #f7f7f7;
+            background-color : #ffc801;   
         }
-
+       
+        .btn-outline-info:hover{
+            background-color : transparent;   
+        }
+        .btn-outline-info:focus{
+            border-color : transparent;   
+        }
         .btn-block{
             display: flex;
         }
@@ -247,13 +270,15 @@ export default {
 
         .card{
             border:0px;
+            background-color:transparent;
         }
         .card-header{
-            background-color: #f7f7f7;
-            border-bottom: 1px solid rgba(0,0,0,.125);
+            background-color: transparent;
+            border-bottom : 0px;
         }
 
         .card-body{
+            margin-top:5px;
             background-color: #fff;
         }
 
@@ -265,7 +290,6 @@ export default {
         .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show>.btn-info.dropdown-toggle {
             color: black !important;
             background-color: #f7f7f7;
-            border-color: #f7f7f7;
             box-shadow: 0 0 0 0;
 }
     

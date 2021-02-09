@@ -8,7 +8,7 @@
         <b-container>
           <b-row class="justify-content-center">
             <b-col cols="12" class="text-center hero-logo d-none d-sm-block">
-              <img src="@/public/images/hero-pemilu.jpg" style="max-width: 400px;" >
+              <img src="@/public/images/hero-pemilu.png" style="max-width: 400px;" >
             </b-col>
             <b-col cols="12" class="my-2 text-center text-salah">
               <p>Mau kemana? :(</p>

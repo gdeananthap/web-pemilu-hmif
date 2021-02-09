@@ -304,6 +304,7 @@ export default {
     	text-transform: uppercase;
 	    text-align: center;
 		padding-bottom: 20px;
+		padding-top:40px;
 		
 	}
 
@@ -388,6 +389,7 @@ export default {
 	.btn-outline-warning{
 		color: #ffc801;
 		border-color: #ffc801;
+		background-color: #ffc801;
 	}
 
 	.btn-outline-warning:hover{

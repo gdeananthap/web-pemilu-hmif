@@ -131,19 +131,16 @@ export default {
         line-height: 44px;
         font-weight: 700;
         text-transform: uppercase;
-        text-shadow: 0 1px 7px rgba(0,0,0,.2);
     }
 
     .coming-soon p {
         margin-top: 20px;
         font-size: 18px;
         line-height: 36px;
-        text-shadow: 0 1px 7px rgba(0,0,0,.2);
     }
 
     .timer {
         margin-top: 40px;
-        text-shadow: 0 1px 5px rgba(0,0,0,.1);
         margin-bottom : 40px;
     }
 
@@ -156,18 +153,10 @@ export default {
         height: 160px;
         margin: 0 10px;
         padding-top: 20px;
-        background: #C4C4C4;
+        background: #ffc801;
         font-size: 18px;
         line-height: 22px;
         -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
-    }
-
-    .timer .days-wrapper:hover,
-    .timer .hours-wrapper:hover,
-    .timer .minutes-wrapper:hover,
-    .timer .seconds-wrapper:hover {
-        background: #ffc801 ;
-        text-shadow: none;
     }
 
     .timer .days,
