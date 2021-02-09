@@ -5,13 +5,8 @@
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
 					<h2>Bagian 1</h2>
-					<h2 class="laptop">&nbsp:&nbsp Pendaftaran</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Pendaftaran</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
@@ -85,13 +80,8 @@
 
         		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
 					<h2>Bagian 2</h2> 
-					<h2 class="laptop">&nbsp:&nbsp Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
@@ -114,13 +104,8 @@
 
         	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
 					<h2>Bagian 3</h2>
-					<h2 class="laptop">&nbsp:&nbsp Kampanye</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>	
+					<h2 class="laptop">&nbsp;:&nbsp; Kampanye</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">	
 				</b-button>
         	    
         	    <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
@@ -195,13 +180,8 @@
 
         	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
 					<h2>Bagian 4</h2>
-					<h2 class="laptop">&nbsp:&nbsp Debat dan Uji Publik</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Debat dan Uji Publik</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
 				
         	    <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
@@ -238,13 +218,8 @@
 
         	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
 					<h2>Bagian 5</h2>
-					<h2 class="laptop">&nbsp:&nbsp Masa Reses</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Masa Reses</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
@@ -266,13 +241,8 @@
         	    
         	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
 					<h2>Bagian 6</h2>
-					<h2 class="laptop">&nbsp:&nbsp Pemungutan Suara</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Pemungutan Suara</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
@@ -295,13 +265,8 @@
 
         	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
 					<h2>Bagian 7</h2>
-					<h2 class="laptop">&nbsp:&nbsp Perhitungan Suara</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Perhitungan Suara</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    	
         	    <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
@@ -326,13 +291,8 @@
 
         	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
 					<h2>Bagian 8</h2>
-					<h2 class="laptop">&nbsp:&nbsp Pelanggaran</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Pelanggaran</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	     	
         	    <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
@@ -501,9 +461,11 @@ export default {
 	}
 
 	/* Animation */
-	.collapsed > .when-open,
-	.not-collapsed > .when-closed {
-  		display: none;
+	.accordion .icon-triangle{
+		transition: .3s transform ease-in-out;
+	}
+	.accordion .not-collapsed .icon-triangle{
+		transform: rotate(90deg);
 	}
 
 	/* Theme color */
