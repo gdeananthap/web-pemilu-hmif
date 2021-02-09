@@ -31,7 +31,6 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .hero-pemilu {
   .hero-logo {
       margin-top: 0px;
@@ -40,6 +39,11 @@
 .text-salah{
   font-size: 40px;
 }
+
+.btn-warning{
+  font-family: Poppins;
+}
+
 @media screen and (max-width: 500px) {
   .text-salah{
     font-size: 22px !important;

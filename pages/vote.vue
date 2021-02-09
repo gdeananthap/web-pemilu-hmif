@@ -124,19 +124,7 @@
                                     <div class="nomor-calon">
                                         <h2>01</h2>
                                     </div>
-                                    <img src="@/public/images/1.png" alt="">
-                                    <div class="nama-calon">
-                                        <h4>Naufal Alim Wahib</h4>
-                                    </div>
-                                    <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="calon">
-                                    <div class="nomor-calon">
-                                        <h2>02</h2>
-                                    </div>
-                                    <img src="@/public/images/1.png" alt="">
+                                    <img src="bagas.webp" alt="">
                                     <div class="nama-calon">
                                         <h4>Bagas Setya Wicaksono</h4>
                                     </div>
@@ -146,9 +134,21 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="calon">
                                     <div class="nomor-calon">
+                                        <h2>02</h2>
+                                    </div>
+                                    <img src="alim.webp" alt="">
+                                    <div class="nama-calon">
+                                        <h4>Naufal Alim Wahib</h4>
+                                    </div>
+                                    <a  class="btn btn-warning btn-lg" @click="(isVoted || isNonDPT)?showModal = false:showModal = true">VOTE</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="calon">
+                                    <div class="nomor-calon">
                                         <h2>03</h2>
                                     </div>
-                                    <img src="@/public/images/1.png" alt="">
+                                    <img src="kotak.png" alt="">
                                     <div class="nama-calon">
                                         <h4>Kotak Kosong</h4>
                                     </div>

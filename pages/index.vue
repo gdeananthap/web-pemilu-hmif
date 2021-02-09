@@ -19,7 +19,7 @@
       <section class="section-timeline">
         <b-container>
           <div class="timeline-word text-center" data-aos="zoom-in" data-aos-delay="200">
-            Timeline
+           TIMELINE
           </div>
           <b-row class="justify-content-center">
             <b-col cols="12" xl="10">
@@ -133,8 +133,6 @@ export default {
 }
 
 .section-timeline {
-	color: black !important;
-
 	.timeline-info {
 		font-size: 32px;
 		line-height: 42px;
@@ -158,9 +156,10 @@ export default {
 	.timeline-word {
 		margin-top: 40px;
 		margin-bottom: 20px;
-		font-weight: 300;
-		font-size: 54px;
+		font-weight: 700;
+		font-size: 40px;
 		line-height: 83px;
+		color: #212529;
 	}
 
 	/* The actual timeline (the vertical ruler) */

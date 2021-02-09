@@ -36,7 +36,7 @@ export default {
         },
         foto: {
             type: String,
-            default: "yena.jpg"
+            default: "kotak.png"
         },
         nama: {
             type: String,
@@ -55,7 +55,7 @@ export default {
             default: []
         },
         organogram: {
-            tyoe: String,
+            type: String,
             default: "organogram.jpg"
         }
     }
