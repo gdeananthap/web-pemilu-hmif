@@ -5,7 +5,7 @@
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
 					<h2>Bagian 1</h2>
-					<h2 class="laptop">&nbsp;:&nbsp; Definisi dan Penjelasan Umum </h2>
+					<h2 class="laptop">&nbsp; :&nbsp; Definisi dan Penjelasan Umum </h2>
 					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">					
 				</b-button>
         	    
