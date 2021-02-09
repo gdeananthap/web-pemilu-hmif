@@ -5,13 +5,8 @@
         	<div class="mx-auto w-100 accordion" role="tablist">
         	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
 					<h2>Bagian 1</h2>
-					<h2 class="laptop">&nbsp:&nbsp Definisi dan Penjelasan Umum </h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp; :&nbsp; Definisi dan Penjelasan Umum </h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">					
 				</b-button>
         	    
         	    <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
@@ -34,13 +29,8 @@
 
         		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
 					<h2>Bagian 2</h2> 
-					<h2 class="laptop">&nbsp:&nbsp Definisi Pemilihan Umum (Pemilu) HMIF ITB</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Definisi Pemilihan Umum (Pemilu) HMIF ITB</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
@@ -62,15 +52,10 @@
         	    </b-collapse>
         	    
 
-        	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
+        	    <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
 					<h2>Bagian 3</h2>
-					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon ketua HMIF</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>	
+					<h2 class="laptop">&nbsp;:&nbsp; Prasyarat untuk menjadi calon ketua HMIF</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
@@ -103,13 +88,8 @@
 
         	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
 					<h2>Bagian 4</h2>
-					<h2 class="laptop">&nbsp:&nbsp Prasyarat untuk menjadi calon senator HMIF</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Prasyarat untuk menjadi calon senator HMIF</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
 				
         	    <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
@@ -140,15 +120,10 @@
         	    </b-collapse>
         	    
 
-        	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
+        	    <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
 					<h2>Bagian 5</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi promotor calon ketua HMIF atau calon senator HMIF</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan untuk menjadi promotor calon ketua HMIF atau calon senator HMIF</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
@@ -174,13 +149,8 @@
         	    
         	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
 					<h2>Bagian 6</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan untuk menjadi tim sukses calon ketua HMIF atau calon senator HMIF</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan untuk menjadi tim sukses calon ketua HMIF atau calon senator HMIF</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    
         	    <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
@@ -206,13 +176,8 @@
 
         	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
 					<h2>Bagian 7</h2>
-					<h2 class="laptop">&nbsp:&nbsp Ketentuan Daftar Pemilih Tetap</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Ketentuan Daftar Pemilih Tetap</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    	
         	    <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
@@ -236,13 +201,8 @@
 
         	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
 					<h2>Bagian 8</h2>
-					<h2 class="laptop">&nbsp:&nbsp Rangkaian Acara</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Rangkaian Acara</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	     	
         	    <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
@@ -304,13 +264,8 @@
 
                 <b-button block v-b-toggle.accordion-9 variant="outline-warning" class="title">
 					<h2>Bagian 9</h2>
-					<h2 class="laptop">&nbsp:&nbsp Aturan Tambahan</h2>
-					<span class="when-open">
-						<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-					</span>
-					<span class="when-closed">
-						<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-					</span>
+					<h2 class="laptop">&nbsp;:&nbsp; Aturan Tambahan</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
 				</b-button>
         	    	
         	    <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
@@ -422,9 +377,11 @@ export default {
 	}
 
 	/* Animation */
-	.collapsed > .when-open,
-	.not-collapsed > .when-closed {
-  		display: none;
+	.accordion .icon-triangle{
+		transition: .3s transform ease-in-out;
+	}
+	.accordion .not-collapsed .icon-triangle{
+		transform: rotate(90deg);
 	}
 
 	/* Theme color */
