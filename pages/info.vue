@@ -62,7 +62,7 @@ html {
   scroll-behavior: smooth;
 }
 .main-container {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 .content-cakahim {

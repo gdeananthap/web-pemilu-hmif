@@ -83,7 +83,7 @@
                     </b-card>
                     <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
-                        <b-button class="shadow-none" block v-b-toggle.accordion-6 variant="info">6. Pilih calon Ketua HMIF 2021/2020 pilihan Anda!</b-button>
+                        <b-button class="shadow-none" block v-b-toggle.accordion-6 variant="info">6. Pilih calon Ketua HMIF 2021/2022 pilihan Anda!</b-button>
                     </b-card-header>
                     <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -250,8 +250,8 @@ export default {
             outline : none !important;
         }
         .btn-info{
-            background-color : #ffc801;
-            border-color:#ffc801;   
+            background-color : #ffc801 !important;
+            border-color:#ffc801 !important;   
         }
         .btn-info:hover{
             background-color : #ffc801;   
@@ -266,7 +266,9 @@ export default {
         .btn-block{
             display: flex;
         }
-
+        .btn-info[data-v-f9f00bbc]:not(:disabled):not(.disabled):active{
+            background-color: #ffc801;
+        }
 
         .card{
             border:0px;

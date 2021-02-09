@@ -129,15 +129,22 @@ export default {
 .hero-pemilu {
   .image-hero{
     max-width: 500px; 
-    margin-bottom:40px;
+    margin-bottom:50px;
+	margin-top: 60px;
+
+	@media screen and (max-width:768px){
+		max-width: 400px;
+
+	}
+
     @media screen and (max-width: 500px) {
-      max-width: 300px; 
-	  }
-  }
-  .hero-logo {
-      margin-top: 10px;
-  }
+      	max-width: 300px;		
+		margin-top: 100px;
+		margin-bottom : 100px;
+		} 
+	}
 }
+
 
 .section-timeline {
 	.timeline-info {
@@ -311,6 +318,7 @@ export default {
 
 	@media screen and (max-width: 500px) {
 
+		
 		.timeline-info {
 			padding-top: 4px;
 			font-size: 22px;
@@ -339,6 +347,7 @@ export default {
 
 	/* Media queries - Responsive timeline on screens less than 768px wide */
 	@media screen and (max-width: 768px) {
+		
 		.timeline-info {
 			text-align: left !important;
 		}
