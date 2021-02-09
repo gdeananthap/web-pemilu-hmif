@@ -8,8 +8,8 @@
       <section class="hero-pemilu">
         <b-container>
           <b-row class="text-center">
-            <b-col cols="12" class="text-center hero-logo d-none d-sm-block" data-aos="zoom-in">
-              <img src="@/public/images/hero-pemilu.jpg" style="max-width: 500px; margin-bottom:40px;" alt="">
+            <b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
+              <img src="@/public/images/hero-pemilu.jpg" class="image-hero" alt="">
             </b-col>
           </b-row>
         </b-container>
@@ -127,6 +127,13 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .hero-pemilu {
+  .image-hero{
+    max-width: 500px; 
+    margin-bottom:40px;
+    @media screen and (max-width: 500px) {
+      max-width: 300px; 
+	  }
+  }
   .hero-logo {
       margin-top: 10px;
   }
