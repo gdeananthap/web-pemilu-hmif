@@ -9,7 +9,7 @@
         <b-container>
           <b-row class="text-center">
             <b-col cols="12" class="text-center hero-logo d-none d-sm-block" data-aos="zoom-in">
-              <img src="@/public/images/hero-pemilu.jpg" style="max-width: 500px;" alt="">
+              <img src="@/public/images/hero-pemilu.jpg" style="max-width: 500px; margin-bottom:40px;" alt="">
             </b-col>
           </b-row>
         </b-container>
@@ -154,7 +154,7 @@ export default {
 	}
 
 	.timeline-word {
-		margin-top: 40px;
+		margin-top: 0px;
 		margin-bottom: 20px;
 		font-weight: 700;
 		font-size: 40px;
