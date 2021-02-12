@@ -3,22 +3,17 @@
       	<h1>TATA CARA</h1>
 		<div class="container">
         	<div class="mx-auto w-100 accordion" role="tablist">
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
-							<h2>Bagian I</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Pendaftaran</h2>
+        	    <b-button block v-b-toggle.accordion-1 variant="outline-warning" class="title">
+					<h2>Bagian 1</h2>
+					<h2 class="laptop">&nbsp; :&nbsp; Pendaftaran</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	    
+        	    <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Pendaftaran</h2>
 								<ol type="1">
 									<li>Pendaftaran calon ketua himpunan dan senator dilakukan secara daring.</li>
 									<li>Waktu dan <i>platform</i> pendaftaran akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
@@ -78,26 +73,22 @@
 									<li>Jumlah tim sukses yang terdaftar tidak boleh berkurang, kecuali atas permintaan dari calon itu sendiri, yang kemudian akan dipertimbangkan oleh Panitia Pemilu HMIF 2021.</li>
 								</ol>
 							  </b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
-							<h2>Bagian II</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>						
-        	          		<b-card-text class="text">
-								<h2>Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
+        		<b-button block v-b-toggle.accordion-2 variant="outline-warning" class="title">
+					<h2>Bagian 2</h2> 
+					<h2 class="laptop">&nbsp;:&nbsp; Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	    
+        	    <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+        	    	<b-card no-body class="mb-1">
+						<b-card-body>						
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Pengembalian Berkas, Verifikasi, dan Pengumuman Calon Terpilih</h2>
 								<ol type="1">
 									<li>Pengembalian berkas dilakukan secara daring.</li>
 									<li>Waktu dan <i>platform</i> pengembalian berkas akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021. Berkas dikembalikan oleh bakal calon ketua himpunan/bakal calon senator dan tidak dapat diwakilkan.</li>
@@ -106,26 +97,22 @@
 									<li>Waktu pengumuman calon terpilih akan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
-							<h2>Bagian III</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>	
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Kampanye</h2>
+        	       <b-button block v-b-toggle.accordion-3 variant="outline-warning" class="title">
+					<h2>Bagian 3</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Kampanye</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">	
+				</b-button>
+        	    
+        	    <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Kampanye</h2>
 								<ol type="1">
 									<li>Seluruh kegiatan kampanye dilakukan secara daring.</li>
 									<li>Kampanye dapat dilakukan sejak nama calon diumumkan hingga sebelum masa reses.</li>
@@ -186,26 +173,22 @@
 									<li>Tidak menutup kemungkinan adanya kampanye terfasilitasi yang lainnya. Hal ini akan diberitahukan lebih lanjut oleh Panitia Pemilu HMIF 2021.</li>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-				<b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
-							<h2>Bagian IV</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Debat dan Uji Publik</h2>
+        	    <b-button block v-b-toggle.accordion-4 variant="outline-warning" class="title">
+					<h2>Bagian 4</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Debat dan Uji Publik</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+				
+        	    <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
+        	    	<b-card no-body class="mb-1">
+						<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Debat dan Uji Publik</h2>
 								<ol type="1">
 									<li>Debat dan uji publik dilakukan secara daring.</li>
 									<li>Debat dan uji publik dilakukan sendiri oleh calon. Jika calon berhalangan hadir dengan alasan yang tidak dapat diterima Panitia Pemilu HMIF 2021, calon akan dikenakan pelanggaran berat. Bila calon tidak menghadiri debat dan uji publik dengan alasan yang dapat diterima Panitia Pemilu HMIF 2021, debat tetap dilaksanakan dengan tidak melibatkan calon yang berhalangan hadir.</li>
@@ -228,26 +211,22 @@
 									<li>Calon yang terlambat datang debat dan uji publik tanpa memberitahu panitia maksimal 1 jam sebelum waktu <i>hearing</i> akan dikenakan pelanggaran sedang.</li>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
-							<h2>Bagian V</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Masa Reses</h2>
+        	       <b-button block v-b-toggle.accordion-5 variant="outline-warning" class="title">
+					<h2>Bagian 5</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Masa Reses</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	    
+        	    <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Masa Reses</h2>
 								<ol type="1">
 									<li>Masa reses dilakukan 3 hari sebelum hari pemungutan suara dilaksanakan.</li>
 									<li>Pukul 00.01 pada masa reses dimulai, publikasi calon telah bersih.</li>
@@ -255,26 +234,22 @@
 									<li>Pada batas waktu tersebut, seluruh publikasi akan diperiksa oleh Panitia Pemilu HMIF 2021. Jika terdapat ketidak-bersihan, maka calon dikenakan pelanggaran sedang dan publikasi tersebut harus dibersihkan maksimal 1 jam setelah diberitahukan. Apabila masih tidak dipenuhi, calon akan dikenakan pelanggaran berat.</li>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
-							<h2>Bagian VI</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Pemungutan Suara</h2>
+        	    
+        	    <b-button block v-b-toggle.accordion-6 variant="outline-warning" class="title">
+					<h2>Bagian 6</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Pemungutan Suara</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	    
+        	    <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Pemungutan Suara</h2>
 								<ol type="1">
 									<li>Proses pemungutan suara dilakukan secara daring.</li>
 									<li>Waktu pemungutan suara akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
@@ -283,26 +258,22 @@
 									<li>Tata cara pemungutan suara secara rinci akan akan dijelaskan dan diumumkan lebih lanjut oleh Panitia Pemilu HMIF 2021.</li>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
-							<h2>Bagian VII</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Perhitungan Suara</h2>
+        	    <b-button block v-b-toggle.accordion-7 variant="outline-warning" class="title">
+					<h2>Bagian 7</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Perhitungan Suara</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	    	
+        	    <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Perhitungan Suara</h2>
 								<ol type="1">
 									<li>Waktu penghitungan suara akan ditentukan dan diumumkan oleh Panitia Pemilu HMIF 2021.</li>
 									<li>Tata cara penghitungan suara adalah sebagai berikut:</li>
@@ -313,26 +284,22 @@
 									</ol>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
 
-        	    <b-card no-body class="mb-1">
-        	      	<b-card-header header-tag="header" class="p-1" role="tab">
-        	        	<b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
-							<h2>Bagian VIII</h2>
-							<span class="when-open">
-								<img src="@/public/images/icon-triangle-down.png" class="icon-triangle">
-							</span>
-							<span class="when-closed">
-								<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
-							</span>
-						</b-button>
-        	      	</b-card-header>
-        	      	<b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
-        	        	<b-card-body>
-        	          		<b-card-text class="text">
-								<h2>Pelanggaran</h2>
+        	    <b-button block v-b-toggle.accordion-8 variant="outline-warning" class="title">
+					<h2>Bagian 8</h2>
+					<h2 class="laptop">&nbsp;:&nbsp; Pelanggaran</h2>
+					<img src="@/public/images/icon-triangle-right.png" class="icon-triangle">
+				</b-button>
+        	     	
+        	    <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
+					<b-card no-body class="mb-1">
+        	    		<b-card-body>
+        	      			<b-card-text class="text">
+								<h2 class="mobile">Pelanggaran</h2>
 								<ol type="1">
 									<li>Jenis Pelanggaran</li>
 									<ol type="a">
@@ -396,10 +363,10 @@
 									</ol>
 								</ol>
 							</b-card-text>
-        	        	</b-card-body>
-        	      	</b-collapse>
-        	    </b-card>
-
+        	    		</b-card-body>
+					</b-card>
+        	    </b-collapse>
+        	    
         	</div>
 		</div>
     </div>
@@ -410,7 +377,7 @@ export default {
 }
 
 </script>
-<style lang="scss" scooped>
+<style lang="scss" scoped>
 
 	/* Judul Utama */
 	h1{
@@ -421,6 +388,7 @@ export default {
     	text-transform: uppercase;
 	    text-align: center;
 		padding-bottom: 20px;
+		
 	}
 
 	/* Subjudul per Bab */
@@ -428,7 +396,6 @@ export default {
 		h2{
 			margin-top: 10px;
 	    	font-family: Roboto;
-	    	font-size: 24px;
 	    	line-height: 20px;
 	    	text-align: left;
 			float: left;
@@ -436,6 +403,39 @@ export default {
 		}	
 
 		border-radius: 1rem;
+		margin-bottom: 6px;
+	}
+
+	/* Responsive judul Bab */
+	@media only screen and (max-width: 1023px){
+		.title{
+			h2{
+				font-size: 20px;
+			}
+		}
+		.laptop{
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 1024px){
+		.title{
+			h2{
+				font-size: 20px;
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 1440px){
+		.title{
+			h2{
+				font-size: 24px;
+			}
+		}
+		.mobile{
+			display: none;
+		}
 	}
 
 	/* Isi Bab */
@@ -444,12 +444,12 @@ export default {
 			margin-top: 0;
 			margin-bottom: 10px;
 			text-align: left;
-			font-size: 24px;
+			font-size: 20px;
 		}
 
 	    font-family: Roboto;
 	    font-size: 16px;
-	    line-height: 24px;
+	    line-height: 32px;
 	    text-align: justify;
 	    color: #000000;
 	}
@@ -461,8 +461,21 @@ export default {
 	}
 
 	/* Animation */
-	.collapsed > .when-open,
-	.not-collapsed > .when-closed {
-  		display: none;
+	.accordion .icon-triangle{
+		transition: .3s transform ease-in-out;
+	}
+	.accordion .not-collapsed .icon-triangle{
+		transform: rotate(90deg);
+	}
+
+	/* Theme color */
+	.btn-outline-warning{
+		color: #ffc801;
+		border-color: #ffc801;
+	}
+
+	.btn-outline-warning:hover{
+		background-color: #ffc801;
+		border-color: #ffc801;
 	}
 </style>

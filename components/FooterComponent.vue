@@ -1,11 +1,11 @@
 <template>
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
             <p class="pt-4 pb-2">
-              2020 Copyright Pemilu HMIF. All Rights Reserved.
+              2021 Copyright Pemilu HMIF. All Rights Reserved.
             </p>
           </div>
         </div>
@@ -21,11 +21,11 @@ export default {
 
 <style lang="scss">
 footer {
-    margin-top: 50px;
-    border-top: 1px solid #e4e4e4;
+  margin-top: 50px;
+  border-top: 1px solid #e4e4e4;
 
-    p {
-        color: #979797;
-    }
+  p {
+    color: #979797;
+  }
 }
 </style>
