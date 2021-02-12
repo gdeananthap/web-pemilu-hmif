@@ -9,18 +9,18 @@
 </template>
 
 <script>
-import FooterComponent from '../components/FooterComponent'
-import NavbarComponent from '../components/NavbarComponent'
+import FooterComponent from "../components/FooterComponent";
+import NavbarComponent from "../components/NavbarComponent";
 export default {
-  name :"default-layout",
-  components : {
+  name: "default-layout",
+  components: {
     NavbarComponent,
     FooterComponent
   },
-  created (){
-    console.log(this.$route.fullPath)
+  created() {
+    console.log(this.$route.fullPath);
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -40,7 +40,7 @@ export default {
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .page-content {
