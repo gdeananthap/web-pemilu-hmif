@@ -11,9 +11,11 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@nuxtjs/firebase": "^7.4.1",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.2",
+    "firebase": "^8.2.5",
     "nuxt": "^2.14.12",
     "nuxt-fontawesome": "^0.4.0"
   },
