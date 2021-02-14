@@ -168,16 +168,15 @@ export default {
   .image-hero{
     max-width: 500px; 
     margin-bottom:50px;
-	margin-top: 60px;
+	margin-top: 30px;
 
 	@media screen and (max-width:768px){
-		max-width: 400px;
-
+		max-width: 450px;
 	}
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 450px) {
       	max-width: 300px;		
-		margin-top: 100px;
+		margin-top: 60px;
 		margin-bottom : 100px;
 		} 
 	}
