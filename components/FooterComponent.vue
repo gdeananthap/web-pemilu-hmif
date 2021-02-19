@@ -3,8 +3,8 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
-            <p class="pt-4 pb-2">
+          <div class="col-12 ">
+            <p class=" mt-2 text-center ">
               2021 Copyright Pemilu HMIF. All Rights Reserved.
             </p>
           </div>
@@ -22,10 +22,10 @@ export default {
 <style lang="scss">
 footer {
   margin-top: 50px;
-  border-top: 1px solid #e4e4e4;
-
+  background: #ffc801;
   p {
-    color: #979797;
+    color: #212529;
+    margin-bottom: 0.5rem;
   }
 }
 </style>

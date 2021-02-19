@@ -66,6 +66,8 @@ export default {
   }
 
   .nav-item {
+    overflow: hidden;
+    white-space: nowrap;
     .nav-link {
       font-size: 16px;
     }

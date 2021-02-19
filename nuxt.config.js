@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "web-pemilu",
+    title: "Pemilu HMIF 2021",
     htmlAttrs: {
       lang: "en"
     },
@@ -11,7 +11,7 @@ export default {
       { hid: "description", name: "description", content: "" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/png", href: "/navbar-logo-pemilu.png" }
       // { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" }
     ]
   },

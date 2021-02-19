@@ -12,14 +12,10 @@
       <section class="hero-pemilu">
         <b-container>
           <b-row class="text-center">
-            <b-col
-              cols="12"
-              class="text-center hero-logo d-none d-sm-block"
-              data-aos="zoom-in"
-            >
+            <b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
               <img
-                src="@/public/images/hero-pemilu.jpg"
-                style="max-width: 500px;"
+                src="@/public/images/hero-pemilu.png"
+                class="image-hero"
                 alt=""
               />
             </b-col>
@@ -35,7 +31,7 @@
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            Timeline
+            TIMELINE
           </div>
           <b-row class="justify-content-center">
             <b-col cols="12" xl="10">
@@ -178,18 +174,28 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .hero-pemilu {
-  .hero-logo {
-    margin-top: 10px;
+  .image-hero {
+    max-width: 500px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 450px;
+    }
+
+    @media screen and (max-width: 450px) {
+      max-width: 300px;
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
   }
 }
 
 .section-timeline {
-  color: black !important;
-
   .timeline-info {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 42px;
 
     p {
@@ -207,11 +213,12 @@ export default {
   }
 
   .timeline-word {
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 54px;
+    font-weight: 700;
+    font-size: 40px;
     line-height: 83px;
+    color: #212529;
   }
 
   /* The actual timeline (the vertical ruler) */
@@ -231,7 +238,7 @@ export default {
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-    z-index: -1;
+    z-index: 0;
   }
 
   /* Container around content */
@@ -240,6 +247,7 @@ export default {
     position: relative;
     background-color: inherit;
     width: 50%;
+    z-index: 1;
   }
 
   .container-left {
@@ -247,6 +255,7 @@ export default {
     position: relative;
     background-color: inherit;
     width: 50%;
+    z-index: 1;
   }
 
   /* The circles on the timeline */
@@ -321,7 +330,7 @@ export default {
 
   /* The actual content */
   .content-left {
-    font-family: Roboto;
+    font-family: Poppins;
     padding: 5px 15px;
     background-color: #44b4c2;
     position: relative;
@@ -329,7 +338,7 @@ export default {
   }
 
   .content-right {
-    font-family: Roboto;
+    font-family: Poppins;
     padding: 5px 15px;
     background-color: #e45642;
     position: relative;
@@ -365,11 +374,11 @@ export default {
   @media screen and (max-width: 400px) {
     .timeline-info {
       padding-top: 4px;
-      font-size: 18px;
+      font-size: 15px;
       line-height: 31px;
     }
     .timeline-time {
-      font-size: 18px;
+      font-size: 15px;
       line-height: 31px;
       padding-bottom: 4px;
     }

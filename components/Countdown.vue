@@ -1,27 +1,32 @@
 <template>
-    <div v-if="loaded" class="page-content">
+    <div class="page-content">
         <div v-if="!expired" class="coming-soon">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2>Countdown to Election Day</h2>
-                        <p>Pemungutan suara akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
+                        <h2>Countdown</h2>
+                        <p>Pemungutan suara baru akan dilakukan pada tanggal 26 Februari 2021 - 1 Maret 2021. Stay tuned!</p>
                         <div class="timer">
                             <div class="days-wrapper">
-                                <span class="days">{{displayDays}}</span> <br>days
+                                <div v-if="loaded">
+                                    <span class="days">{{displayDays}}</span> <br>days
+                                </div>
                             </div>
                             <div class="hours-wrapper">
-                                <span class="hours">{{displayHours}}</span> <br>hours
+                                <div v-if="loaded">
+                                    <span class="hours">{{displayHours}}</span> <br>hours
+                                </div>
                             </div>
                             <div class="minutes-wrapper">
-                                <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                                <div v-if="loaded">
+                                    <span class="minutes">{{displayMinutes}}</span> <br>minutes
+                                </div>
                             </div>
                             <div class="seconds-wrapper">
-                                <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                               <div v-if="loaded">
+                                    <span class="seconds">{{displaySeconds}}</span> <br>seconds
+                                </div>
                             </div>
-                        </div>
-                        <div class="infocalon">
-                            <NuxtLink to="/info" class="btn btn-primary btn-lg">Lihat Informasi CaKahim dan CaSenat</NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -31,7 +36,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2>Vote Now!</h2>
+                        <h2>Voting Sekarang!</h2>
                         <p>Pemungutan suara telah dimulai. Login untuk menggunakan hak suara Anda!</p>
                         <div class="timer">
                             <div class="days-wrapper">
@@ -112,6 +117,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .page-content{
+        margin-top : 0px;
+    }
+
 	.coming-soon {
     margin: 0 auto;
     text-align: center;
@@ -122,19 +131,16 @@ export default {
         line-height: 44px;
         font-weight: 700;
         text-transform: uppercase;
-        text-shadow: 0 1px 7px rgba(0,0,0,.2);
     }
 
     .coming-soon p {
         margin-top: 20px;
         font-size: 18px;
         line-height: 36px;
-        text-shadow: 0 1px 7px rgba(0,0,0,.2);
     }
 
     .timer {
         margin-top: 40px;
-        text-shadow: 0 1px 5px rgba(0,0,0,.1);
         margin-bottom : 40px;
     }
 
@@ -147,18 +153,10 @@ export default {
         height: 160px;
         margin: 0 10px;
         padding-top: 20px;
-        background: #C4C4C4;
+        background: #ffc801;
         font-size: 18px;
         line-height: 22px;
         -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
-    }
-
-    .timer .days-wrapper:hover,
-    .timer .hours-wrapper:hover,
-    .timer .minutes-wrapper:hover,
-    .timer .seconds-wrapper:hover {
-        background: #e45642;
-        text-shadow: none;
     }
 
     .timer .days,
