@@ -10,17 +10,21 @@
                     <div><span class="highlight">{{nama}}</span></div> 
                     <div class="jurusan-calon"> {{jurusan}} </div>
                 </div>
-                <div class="foto-calon"> <img :src="foto" alt=""></div>
-                <div class="top-content">
-                    <div class="info-calon">
-                        <div class="visimisi-calon">
-                            <div class="title">Visi</div>
-                            <div class="content visi-calon"> {{visi}} </div>
-                            <div class="title">Misi</div>
-                            <div v-for="(misi, id) in misi" :key="misi" class="content misi-calon">{{id+1}}. {{misi}} </div>
+                <div class="main-content">
+                    <div class="foto-calon"> <img :src="foto" alt=""></div>
+                    <div class="top-content">
+                        <div class="info-calon">
+                            <div class="visimisi-calon">
+                                <div class="title">Visi</div>
+                                <div class="content visi-calon"> {{visi}} </div>
+                                <div class="title">Misi</div>
+                                <div v-for="(misi, id) in misi" :key="misi" class="content misi-calon">{{id+1}}. {{misi}} </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="title">Organogram</div>
+                <div class="organogram"> <img :src="organogram" alt=""></div>
             </div>
         </div>
     </div>
@@ -64,10 +68,10 @@ export default {
 
 <style lang="css" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
+/* *{
     text-align: center;
-}
-.box-head, .box-body, .container-calon, .decoration {
+} */
+.box-head, .box-body, .container-calon, .decoration, .main-content {
     display: flex;
 }
 img {
@@ -75,7 +79,6 @@ img {
     border-radius: 10px;
 }
 .container-calon {
-    width: 78%;
     flex-direction: column;
 }
 .space {
@@ -92,6 +95,7 @@ img {
 .box-body {
     border: 3px solid #666666;
     border-radius: 0px 0px 10px 10px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -99,7 +103,7 @@ img {
 .foto-calon {
     flex-basis: 40%;
     max-width: 75%;
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: 20px;
 }
 .jurusan-calon {
@@ -113,13 +117,16 @@ img {
     padding: 5px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 .nama-calon {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
 }
-
+.info-calon {
+    padding: 0 40px;
+}
 .title {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -140,8 +147,23 @@ img {
     }
 }
 @media only screen and (max-width: 425px) {
+    * {
+        text-align: center;
+    }
     .status-calon {
         font-size: 16px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .title {
+        margin-top: 30px;
+    }
+    .foto-calon{
+        margin: auto;
+    }
+    .info-calon {
+        padding: 0;
     }
 }
 </style>

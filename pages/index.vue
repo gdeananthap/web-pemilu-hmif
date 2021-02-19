@@ -1,8 +1,9 @@
 <template>
   <div>
-
     <!-- Main Content -->
     <div class="page-content">
+      <!-- Alert Component if login
+      <AlertNimComponent /> -->
 
       <!-- Logo Besar Pemilu -->
       <section class="hero-pemilu">
@@ -24,7 +25,11 @@
           <b-row class="justify-content-center">
             <b-col cols="12" xl="10">
               <div class="timeline">
-                <div class="container-left left" data-aos="fade-right" data-aos-delay="300">
+                <div
+                  class="container-left left"
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                >
                   <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Hearing-1</p>
@@ -34,7 +39,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-right right" data-aos="fade-left" data-aos-delay="400">
+                <div
+                  class="container-right right"
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                >
                   <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Hearing-2</p>
@@ -44,7 +53,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-left left" data-aos="fade-right" data-aos-delay="500">
+                <div
+                  class="container-left left"
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                >
                   <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Hearing-3</p>
@@ -54,7 +67,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-right right" data-aos="fade-left" data-aos-delay="600">
+                <div
+                  class="container-right right"
+                  data-aos="fade-left"
+                  data-aos-delay="600"
+                >
                   <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Debat</p>
@@ -64,7 +81,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-left left" data-aos="fade-right" data-aos-delay="700">
+                <div
+                  class="container-left left"
+                  data-aos="fade-right"
+                  data-aos-delay="700"
+                >
                   <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Masa Tenang</p>
@@ -74,7 +95,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-right right" data-aos="fade-left" data-aos-delay="800">
+                <div
+                  class="container-right right"
+                  data-aos="fade-left"
+                  data-aos-delay="800"
+                >
                   <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Pemungutan Suara</p>
@@ -84,7 +109,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-left left" data-aos="fade-right" data-aos-delay="900">
+                <div
+                  class="container-left left"
+                  data-aos="fade-right"
+                  data-aos-delay="900"
+                >
                   <div class="content-right text-left">
                     <div class="timeline-info">
                       <p>Penghitungan Suara</p>
@@ -94,7 +123,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="container-right right" data-aos="fade-left" data-aos-delay="1000">
+                <div
+                  class="container-right right"
+                  data-aos="fade-left"
+                  data-aos-delay="1000"
+                >
                   <div class="content-left text-right">
                     <div class="timeline-info">
                       <p>Pengumuman</p>
@@ -114,14 +147,19 @@
 </template>
 
 <script>
-import AlertNimComponent from '../components/AlertNimComponent'
+import AlertNimComponent from "../components/AlertNimComponent";
 
 export default {
-  name : "landing-page",
-  components : {
+  name: "landing-page",
+  components: {
     AlertNimComponent
+  },
+  computed: {
+    email() {
+      return this.$store.state.auth.email;
+    }
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -130,16 +168,15 @@ export default {
   .image-hero{
     max-width: 500px; 
     margin-bottom:50px;
-	margin-top: 60px;
+	margin-top: 30px;
 
 	@media screen and (max-width:768px){
-		max-width: 400px;
-
+		max-width: 450px;
 	}
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 450px) {
       	max-width: 300px;		
-		margin-top: 100px;
+		margin-top: 60px;
 		margin-bottom : 100px;
 		} 
 	}
