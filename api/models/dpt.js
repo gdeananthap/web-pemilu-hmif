@@ -8,10 +8,10 @@ class Dpt {
 
   async getDpt(nim) {
     const docRef = this.dpt.doc(nim.toString());
-    if (!docRef) {
+    const doc = await docRef.get();
+    if (!doc.data()) {
       return false;
     }
-    const doc = await docRef.get();
     return doc.data();
   }
 

@@ -17,6 +17,14 @@ async function adminMiddleware(req, res, next) {
 }
 
 async function authMiddleware(req, res, next) {
+  if (!req.headers.idtoken) {
+    res.status(400).send(
+      createFailureMessage({
+        message: "No id token detected"
+      })
+    );
+    return;
+  }
   const claims = await getClaims(req.headers.idtoken);
 
   if (!claims) {

@@ -1,7 +1,7 @@
 const express = require("express");
-const { adminMiddleware } = require("../middleware/auth");
+const { adminMiddleware, authMiddleware } = require("../middleware/auth");
 const { Router } = express;
-
+const admin = require("firebase-admin");
 const router = Router();
 
 const Dpt = require("../models/dpt");
@@ -9,6 +9,7 @@ const {
   createSuccessMessage,
   createFailureMessage
 } = require("../utils/response-message");
+const dptMiddleware = require("../middleware/dptMiddleware");
 const dptDatabase = new Dpt();
 
 router.get("/", async (req, res, next) => {
@@ -24,6 +25,18 @@ router.get("/", async (req, res, next) => {
     );
   }
 });
+
+router.post(
+  "/isdpt",
+  [authMiddleware, dptMiddleware],
+  async (req, res, next) => {
+    res.send(
+      createSuccessMessage({
+        message: "You are a dpt"
+      })
+    );
+  }
+);
 
 // create, only "admin" user can do this
 router.post("/", adminMiddleware, async (req, res, next) => {
