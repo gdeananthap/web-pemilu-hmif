@@ -67,6 +67,7 @@ html {
 }
 .content-cakahim {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 @media only screen and (max-width: 768px) {

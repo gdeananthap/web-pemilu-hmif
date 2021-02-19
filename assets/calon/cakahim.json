@@ -4,11 +4,12 @@
             "status": "CAKAHIM - 01",
             "nama": "Bagas Setyo Wicaksono",
             "jurusan": "IF'18", 
-            "visi": "Menjadi Jembatan Karya dalam Kebersamaan",
+            "visi": "HMIF sebagai Katalisator Karya dalam Harmoni",
             "misi": ["Membangun rumah aspirasi dengan berlandaskan empati.", 
                     "Optimalisasi potensi warga HMIF berdasarkan minat dan bakat dari warganya", 
                     "Mengembangkan wadah untuk berkarya sebagai bentuk aktualisasi diri yang berasaskan profesionalitas."],
-            "foto": "bagas.webp"
+            "foto": "bagas.webp",
+            "organogram": "organorgram-bagas.webp"
         }
     ],
     "02": [
@@ -24,7 +25,8 @@
                 "Menumbuhkan rasa kepemilikan terhadap himpunan terhadap seluruh anggotanya", 
                 "Menciptakan karya sebagai bentuk aktualisasi diri dan kontribusi terhadap perkembangan Teknologi Informasi di dalam dan luar ITB"
             ],
-            "foto": "alim.webp"
+            "foto": "alim.webp",
+            "organogram": "organogram-alim.webp"
         }
     ]
 }
