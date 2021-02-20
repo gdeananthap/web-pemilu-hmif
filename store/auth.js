@@ -1,8 +1,11 @@
+import dpt from "@/assets/dpt.json";
+
 export const state = () => ({
   email: null,
   nim: null,
   uid: null,
-  loading: true
+  loading: true,
+  isdpt: null
 });
 
 export const mutations = {
@@ -11,7 +14,12 @@ export const mutations = {
     function login({ email, uid }) {
       state.email = email;
       state.uid = uid;
-      state.nim = email.split(".")[0];
+      state.nim = email.split("@")[0];
+      if (dpt.includes(state.nim)) {
+        state.isdpt = true;
+      } else {
+        state.isdpt = false;
+      }
     }
     function logout() {
       state.email = null;

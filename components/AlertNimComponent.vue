@@ -2,6 +2,19 @@
   <div class="container" :class="{ 'd-none': clicked }">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-8 col-md-6">
+        <div
+          class="alert alert-danger"
+          v-if="isdpt === false && email !== null"
+        >
+          Anda bukan seorang dpt
+        </div>
+        <div
+          class="alert alert-success-custom"
+          v-if="isdpt === true && email !== null"
+        >
+          Anda adalah seorang dpt
+        </div>
+
         <div class="alert alert-success-custom" role="alert">
           <div class="row">
             <div class="col-10 d-flex">
@@ -41,6 +54,9 @@ export default {
   computed: {
     email() {
       return this.$store.state.auth.email;
+    },
+    isdpt() {
+      return this.$store.state.auth.isdpt;
     }
   }
 };
@@ -48,29 +64,28 @@ export default {
 
 <style lang="scss">
 .alert-success-custom {
-    padding: 0.25rem 0.50rem;
-    color: white;
-    background-color: #44B4C2;
-    border-color: #44B4C2;
-    margin-bottom: 0px;
-    margin-top: 25px;
-    .alert-message {
-      font-size: 16px;
-      font-family: Poppins;
-      @media screen and (max-width: 400px) {
-        font-size: 12px;
-      }
-    }
-    .icon-cross {
-      padding: 0px !important;
-      max-width: 40px;
-		  cursor: pointer;
-    }
-    .col-icon {
-      @media screen and (max-width: 800px) {
-        padding: 0px !important;
-      }
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: #44b4c2;
+  border-color: #44b4c2;
+  margin-bottom: 0px;
+  margin-top: 25px;
+  .alert-message {
+    font-size: 16px;
+    font-family: Poppins;
+    @media screen and (max-width: 400px) {
+      font-size: 12px;
     }
   }
-  
+  .icon-cross {
+    padding: 0px !important;
+    max-width: 40px;
+    cursor: pointer;
+  }
+  .col-icon {
+    @media screen and (max-width: 800px) {
+      padding: 0px !important;
+    }
+  }
+}
 </style>

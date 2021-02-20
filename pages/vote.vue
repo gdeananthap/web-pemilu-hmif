@@ -332,21 +332,6 @@ export default {
     isLogin() {
       return !!this.$store.state.auth.email;
     }
-  },
-  mounted: function() {
-    const checkDptStatus = async () => {
-      const idToken = await this.$fire.auth.currentUser.getIdToken(true);
-      this.$axios.setHeader("idtoken", idToken);
-      try {
-        const data = await this.$axios.$post("/api/dpt/isdpt");
-        console.log(data);
-        this.isNonDPT = false;
-      } catch (err) {
-        console.log(err.message);
-        this.isNonDPT = true;
-      }
-    };
-    checkDptStatus();
   }
 };
 </script>
