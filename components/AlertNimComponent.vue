@@ -15,16 +15,18 @@
               <p v-if="isdpt === false">
                 Anda bukan seorang dpt
               </p>
-              <p
-                class="my-auto alert-message"
-                v-if="email !== null && isdpt === true"
-              >
-                Halo, {{ email }}, kamu merupakan dpt
-              </p>
-              <p class="my-auto alert-message" v-else>
-                Anda belum login, silahkan login dengan menakan tombol di pojok
-                kanan atas
-              </p>
+              <div v-else>
+                <p
+                  class="my-auto alert-message"
+                  v-if="email !== null && isdpt === true"
+                >
+                  Halo, {{ email }}, kamu merupakan dpt
+                </p>
+                <p class="my-auto alert-message" v-else>
+                  Anda belum login, silahkan login dengan menakan tombol di
+                  pojok kanan atas
+                </p>
+              </div>
             </div>
             <div class="col-2 col-icon">
               <a @click="changeComplete" class="d-block w-100"
