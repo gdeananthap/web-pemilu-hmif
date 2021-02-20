@@ -184,11 +184,8 @@
       <!-- user bukan dpt -->
       <AlertNonDPT v-if="isNonDPT && isLogin" />
 
-      <div v-if="isNonDPT == null">
-        <h2 class="text-center">Waiting dpt status...</h2>
-      </div>
       <!-- countdown telah selesai -->
-      <div v-if="isVotingStarted && isLogin && isNonDPT != null" class="vote">
+      <div v-if="isVotingStarted && isLogin && isDpt !== null" class="vote">
         <div class="calonKetua">
           <div class="container">
             <h2>Surat Suara Pemilihan Umum</h2>
@@ -312,7 +309,7 @@ import AlertNonDPT from "@/components/AlertNonDPT";
 
 export default {
   data: () => ({
-    isVotingStarted: true,
+    isVotingStarted: false,
     isVoted: false,
     isNonDPT: null,
     showModal: false,
@@ -331,6 +328,9 @@ export default {
   computed: {
     isLogin() {
       return !!this.$store.state.auth.email;
+    },
+    isDpt() {
+      return this.$store.state.auth.isdpt;
     }
   }
 };
