@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Pemilu HMIF 2021',
+    title: "Pemilu HMIF 2021",
     htmlAttrs: {
       lang: "en"
     },
@@ -11,7 +11,7 @@ export default {
       { hid: "description", name: "description", content: "" }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href:'/navbar-logo-pemilu.png'},
+      { rel: "icon", type: "image/png", href: "/navbar-logo-pemilu.png" }
       // { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" }
     ]
   },
@@ -28,10 +28,19 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
 
+  serverMiddleware: [
+    {
+      path: "/api",
+      handler: "~/api/index.js"
+    }
+  ],
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    "@nuxtjs/pwa",
     "bootstrap-vue/nuxt",
+    "@nuxtjs/axios", // for communicating with api
     [
       "nuxt-fontawesome",
       {

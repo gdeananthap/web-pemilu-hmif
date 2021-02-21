@@ -373,11 +373,19 @@
 </template>
 
 <script>
-export default {
-}
-
+export default {};
 </script>
 <style lang="scss" scoped>
+/* Judul Utama */
+h1 {
+  font-family: Roboto;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+}
 
 	/* Judul Utama */
 	h1{
@@ -403,9 +411,9 @@ export default {
 	    	color: #000000;
 		}	
 
-		border-radius: 1rem;
-		margin-bottom: 6px;
-	}
+  border-radius: 1rem;
+  margin-bottom: 6px;
+}
 
 	/* Responsive judul Bab */
 	@media only screen and (max-width: 1023px){
@@ -439,14 +447,14 @@ export default {
 		}
 	}
 
-	/* Isi Bab */
-	.text{
-		h2{
-			margin-top: 0;
-			margin-bottom: 10px;
-			text-align: left;
-			font-size: 20px;
-		}
+/* Isi Bab */
+.text {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+  }
 
 	    font-family: Poppins;
 	    font-size: 16px;
@@ -455,11 +463,11 @@ export default {
 	    color: #000000;
 	}
 
-	/* Icon triangle */
-	.icon-triangle{
-		width: 40px;
-		float: right;
-	}
+/* Icon triangle */
+.icon-triangle {
+  width: 40px;
+  float: right;
+}
 
 	/* Animation */
 	.accordion .icon-triangle{
@@ -476,8 +484,8 @@ export default {
 		border-color: #ffc801;
 	}
 
-	.btn-outline-warning:hover{
-		background-color: #ffc801;
-		border-color: #ffc801;
-	}
+.btn-outline-warning:hover {
+  background-color: #ffc801;
+  border-color: #ffc801;
+}
 </style>

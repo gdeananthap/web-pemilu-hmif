@@ -1,22 +1,13 @@
 <template>
   <b-nav-item to="/" class="my-auto">
     <b-button
-      v-if="loggedIn == false"
       block
-      variant="success"
+      :variant="loading ? 'secondary' : loggedIn ? 'danger' : 'success'"
       class="px-3 text-white"
       size="lg"
-      v-on:click="login()"
-      >Login</b-button
-    >
-    <b-button
-      v-else
-      block
-      variant="danger"
-      class="px-3 text-white"
-      size="lg"
-      v-on:click="logout()"
-      >Logout</b-button
+      :disabled="loading"
+      v-on:click="loggedIn ? logout() : login()"
+      >{{ loading ? "Loading..." : loggedIn ? "Logout" : "Login" }}</b-button
     >
   </b-nav-item>
 </template>
@@ -34,7 +25,7 @@ export default {
     login() {
       var provider = new this.$fireModule.auth.GoogleAuthProvider();
       provider.setCustomParameters({
-        'hd': 'std.stei.itb.ac.id'
+        hd: "std.stei.itb.ac.id"
       });
       this.$fire.auth
         .signInWithPopup(provider)
@@ -53,7 +44,6 @@ export default {
     async logout() {
       try {
         const res = await this.$fire.auth.signOut();
-        console.log("logged out successfully");
       } catch (err) {
         this.error = true;
       }
@@ -64,6 +54,11 @@ export default {
       const isLoggedIn = !!user;
       this.loggedIn = isLoggedIn;
     });
+  },
+  computed: {
+    loading() {
+      return this.$store.state.auth.loading;
+    }
   }
 };
 </script>
