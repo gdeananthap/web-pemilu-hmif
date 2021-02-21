@@ -26,10 +26,10 @@
             <b-nav-item to="/peraturan" class="my-auto" active-class="active">
               Peraturan
             </b-nav-item>
-            <b-nav-item to="/vote" class="my-auto" active-class="active"> 
+            <b-nav-item to="/vote" class="my-auto" active-class="active">
               Vote
             </b-nav-item>
-            <!-- <login-button /> -->
+            <login-button />
           </b-navbar-nav>
         </b-collapse>
       </b-container>

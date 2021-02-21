@@ -4,7 +4,7 @@
     <div class="wrapss">
       <Nuxt />
     </div>
-    <FooterComponent/>
+    <FooterComponent />
   </div>
 </template>
 
@@ -16,20 +16,16 @@ export default {
   components: {
     NavbarComponent,
     FooterComponent
-  },
-  created() {
-    console.log(this.$route.fullPath);
   }
 };
 </script>
 
 <style lang="scss">
-.allscreen{
-  background-image: url('~@/assets/BGWebE.jpg');
+.allscreen {
+  background-image: url("~@/assets/BGWebE.jpg");
 }
-.wrapss{
+.wrapss {
   min-height: calc(100vh - 70px);
-
 }
 @media (max-width: 768px) {
   html,
@@ -48,15 +44,8 @@ body {
 }
 
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Poppins,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Poppins, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -64,7 +53,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  
 }
 
 *,
