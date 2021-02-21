@@ -38,7 +38,14 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    // "@nuxtjs/pwa",
+    [
+      "@nuxtjs/pwa",
+      {
+        icon: {
+          fileName: 'navbar-logo-pemilu.png',
+        }
+      }
+    ],
     "bootstrap-vue/nuxt",
     "@nuxtjs/axios", // for communicating with api
     [
