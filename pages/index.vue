@@ -1,159 +1,162 @@
 <template>
   <div>
     <!-- Main Content -->
-    <div v-if="loading">
-      Loading...
-    </div>
-    <div class="page-content" v-if="!loading">
-      <!-- Alert Component if login -->
-      <AlertNimComponent />
+    <client-only>
+      <div v-if="loading">
+        Loading...
+      </div>
+    
+      <div class="page-content" v-if="!loading">
+        <!-- Alert Component if login -->
+        <AlertNimComponent />
 
-      <!-- Logo Besar Pemilu -->
-      <section class="hero-pemilu">
-        <b-container>
-          <b-row class="text-center">
-            <b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
-              <img
-                src="@/public/images/hero-pemilu.png"
-                class="image-hero"
-                alt=""
-              />
-            </b-col>
-          </b-row>
-        </b-container>
-      </section>
+        <!-- Logo Besar Pemilu -->
+        <section class="hero-pemilu">
+          <b-container>
+            <b-row class="text-center">
+              <b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
+                <img
+                  src="@/public/images/hero-pemilu.png"
+                  class="image-hero"
+                  alt=""
+                />
+              </b-col>
+            </b-row>
+          </b-container>
+        </section>
 
-      <!-- Timeline -->
-      <section class="section-timeline">
-        <b-container>
-          <div
-            class="timeline-word text-center"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            TIMELINE
-          </div>
-          <b-row class="justify-content-center">
-            <b-col cols="12" xl="10">
-              <div class="timeline">
-                <div
-                  class="container-left left"
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                >
-                  <div class="content-right text-left">
-                    <div class="timeline-info">
-                      <p>Hearing-1</p>
+        <!-- Timeline -->
+        <section class="section-timeline">
+          <b-container>
+            <div
+              class="timeline-word text-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              TIMELINE
+            </div>
+            <b-row class="justify-content-center">
+              <b-col cols="12" xl="10">
+                <div class="timeline">
+                  <div
+                    class="container-left left"
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                  >
+                    <div class="content-right text-left">
+                      <div class="timeline-info">
+                        <p>Hearing-1</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>11 Feb 2021</p>
+                      </div>
                     </div>
-                    <div class="timeline-time">
-                      <p>11 Feb 2021</p>
+                  </div>
+                  <div
+                    class="container-right right"
+                    data-aos="fade-left"
+                    data-aos-delay="400"
+                  >
+                    <div class="content-left text-right">
+                      <div class="timeline-info">
+                        <p>Hearing-2</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>15 Feb 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-left left"
+                    data-aos="fade-right"
+                    data-aos-delay="500"
+                  >
+                    <div class="content-right text-left">
+                      <div class="timeline-info">
+                        <p>Hearing-3</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>18 Feb 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-right right"
+                    data-aos="fade-left"
+                    data-aos-delay="600"
+                  >
+                    <div class="content-left text-right">
+                      <div class="timeline-info">
+                        <p>Debat</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>22 Feb 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-left left"
+                    data-aos="fade-right"
+                    data-aos-delay="700"
+                  >
+                    <div class="content-right text-left">
+                      <div class="timeline-info">
+                        <p>Masa Tenang</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>23-25 Feb 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-right right"
+                    data-aos="fade-left"
+                    data-aos-delay="800"
+                  >
+                    <div class="content-left text-right">
+                      <div class="timeline-info">
+                        <p>Pemungutan Suara</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>26 Feb - 1 Mar 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-left left"
+                    data-aos="fade-right"
+                    data-aos-delay="900"
+                  >
+                    <div class="content-right text-left">
+                      <div class="timeline-info">
+                        <p>Penghitungan Suara</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>2 Mar 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="container-right right"
+                    data-aos="fade-left"
+                    data-aos-delay="1000"
+                  >
+                    <div class="content-left text-right">
+                      <div class="timeline-info">
+                        <p>Pengumuman</p>
+                      </div>
+                      <div class="timeline-time">
+                        <p>3 Mar 2021 <i class="d-sm-none fa fa-calendar"></i></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="container-right right"
-                  data-aos="fade-left"
-                  data-aos-delay="400"
-                >
-                  <div class="content-left text-right">
-                    <div class="timeline-info">
-                      <p>Hearing-2</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>15 Feb 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-left left"
-                  data-aos="fade-right"
-                  data-aos-delay="500"
-                >
-                  <div class="content-right text-left">
-                    <div class="timeline-info">
-                      <p>Hearing-3</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>18 Feb 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-right right"
-                  data-aos="fade-left"
-                  data-aos-delay="600"
-                >
-                  <div class="content-left text-right">
-                    <div class="timeline-info">
-                      <p>Debat</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>22 Feb 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-left left"
-                  data-aos="fade-right"
-                  data-aos-delay="700"
-                >
-                  <div class="content-right text-left">
-                    <div class="timeline-info">
-                      <p>Masa Tenang</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>23-25 Feb 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-right right"
-                  data-aos="fade-left"
-                  data-aos-delay="800"
-                >
-                  <div class="content-left text-right">
-                    <div class="timeline-info">
-                      <p>Pemungutan Suara</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>26 Feb - 1 Mar 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-left left"
-                  data-aos="fade-right"
-                  data-aos-delay="900"
-                >
-                  <div class="content-right text-left">
-                    <div class="timeline-info">
-                      <p>Penghitungan Suara</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>2 Mar 2021</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="container-right right"
-                  data-aos="fade-left"
-                  data-aos-delay="1000"
-                >
-                  <div class="content-left text-right">
-                    <div class="timeline-info">
-                      <p>Pengumuman</p>
-                    </div>
-                    <div class="timeline-time">
-                      <p>3 Mar 2021 <i class="d-sm-none fa fa-calendar"></i></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </b-col>
-          </b-row>
-        </b-container>
-      </section>
-    </div>
+              </b-col>
+            </b-row>
+          </b-container>
+        </section>
+      </div>
+    </client-only>
   </div>
 </template>
 
