@@ -178,11 +178,25 @@
           Surat Suara
         </button>
       </div>
+
+      <div v-if="errors.length > 0">
+        <closable-alert
+          variant="danger"
+          v-for="error in errors"
+          :key="error.id"
+          :text="error.message"
+          class="my-2"
+        />
+      </div>
+
+      <div v-if="success.state === true">
+        <closable-alert variant="success" :text="success.message" />
+      </div>
       <!-- user sudah memilih -->
       <AlertVoteDone v-if="isVoted && isLogin" />
 
       <!-- user bukan dpt -->
-      <AlertNonDPT v-if="isNonDPT && isLogin" />
+      <AlertNonDPT v-if="!isDpt && isLogin" />
 
       <!-- countdown telah selesai -->
       <div v-if="isVotingStarted && isLogin && isDpt !== null" class="vote">
@@ -201,12 +215,10 @@
                     <h4>Bagas Setyo Wicaksono</h4>
                   </div>
                   <a
-                    class="btn btn-warning btn-lg"
-                    @click="
-                      isVoted || isNonDPT
-                        ? (showModal = false)
-                        : (showModal = true)
-                    "
+                    v-if="isDpt === true"
+                    class="btn btn-lg"
+                    :disabled="hasVoted === true"
+                    @click="openModalAndVote('13518042')"
                     >VOTE</a
                   >
                 </div>
@@ -221,12 +233,10 @@
                     <h4>Naufal Alim Wahib</h4>
                   </div>
                   <a
+                    v-if="isDpt === true"
                     class="btn btn-warning btn-lg"
-                    @click="
-                      isVoted || isNonDPT
-                        ? (showModal = false)
-                        : (showModal = true)
-                    "
+                    @click="openModalAndVote('18218005')"
+                    :disabled="hasVoted === true"
                     >VOTE</a
                   >
                 </div>
@@ -241,12 +251,10 @@
                     <h4>Kotak Kosong</h4>
                   </div>
                   <a
+                    v-if="isDpt === true"
                     class="btn btn-warning btn-lg"
-                    @click="
-                      isVoted || isNonDPT
-                        ? (showModal = false)
-                        : (showModal = true)
-                    "
+                    @click="openModalAndVote('kosong')"
+                    :disabled="hasVoted === true"
                     >VOTE</a
                   >
                 </div>
@@ -265,11 +273,14 @@
                     <div class="modal-header">
                       <h4 class="modal-title">Apakah Anda Yakin?</h4>
                     </div>
+                    <div class="modal-body">
+                      Perlu diingat bahwa vote anda tidak bisa ditarik kembali
+                    </div>
                     <div class="modal-footer">
                       <button
                         type="button"
                         class="btn btn-primary"
-                        @click="(isVoted = true), (showModal = True)"
+                        @click="vote()"
                       >
                         Yakin
                       </button>
@@ -306,23 +317,68 @@
 import Countdown from "@/components/Countdown";
 import AlertVoteDone from "@/components/AlertVoteDone";
 import AlertNonDPT from "@/components/AlertNonDPT";
+import ClosableAlert from "@/components/ClosableAlert";
+import { v4 as idGenerator } from "uuid";
+import cookie from "js-cookie";
 
 export default {
   data: () => ({
     isVotingStarted: false,
     isVoted: false,
-    isNonDPT: null,
     showModal: false,
-    showTataCara: true
+    showTataCara: true,
+    votedCandidate: null,
+    errors: [],
+    success: { state: false, message: null },
+    hasVoted: false
   }),
   components: {
     Countdown,
     AlertVoteDone,
-    AlertNonDPT
+    AlertNonDPT,
+    ClosableAlert
   },
   methods: {
     startVote() {
       this.isVotingStarted = !this.isVotingStarted;
+    },
+    openModalAndVote(nim) {
+      if (this.hasVoted == true) {
+        return;
+      }
+      this.votedCandidate = nim;
+      this.showModal = true;
+    },
+    async vote() {
+      const validNims = ["13518042", "18218005", "kosong"];
+      this.showModal = false;
+      const nim = this.votedCandidate;
+      const idToken = await this.$fire.auth.currentUser.getIdToken(true);
+      this.$axios.setHeader("idtoken", idToken);
+      if (!validNims.find(validNim => validNim == nim)) {
+        console.log("NIM is wrong");
+        return;
+      }
+
+      try {
+        const data = await this.$axios.$post("/api/vote", {
+          toBeVotedNim: nim
+        });
+        console.log(data);
+        this.success = {
+          state: true,
+          message: "Successfully voted"
+        };
+        this.hasVoted = true;
+        cookie.set("hasvoted", true);
+      } catch (err) {
+        console.log(err.response.data.message);
+        this.errors.push({
+          id: idGenerator(),
+          state: true,
+          message: err.response.data.message
+        });
+      }
     }
   },
   computed: {
@@ -332,6 +388,14 @@ export default {
     isDpt() {
       return this.$store.state.auth.isdpt;
     }
+  },
+  mounted: function() {
+    const checkHasVotedFromCookie = () => {
+      if (!!cookie.get("hasvoted")) {
+        this.hasVoted = true;
+      }
+    };
+    checkHasVotedFromCookie();
   }
 };
 </script>
@@ -359,29 +423,6 @@ export default {
   }
   .btn {
     text-align: left;
-  }
-  .btn:focus {
-    outline: none !important;
-  }
-  .btn-info {
-    background-color: #ffc801 !important;
-    border-color: #ffc801 !important;
-  }
-  .btn-info:hover {
-    background-color: #ffc801;
-  }
-
-  .btn-outline-info:hover {
-    background-color: transparent;
-  }
-  .btn-outline-info:focus {
-    border-color: transparent;
-  }
-  .btn-block {
-    display: flex;
-  }
-  .btn-info[data-v-f9f00bbc]:not(:disabled):not(.disabled):active {
-    background-color: #ffc801;
   }
 
   .card {
@@ -468,6 +509,13 @@ export default {
     background-color: #ffc801;
     border-color: #333;
     margin-top: 10px;
+    position: relative;
+  }
+
+  .btn[disabled] {
+    background-color: #ffc801;
+    opacity: 0.5;
+    cursor: default;
   }
 }
 
@@ -516,8 +564,6 @@ export default {
   background-color: #ffc801;
   justify-content: center;
   border-bottom: 0px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .modal-footer {

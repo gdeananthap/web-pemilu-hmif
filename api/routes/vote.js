@@ -57,7 +57,7 @@ router.post(
     }
 
     // and finally he is dpt that has not voted yet!
-    const voter = new Voter(req, nim);
+    const voter = new Voter(req.nim);
     try {
       // ! the most important code: voting process
       await voter.vote(toBeVotedNim);

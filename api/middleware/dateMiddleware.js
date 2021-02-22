@@ -8,18 +8,16 @@ async function dateMiddleware(req, res, next) {
   const dateNow = new Date();
   // if no kill process
   if (dateNow < votingStart) {
-    res.status(200).send(
+    res.status(400).send(
       createFailureMessage({
-        status: 200,
         message: "Pemilu belom mulai bray"
       })
     );
     return;
   }
   if (dateNow > votingEnd) {
-    res.status(200).send(
+    res.status(400).send(
       createFailureMessage({
-        status: 200,
         message: "Pemilu udah beres bray"
       })
     );
