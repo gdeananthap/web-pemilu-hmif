@@ -23,7 +23,7 @@ if (!firebase.apps.length) {
   firebase.app();
 }
 app.use(express.json());
-app, use(cors());
+app.use(cors());
 app.get("/", async (req, res) => {
   res.send("Go away Awoo! don't try to hack the server!");
 });
