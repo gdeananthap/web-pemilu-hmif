@@ -323,7 +323,7 @@ import cookie from "js-cookie";
 
 export default {
   data: () => ({
-    isVotingStarted: false,
+    isVotingStarted: true,
     isVoted: false,
     showModal: false,
     showTataCara: true,

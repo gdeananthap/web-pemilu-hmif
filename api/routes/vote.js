@@ -23,7 +23,7 @@ router.get("/candidates", (req, res, next) => {
 
 router.post(
   "/",
-  [authMiddleware, dateMiddleware, dptMiddleware],
+  [authMiddleware /*dateMiddleware*/, , dptMiddleware],
   async (req, res) => {
     const { toBeVotedNim } = req.body;
 
