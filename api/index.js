@@ -24,7 +24,6 @@ if (!firebase.apps.length) {
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  const claims = admin.auth().verifyIdToken(req);
   res.send("Go away Awoo! don't try to hack the server!");
 });
 

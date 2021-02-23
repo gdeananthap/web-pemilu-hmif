@@ -350,21 +350,15 @@ export default {
       this.showModal = true;
     },
     async vote() {
-      const validNims = ["13518042", "18218005", "kosong"];
       this.showModal = false;
       const nim = this.votedCandidate;
       const idToken = await this.$fire.auth.currentUser.getIdToken(true);
       this.$axios.setHeader("idtoken", idToken);
-      if (!validNims.find(validNim => validNim == nim)) {
-        console.log("NIM is wrong");
-        return;
-      }
 
       try {
         const data = await this.$axios.$post("/api/vote", {
           toBeVotedNim: nim
         });
-        console.log(data);
         this.success = {
           state: true,
           message: "Successfully voted"
@@ -372,7 +366,7 @@ export default {
         this.hasVoted = true;
         cookie.set("hasvoted", true);
       } catch (err) {
-        console.log(err.response.data.message);
+        console.log(err);
         this.errors.push({
           id: idGenerator(),
           state: true,
@@ -390,12 +384,16 @@ export default {
     }
   },
   mounted: function() {
-    const checkHasVotedFromCookie = () => {
+    const modifyHasVotedIfCookieExist = () => {
       if (!!cookie.get("hasvoted")) {
         this.hasVoted = true;
+        this.success = {
+          state: true,
+          message: "Anda sudah berhasil vote"
+        };
       }
     };
-    checkHasVotedFromCookie();
+    modifyHasVotedIfCookieExist();
   }
 };
 </script>
