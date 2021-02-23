@@ -18,21 +18,13 @@ firebase.default.initializeApp({
   measurementId: "G-VJK3F6DLE7"
 });
 
-const db = admin.firestore();
-const dpt = db.collection("dpt");
-
-const batch = db.batch();
-
-// Set the value of 'NYC'
-dptDatas.forEach(nim => {
-  const dptRef = dpt.doc(nim.toString());
-  batch.set(dptRef, {
-    votefor: ""
+async function getAndSaveUsers() {
+  console.log("test");
+  const userResultList = await admin.auth().listUsers(1000);
+  console.log(userResultList);
+  const users = userResultList.users.map(user => {
+    return user.toJSON();
   });
-});
-async function commitWrite() {
-  await batch.commit();
-  console.log("done!");
+  fs.writeFileSync("users.json", JSON.stringify(users));
 }
-
-commitWrite();
+getAndSaveUsers();
