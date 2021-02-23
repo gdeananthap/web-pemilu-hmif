@@ -274,7 +274,7 @@
                       <h4 class="modal-title">Apakah Anda Yakin?</h4>
                     </div>
                     <div class="modal-body">
-                      Vote <strong>BISA</strong> diganti
+                      Vote <strong>TIDAK BISA</strong> diganti
                     </div>
                     <div class="modal-footer">
                       <button
