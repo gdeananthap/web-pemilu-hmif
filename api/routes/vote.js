@@ -36,8 +36,6 @@ router.post(
       return;
     }
 
-    console.log("tunak tun");
-
     // check if the one he want to vote is a candidate
     if (!isVotedNimValid(toBeVotedNim)) {
       res.status(400).send(
