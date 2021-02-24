@@ -40,7 +40,7 @@ function isEmailValid(email) {
   if (back != "std.stei.itb.ac.id") {
     return false;
   }
-  const patt = /1351[789][012][0-9][0-9]/;
+  const patt = /(135)|(182)1[6789][0123][0-9][0-9]/;
   return patt.test(nim);
 }
 

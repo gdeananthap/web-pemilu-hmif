@@ -12,20 +12,6 @@ const {
 const dptMiddleware = require("../middleware/dptMiddleware");
 const dptDatabase = new Dpt();
 
-router.get("/", async (req, res, next) => {
-  try {
-    const data = await dptDatabase.getAllDpt();
-    res.status(200).send(createSuccessMessage({ data }));
-  } catch (err) {
-    res.status(500).send(
-      createFailureMessage({
-        status: 500,
-        message: "Cannot get all available DPT"
-      })
-    );
-  }
-});
-
 router.post(
   "/isdpt",
   [authMiddleware, dptMiddleware],

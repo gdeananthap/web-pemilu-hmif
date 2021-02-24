@@ -217,8 +217,8 @@
                   <a
                     v-if="isDpt === true"
                     class="btn btn-lg"
-                    :disabled="hasVoted === true"
                     @click="openModalAndVote('13518042')"
+                    :disabled="!!hasVoted"
                     >VOTE</a
                   >
                 </div>
@@ -236,7 +236,7 @@
                     v-if="isDpt === true"
                     class="btn btn-warning btn-lg"
                     @click="openModalAndVote('18218005')"
-                    :disabled="hasVoted === true"
+                    :disabled="!!hasVoted"
                     >VOTE</a
                   >
                 </div>
@@ -254,7 +254,7 @@
                     v-if="isDpt === true"
                     class="btn btn-warning btn-lg"
                     @click="openModalAndVote('kosong')"
-                    :disabled="hasVoted === true"
+                    :disabled="!!hasVoted"
                     >VOTE</a
                   >
                 </div>
@@ -274,7 +274,7 @@
                       <h4 class="modal-title">Apakah Anda Yakin?</h4>
                     </div>
                     <div class="modal-body">
-                      Perlu diingat bahwa vote anda tidak bisa ditarik kembali
+                      Vote <strong>TIDAK BISA</strong> diganti
                     </div>
                     <div class="modal-footer">
                       <button
@@ -318,19 +318,24 @@ import Countdown from "@/components/Countdown";
 import AlertVoteDone from "@/components/AlertVoteDone";
 import AlertNonDPT from "@/components/AlertNonDPT";
 import ClosableAlert from "@/components/ClosableAlert";
-import { v4 as idGenerator } from "uuid";
+import { v4 } from "uuid";
 import cookie from "js-cookie";
 
 export default {
   data: () => ({
-    isVotingStarted: false,
+    isVotingStarted: true,
     isVoted: false,
     showModal: false,
     showTataCara: true,
     votedCandidate: null,
+    votedCandidateName: "",
     errors: [],
     success: { state: false, message: null },
-    hasVoted: false
+    hasVoted: false,
+    nimToNameMap: {
+      "13518042": "Bagas Setyo Wicaksono",
+      "18218005": "Naufal Alim"
+    }
   }),
   components: {
     Countdown,
@@ -343,41 +348,38 @@ export default {
       this.isVotingStarted = !this.isVotingStarted;
     },
     openModalAndVote(nim) {
-      if (this.hasVoted == true) {
-        return;
-      }
       this.votedCandidate = nim;
       this.showModal = true;
+      this.votedCandidateName = this.nimToNameMap[this.votedCandidate];
     },
     async vote() {
-      const validNims = ["13518042", "18218005", "kosong"];
-      this.showModal = false;
-      const nim = this.votedCandidate;
-      const idToken = await this.$fire.auth.currentUser.getIdToken(true);
-      this.$axios.setHeader("idtoken", idToken);
-      if (!validNims.find(validNim => validNim == nim)) {
-        console.log("NIM is wrong");
-        return;
-      }
-
       try {
-        const data = await this.$axios.$post("/api/vote", {
-          toBeVotedNim: nim
+        this.showModal = false;
+        const firestore = this.$fire.firestore;
+        const collection = firestore.collection("dpt");
+        const nim = this.$store.state.auth.nim;
+        const docRef = collection.doc(nim);
+        await docRef.set({
+          votefor: this.votedCandidate
         });
-        console.log(data);
+        cookie.set("hasvoted", this.votedCandidateName);
+        this.hasVoted = true;
         this.success = {
           state: true,
-          message: "Successfully voted"
+          message: "Successfully voted " + this.votedCandidateName
         };
-        this.hasVoted = true;
-        cookie.set("hasvoted", true);
-      } catch (err) {
-        console.log(err.response.data.message);
-        this.errors.push({
-          id: idGenerator(),
-          state: true,
-          message: err.response.data.message
-        });
+      } catch (error) {
+        if (this.hasVoted) {
+          this.errors.push({
+            id: v4(),
+            message: "Anda sudah memberikan vote anda"
+          });
+        } else {
+          this.errors.push({
+            id: v4(),
+            message: "Ada sebuah kesalahan, harap hubungi panitia"
+          });
+        }
       }
     }
   },
@@ -390,12 +392,17 @@ export default {
     }
   },
   mounted: function() {
-    const checkHasVotedFromCookie = () => {
+    const modifyHasVotedIfCookieExist = () => {
       if (!!cookie.get("hasvoted")) {
-        this.hasVoted = true;
+        this.hasVoted = !!cookie.get("hasvoted");
+        this.votedCandidateName = cookie.get("hasvoted");
+        this.success = {
+          state: true,
+          message: `Anda telah sukses memberikan suara anda untuk <strong>${this.votedCandidateName}</strong> (tenang saja informasi ini disimpan secara lokal oleh cookie dan tidak bisa diakses sembarang orang), bila ada kesalahan atau error, harap hubungi panitia`
+        };
       }
     };
-    checkHasVotedFromCookie();
+    modifyHasVotedIfCookieExist();
   }
 };
 </script>
