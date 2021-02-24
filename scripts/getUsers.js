@@ -1,5 +1,3 @@
-// run this script to set all user with user id from ./adminuid.json to admin
-const dptDatas = require("./dpt.json");
 const admin = require("firebase-admin");
 const firebase = require("firebase");
 const fs = require("fs");

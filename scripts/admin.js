@@ -1,5 +1,4 @@
 // run this script to set all user with user id from ./adminuid.json to admin
-const adminuids = require("./adminuid.json");
 const admin = require("firebase-admin");
 const firebase = require("firebase");
 
@@ -17,6 +16,4 @@ firebase.default.initializeApp({
   measurementId: "G-VJK3F6DLE7"
 });
 
-adminuids.forEach(async uid => {
-  const res = await admin.auth().setCustomUserClaims(uid, { admin: true });
-});
+module.exports = admin;
