@@ -20,17 +20,18 @@
 
 <script>
 export default {
-	name : "AlertNonDPT",
-	data () {
-		return {
-			clicked : false
-		}
-	}, methods: {
-		changeComplete(){
-			this.clicked = !this.clicked;
-		}
-	},
-}
+  name: "AlertNonDPT",
+  data() {
+    return {
+      clicked: false
+    };
+  },
+  methods: {
+    changeComplete() {
+      this.clicked = !this.clicked;
+    }
+  }
+};
 </script>
 
 <style lang="scss">

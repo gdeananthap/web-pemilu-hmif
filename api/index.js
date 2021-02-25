@@ -4,6 +4,7 @@ const app = express();
 const serviceAccount = require("./utils/serviceAccountKey.json");
 const admin = require("firebase-admin");
 const firebase = require("firebase").default;
+const cors = require("cors");
 
 if (!firebase.apps.length) {
   admin.initializeApp({
@@ -22,14 +23,13 @@ if (!firebase.apps.length) {
   firebase.app();
 }
 app.use(express.json());
-
+app.use(cors());
 app.get("/", async (req, res) => {
-  const claims = admin.auth().verifyIdToken(req);
   res.send("Go away Awoo! don't try to hack the server!");
 });
 
-const voteRouter = require("./routes/vote");
 const dptRouter = require("./routes/dpt");
+const voteRouter = require("./routes/vote");
 const authRouter = require("./routes/auth");
 
 app.use("/vote", voteRouter);
