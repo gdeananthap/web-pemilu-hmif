@@ -364,7 +364,7 @@ export default {
     votedCandidateName: "",
     errors: [],
     success: { state: false, message: null },
-    hasVoted: false,
+    hasVoted: true,
     nimToNameMap: {
       "13518042": "Bagas Setyo Wicaksono",
       "18218005": "Naufal Alim",
@@ -624,6 +624,7 @@ export default {
   background-color: #ffc801;
   justify-content: center;
   border-bottom: 0px;
+  text-align: center;
 }
 
 .modal-footer {
