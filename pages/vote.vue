@@ -364,11 +364,11 @@ export default {
     votedCandidateName: "",
     errors: [],
     success: { state: false, message: null },
-    hasVoted: true,
+    hasVoted: false,
     nimToNameMap: {
       "13518042": "Bagas Setyo Wicaksono",
-      "18218005": "Naufal Alim",
-      kosong: "kosong"
+      "18218005": "Naufal Alim Wahib",
+      kosong: "Kotak Kosong"
     }
   }),
   components: {
