@@ -354,7 +354,7 @@ import cookie from "js-cookie";
 
 export default {
   data: () => ({
-    isVotingStarted: true,
+    isVotingStarted: false,
     isVotingEnded: false,
     loadEnd: false,
     isVoted: false,
