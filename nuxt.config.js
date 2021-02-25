@@ -1,3 +1,5 @@
+let development = process.env.NODE_ENV !== "production";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -63,6 +65,7 @@ export default {
         ]
       }
     ],
+
     [
       "@nuxtjs/firebase",
       {
@@ -92,6 +95,12 @@ export default {
       }
     ]
   ],
+
+  axios: {
+    baseURL: development
+      ? "http://localhost:3000"
+      : "https://tesvote.herokuapp.com"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}

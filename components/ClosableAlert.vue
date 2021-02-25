@@ -1,9 +1,7 @@
 <template>
   <div v-if="isOpened" :class="`alert alert-${variant}`" role="alert">
     <div class="d-flex">
-      <p class="my-auto">
-        {{ text }}
-      </p>
+      <p class="my-auto" v-html="text"></p>
       <div class="ml-auto">
         <button class="bg-transparent border-0" @click="closeAlert()">
           <img

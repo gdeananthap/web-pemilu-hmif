@@ -23,7 +23,7 @@ router.get("/candidates", (req, res, next) => {
 
 router.post(
   "/",
-  [authMiddleware, dateMiddleware, dptMiddleware],
+  [authMiddleware, /*dateMiddleware*/ dptMiddleware],
   async (req, res) => {
     const { toBeVotedNim } = req.body;
 
@@ -62,7 +62,7 @@ router.post(
       // ! the most important code: voting process
       await voter.vote(toBeVotedNim);
     } catch (error) {
-      res.status(500).send(
+      res.status(400).send(
         createFailureMessage({
           status: 500,
           message:
