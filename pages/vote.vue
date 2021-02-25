@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div v-if= "!isVotingEnded && loadEnd" class="page-content">
+    <div v-if="!isVotingEnded && loadEnd" class="page-content">
       <div v-if="showTataCara" class="tatacara">
         <div class="votemenu">
           <button class="selected" @click="showTataCara = true">
@@ -29,11 +29,12 @@
               >
                 <b-card-body>
                   <b-card-text>
-                    Pemilu HMIF 2021 berbeda dari tahun-tahun sebelumnya. Terlebih
-                    lagi pada tahun ini Pemilu dilaksanakan secara daring.
-                    Sehingga terdapat beberapa penyesuaian pada peraturan dan tata
-                    cara pemilu pada tahun ini. Pastikan anda memahami peraturan
-                    dan tata cara Pemilu HMIF dengan membacanya pada halaman
+                    Pemilu HMIF 2021 berbeda dari tahun-tahun sebelumnya.
+                    Terlebih lagi pada tahun ini Pemilu dilaksanakan secara
+                    daring. Sehingga terdapat beberapa penyesuaian pada
+                    peraturan dan tata cara pemilu pada tahun ini. Pastikan anda
+                    memahami peraturan dan tata cara Pemilu HMIF dengan
+                    membacanya pada halaman
                     <a href="/peraturan">peraturan</a> dan halaman
                     <a href="/tatacara">tata cara</a> terlebih dahulu.
                   </b-card-text>
@@ -124,7 +125,8 @@
                   block
                   v-b-toggle.accordion-5
                   variant="info"
-                  >5. Buka surat suara dengan mengklik menu surat suara</b-button
+                  >5. Buka surat suara dengan mengklik menu surat
+                  suara</b-button
                 >
               </b-card-header>
               <b-collapse
@@ -312,19 +314,28 @@
         </div>
       </div>
     </div>
-    <div v-if= "isVotingEnded && loadEnd" class="page-content">
+    <div v-if="isVotingEnded && loadEnd" class="page-content">
       <!-- Logo Besar Pemilu -->
       <section class="hero-pemilu">
         <b-container>
           <b-row class="justify-content-center">
             <b-col cols="12" class="text-center hero-logo d-sm-block">
-              <img src="@/public/images/hero-pemilu.png" class="hero-logo-width" >
+              <img
+                src="@/public/images/hero-pemilu.png"
+                class="hero-logo-width"
+              />
             </b-col>
             <b-col cols="12" class="my-2 text-center text-salah">
-              <p>Masa pemungutan suara telah berakhir, terimakasih sudah menggunakan hak suara anda. Hasil perhitungan suara akan segera diumumkan oleh panitia.</p>
+              <p>
+                Masa pemungutan suara telah berakhir, terimakasih sudah
+                menggunakan hak suara anda. Hasil perhitungan suara akan segera
+                diumumkan oleh panitia.
+              </p>
             </b-col>
             <b-col cols="6" md="3" lg="2" class="my-2 text-center">
-              <NuxtLink to="/" class="btn btn-warning btn-lg btn-block"> HOME </NuxtLink>
+              <NuxtLink to="/" class="btn btn-warning btn-lg btn-block">
+                HOME
+              </NuxtLink>
             </b-col>
           </b-row>
         </b-container>
@@ -356,7 +367,8 @@ export default {
     hasVoted: false,
     nimToNameMap: {
       "13518042": "Bagas Setyo Wicaksono",
-      "18218005": "Naufal Alim"
+      "18218005": "Naufal Alim",
+      kosong: "kosong"
     }
   }),
   components: {
@@ -370,6 +382,9 @@ export default {
       this.isVotingStarted = !this.isVotingStarted;
     },
     openModalAndVote(nim) {
+      if (this.hasVoted) {
+        return;
+      }
       this.votedCandidate = nim;
       this.showModal = true;
       this.votedCandidateName = this.nimToNameMap[this.votedCandidate];
@@ -383,7 +398,6 @@ export default {
         if (distance <= 0) {
           clearInterval(timer);
           this.isVotingEnded = true;
-
         }
         this.loadEnd = true;
       }, 1000);
@@ -459,9 +473,9 @@ export default {
 .col-lg-8 {
   margin: auto;
   font-family: Poppins, sans-serif;
-  
+
   button {
-    background-color :#ffc801 !important;
+    background-color: #ffc801 !important;
     border-color: #ffc801 !important;
     background-color: #ffc801;
     color: black;
@@ -676,28 +690,28 @@ export default {
 
 .hero-pemilu {
   .hero-logo {
-      margin-top: 30px;
+    margin-top: 30px;
   }
 }
-.text-salah{
+.text-salah {
   font-size: 22px;
   font-weight: 500;
 }
 
-.btn-warning{
+.btn-warning {
   font-family: Poppins;
 }
 @media only screen and (min-width: 576px) {
   .hero-pemilu {
     .hero-logo-width {
-        max-width: 400px;
+      max-width: 400px;
     }
   }
 }
 @media only screen and (max-width: 425px) {
   .hero-pemilu {
     .hero-logo-width {
-        max-width: 300px;
+      max-width: 300px;
     }
   }
 }
@@ -705,15 +719,14 @@ export default {
 @media only screen and (max-width: 375px) {
   .hero-pemilu {
     .hero-logo-width {
-        width: 300px;
+      width: 300px;
     }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .text-salah{
+  .text-salah {
     font-size: 16px !important;
   }
 }
-
 </style>
