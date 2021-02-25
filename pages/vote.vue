@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div v-if= "!isVotingEnded" class="page-content">
+      <div v-if= "!isVotingEnded && loadEnd" class="page-content">
       <div v-if="showTataCara" class="tatacara">
         <div class="votemenu">
           <button class="selected" @click="showTataCara = true">
@@ -312,7 +312,7 @@
         </div>
       </div>
     </div>
-    <div v-if= "isVotingEnded" class="page-content">
+    <div v-if= "isVotingEnded && loadEnd" class="page-content">
       <!-- Logo Besar Pemilu -->
       <section class="hero-pemilu">
         <b-container>
@@ -344,7 +344,8 @@ import cookie from "js-cookie";
 export default {
   data: () => ({
     isVotingStarted: true,
-    isVotingEnded: true,
+    isVotingEnded: false,
+    loadEnd: false,
     isVoted: false,
     showModal: false,
     showTataCara: true,
@@ -372,6 +373,20 @@ export default {
       this.votedCandidate = nim;
       this.showModal = true;
       this.votedCandidateName = this.nimToNameMap[this.votedCandidate];
+    },
+    checkVotingDuration() {
+      const timer = setInterval(() => {
+        const now = new Date();
+        const end = new Date(2021, 2, 1, 23, 0, 0);
+        const distance = end.getTime() - now.getTime();
+
+        if (distance <= 0) {
+          clearInterval(timer);
+          this.isVotingEnded = true;
+
+        }
+        this.loadEnd = true;
+      }, 1000);
     },
     async vote() {
       try {
@@ -424,6 +439,7 @@ export default {
       }
     };
     modifyHasVotedIfCookieExist();
+    this.checkVotingDuration();
   }
 };
 </script>
