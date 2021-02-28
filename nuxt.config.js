@@ -97,7 +97,7 @@ export default {
   ],
 
   axios: {
-    baseURL: development ? "http://localhost:3000" : "https://pemiluhmif.tech"
+    baseURL: development ? "http://localhost:3000" : "http://pemiluhmif.tech"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
