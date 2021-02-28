@@ -418,7 +418,7 @@ export default {
           axiosConfig
         );
         console.log(res);
-        cookie.set("hasvoted", this.votedCandidateName);
+        cookie.set("hasvoted", this.votedCandidateName, { expires: 9999 });
         this.hasVoted = true;
         this.success = {
           state: true,
@@ -426,16 +426,17 @@ export default {
         };
       } catch (error) {
         console.log(error);
-        if (this.hasVoted) {
-          this.errors.push({
-            id: v4(),
-            message: "Anda sudah memberikan vote anda"
-          });
-        } else {
-          this.errors.push({
-            id: v4(),
-            message: error.response.data.message
-          });
+        this.errors.push({
+          id: v4(),
+          message: error.response.data.message
+        });
+        if (error.response.data.message == "Anda telah memberikan vote anda") {
+          this.hasVoted = true;
+          cookie.set(
+            "hasvoted",
+            "seseorang (mungkin anda memberikan vote anda dari device lain, cek device tersebut untuk mengetahui anda memvote siapa)",
+            { expires: 9999 }
+          );
         }
       }
     }
