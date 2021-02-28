@@ -349,6 +349,7 @@ export default {
       this.isVotingStarted = !this.isVotingStarted;
     },
     openModalAndVote(nim) {
+      if (this.hasVoted) return;
       this.votedCandidate = nim;
       this.showModal = true;
       this.votedCandidateName = this.nimToNameMap[this.votedCandidate];
@@ -356,13 +357,22 @@ export default {
     async vote() {
       try {
         this.showModal = false;
-        const firestore = this.$fire.firestore;
-        const collection = firestore.collection("dpt");
-        const nim = this.$store.state.auth.nim;
-        const docRef = collection.doc(nim);
-        await docRef.set({
-          votefor: this.votedCandidate
-        });
+        const idToken = await this.$fire.auth.currentUser.getIdToken();
+        this.showModal = false;
+        const axiosConfig = {
+          headers: {
+            idToken
+          }
+        };
+        // todo
+        const res = await this.$axios.post(
+          "/api/vote",
+          {
+            toBeVotedNim: this.votedCandidate
+          },
+          axiosConfig
+        );
+        console.log(res);
         cookie.set("hasvoted", this.votedCandidateName);
         this.hasVoted = true;
         this.success = {
@@ -370,6 +380,7 @@ export default {
           message: "Successfully voted " + this.votedCandidateName
         };
       } catch (error) {
+        console.log(error);
         if (this.hasVoted) {
           this.errors.push({
             id: v4(),
@@ -378,7 +389,7 @@ export default {
         } else {
           this.errors.push({
             id: v4(),
-            message: "Ada sebuah kesalahan, harap hubungi panitia"
+            message: error.response.data.message
           });
         }
       }

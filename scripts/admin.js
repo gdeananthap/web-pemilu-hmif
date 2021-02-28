@@ -14,6 +14,14 @@ firebase.default.initializeApp({
   messagingSenderId: "1006768768666",
   appId: "1:1006768768666:web:2b0c8c2195a21c7a994123",
   measurementId: "G-VJK3F6DLE7"
+  // INI BUAT PERCOBAAN AJA
+  // apiKey: "AIzaSyA5eRtJcUX0VxOmlJzXjr3H_y8BSiZyM60",
+  // authDomain: "pemilu-c3c44.firebaseapp.com",
+  // projectId: "pemilu-c3c44",
+  // storageBucket: "pemilu-c3c44.appspot.com",
+  // messagingSenderId: "551940857191",
+  // appId: "1:551940857191:web:f8d4bb242a684ce547a3c2",
+  // measurementId: "G-0T0MY4TH8T"
 });
 
 module.exports = admin;

@@ -13,7 +13,7 @@ class Voter {
     }
     try {
       this.nimToBeVoted = nimToBeVoted;
-      this.beginVoteTransaction();
+      await this.beginVoteTransaction();
     } catch (err) {
       throw err;
     }
@@ -23,6 +23,7 @@ class Voter {
   async beginVoteTransaction() {
     try {
       await db.runTransaction(async transaction => {
+        const voterRef = db.collection("dpt").doc(this.dpt);
         const voterDoc = await transaction.get(voterRef);
         if (voterDoc.data().hasVoted === true) {
           throw {
@@ -32,7 +33,6 @@ class Voter {
         const toBeVotedRef = db
           .collection("votes")
           .doc(this.nimToBeVoted.toString());
-        const voterRef = db.collection("dpt").doc(this.dpt);
         const toBeVotedDoc = await transaction.get(toBeVotedRef);
         const latestTotalVote = toBeVotedDoc.data().totalVote;
 
@@ -46,7 +46,7 @@ class Voter {
     } catch (err) {
       throw {
         name: "Voting error",
-        message: "Something bad happened while voting"
+        message: err.message
       };
     }
   }
