@@ -334,7 +334,8 @@ export default {
     hasVoted: false,
     nimToNameMap: {
       "13518042": "Bagas Setyo Wicaksono",
-      "18218005": "Naufal Alim"
+      "18218005": "Naufal Alim",
+      kosong: "Kotak Kosong"
     }
   }),
   components: {
@@ -422,9 +423,9 @@ export default {
 .col-lg-8 {
   margin: auto;
   font-family: Poppins, sans-serif;
-  
+
   button {
-    background-color :#ffc801 !important;
+    background-color: #ffc801 !important;
     border-color: #ffc801 !important;
     background-color: #ffc801;
     color: black;

@@ -11,7 +11,7 @@ const {
 } = require("../utils/response-message");
 const { authMiddleware } = require("../middleware/auth");
 const dateMiddleware = require("../middleware/dateMiddleware");
-const dptMiddleware = require("../middleware/dptMiddleware");
+const emailAndNIMMiddleware = require("../middleware/emailAndNIMMiddleware");
 
 // too lazy to seperate this to a file
 const candidates = ["13518042", "18218005", "kosong"]; // bagas, alim
@@ -23,7 +23,7 @@ router.get("/candidates", (req, res, next) => {
 
 router.post(
   "/",
-  [authMiddleware, /*dateMiddleware*/ dptMiddleware],
+  [authMiddleware, dateMiddleware, emailAndNIMMiddleware],
   async (req, res) => {
     const { toBeVotedNim } = req.body;
 
@@ -46,17 +46,7 @@ router.post(
       return;
     }
 
-    // check if user have alrd voted
-    if (req.dptData.hasVoted) {
-      res.status(400).send(
-        createFailureMessage({
-          message: "You have already voted!"
-        })
-      );
-      return;
-    }
-
-    // and finally he is dpt that has not voted yet!
+    // try to vote
     const voter = new Voter(req.nim);
     try {
       // ! the most important code: voting process
@@ -64,9 +54,8 @@ router.post(
     } catch (error) {
       res.status(400).send(
         createFailureMessage({
-          status: 500,
-          message:
-            "We're sorry but there's an internal server problem currently"
+          status: 400,
+          message: error.message
         })
       );
       return;

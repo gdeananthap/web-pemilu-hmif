@@ -12,22 +12,30 @@ class Voter {
       throw new Error("Set the voter first!");
     }
     try {
-      const toBeVotedRef = await db
-        .collection("suara")
-        .doc(nimToBeVoted.toString());
-      const voterRef = await db.collection("dpt").doc(this.dpt);
-      this.beginVoteTransaction(toBeVotedRef, voterRef);
+      this.nimToBeVoted = nimToBeVoted;
+      this.beginVoteTransaction();
     } catch (err) {
       throw err;
     }
     return true;
   }
 
-  async beginVoteTransaction(toBeVotedRef, voterRef) {
+  async beginVoteTransaction() {
     try {
       await db.runTransaction(async transaction => {
+        const voterDoc = await transaction.get(voterRef);
+        if (voterDoc.data().hasVoted === true) {
+          throw {
+            message: "Anda telah memberikan vote anda"
+          };
+        }
+        const toBeVotedRef = db
+          .collection("votes")
+          .doc(this.nimToBeVoted.toString());
+        const voterRef = db.collection("dpt").doc(this.dpt);
         const toBeVotedDoc = await transaction.get(toBeVotedRef);
         const latestTotalVote = toBeVotedDoc.data().totalVote;
+
         transaction.update(toBeVotedRef, {
           totalVote: latestTotalVote + 1
         });
