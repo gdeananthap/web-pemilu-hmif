@@ -44,7 +44,7 @@ export default {
       "@nuxtjs/pwa",
       {
         icon: {
-          fileName: 'navbar-logo-pemilu.png',
+          fileName: "navbar-logo-pemilu.png"
         }
       }
     ],
@@ -97,9 +97,7 @@ export default {
   ],
 
   axios: {
-    baseURL: development
-      ? "http://localhost:3000"
-      : "https://tesvote.herokuapp.com"
+    baseURL: development ? "http://localhost:3000" : "https://pemiluhmif.tech"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

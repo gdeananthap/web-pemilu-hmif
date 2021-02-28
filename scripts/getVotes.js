@@ -9,7 +9,6 @@ async function getAllDpt() {
       nim: doc.id,
       votefor: doc.data().votefor
     }));
-    console.log(datas);
     return datas;
   } catch (err) {
     console.log(err);
