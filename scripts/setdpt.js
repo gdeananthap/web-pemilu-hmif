@@ -1,4 +1,4 @@
-const dptDatas = require("./dpt.json");
+const voters = require("./votes.json");
 const admin = require("./admin");
 
 const db = admin.firestore();
@@ -7,10 +7,10 @@ const dpt = db.collection("dpt");
 const batch = db.batch();
 
 // Set the value of 'NYC'
-dptDatas.forEach(nim => {
-  const dptRef = dpt.doc(nim.toString());
+voters.forEach(voter => {
+  const dptRef = dpt.doc(voter.nim.toString());
   batch.set(dptRef, {
-    votefor: ""
+    hasVoted: voter.votefor !== ""
   });
 });
 async function commitWrite() {
