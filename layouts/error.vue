@@ -7,8 +7,8 @@
       <section class="hero-pemilu">
         <b-container>
           <b-row class="justify-content-center">
-            <b-col cols="12" class="text-center hero-logo d-none d-sm-block">
-              <img src="@/public/images/hero-pemilu.png" style="max-width: 400px;" >
+            <b-col cols="12" class="text-center hero-logo d-sm-block">
+              <img src="@/public/images/hero-pemilu.png" class="hero-logo-width" >
             </b-col>
             <b-col cols="12" class="my-2 text-center text-salah">
               <p>Mau kemana? :(</p>
@@ -33,7 +33,7 @@
 <style lang="scss">
 .hero-pemilu {
   .hero-logo {
-      margin-top: 0px;
+      margin-top: 30px;
   }
 }
 .text-salah{
@@ -42,6 +42,28 @@
 
 .btn-warning{
   font-family: Poppins;
+}
+@media only screen and (min-width: 576px) {
+  .hero-pemilu {
+    .hero-logo-width {
+        max-width: 400px;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  .hero-pemilu {
+    .hero-logo-width {
+        max-width: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .hero-pemilu {
+    .hero-logo-width {
+        width: 300px;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
