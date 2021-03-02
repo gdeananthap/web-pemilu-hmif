@@ -1,9 +1,7 @@
 <template>
 <b-row class="justify-content-center"> 
-    <b-col cols="12" md="6">
-        <b-card img-bottom class="bg-transparent">
-            <ChartVoteBase :chart-data="chartData" />
-        </b-card>
+    <b-col cols="12" md="6" class="py-3">
+      <ChartVoteBase :chart-data="chartData" />
     </b-col>
 </b-row>
 </template>
@@ -26,7 +24,7 @@ export default {
           {
             backgroundColor: ["#f36e60", "#ffdb3b", "#185190"],
             hoverBackgroundColor: ["#fbd2cd", "#fef5c9", "#d1e3f7"],
-            data: [10, 20, 40]
+            data: [188, 53, 45]
           }
         ]
       };
