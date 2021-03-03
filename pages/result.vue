@@ -6,6 +6,20 @@
 				Loading...
 			</div>
 			<div class="page-content" v-if="!loading">
+					<!-- Logo Besar Pemilu -->
+					<section class="hero-pemilu">
+					<b-container>
+						<b-row class="text-center">
+						<b-col cols="12" class="text-center hero-logo" data-aos="zoom-in">
+							<img
+							src="@/public/images/hero-pemilu.png"
+							class="image-hero"
+							alt=""
+							/>
+						</b-col>
+						</b-row>
+					</b-container>
+					</section>
 					<section class="section-result">
 						<b-container class="pt-5 text-center">
 							<b-row class="justify-content-center">
@@ -73,6 +87,24 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.hero-pemilu {
+  .image-hero {
+    max-width: 500px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 450px;
+    }
+
+    @media screen and (max-width: 450px) {
+      max-width: 300px;
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
+  }
+}
 .section-result {
 	margin-top: 60px;
 	.card-calon{
