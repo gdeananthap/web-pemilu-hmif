@@ -328,8 +328,7 @@
             <b-col cols="12" class="my-2 text-center text-salah">
               <p>
                 Masa pemungutan suara telah berakhir, terimakasih sudah
-                menggunakan hak suara anda. Hasil perhitungan suara akan segera
-                diumumkan oleh panitia.
+                menggunakan hak suara anda. Hasil perhitungan suara dapat dilihat di Home.
               </p>
             </b-col>
             <b-col cols="6" md="3" lg="2" class="my-2 text-center">
