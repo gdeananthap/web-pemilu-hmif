@@ -367,7 +367,7 @@ export default {
     hasVoted: false,
     nimToNameMap: {
       "13518042": "Bagas Setyo Wicaksono",
-      "18218005": "Naufal Alim Wahib",
+      "18218005": "Naufal Alim",
       kosong: "Kotak Kosong"
     }
   }),
@@ -382,9 +382,7 @@ export default {
       this.isVotingStarted = !this.isVotingStarted;
     },
     openModalAndVote(nim) {
-      if (this.hasVoted) {
-        return;
-      }
+      if (this.hasVoted) return;
       this.votedCandidate = nim;
       this.showModal = true;
       this.votedCandidateName = this.nimToNameMap[this.votedCandidate];
@@ -404,31 +402,41 @@ export default {
     },
     async vote() {
       try {
+        const idToken = await this.$fire.auth.currentUser.getIdToken();
         this.showModal = false;
-        const firestore = this.$fire.firestore;
-        const collection = firestore.collection("dpt");
-        const nim = this.$store.state.auth.nim;
-        const docRef = collection.doc(nim);
-        await docRef.set({
-          votefor: this.votedCandidate
-        });
-        cookie.set("hasvoted", this.votedCandidateName);
+        const axiosConfig = {
+          headers: {
+            idToken
+          }
+        };
+        // todo
+        const res = await this.$axios.post(
+          "/api/vote",
+          {
+            toBeVotedNim: this.votedCandidate
+          },
+          axiosConfig
+        );
+        console.log(res);
+        cookie.set("hasvoted", this.votedCandidateName, { expires: 9999 });
         this.hasVoted = true;
         this.success = {
           state: true,
           message: "Successfully voted " + this.votedCandidateName
         };
       } catch (error) {
-        if (this.hasVoted) {
-          this.errors.push({
-            id: v4(),
-            message: "Anda sudah memberikan vote anda"
-          });
-        } else {
-          this.errors.push({
-            id: v4(),
-            message: "Ada sebuah kesalahan, harap hubungi panitia"
-          });
+        console.log(error);
+        this.errors.push({
+          id: v4(),
+          message: error.response.data.message
+        });
+        if (error.response.data.message == "Anda telah memberikan vote anda") {
+          this.hasVoted = true;
+          cookie.set(
+            "hasvoted",
+            "seseorang (mungkin anda memberikan vote anda dari device lain, cek device tersebut untuk mengetahui anda memvote siapa)",
+            { expires: 9999 }
+          );
         }
       }
     }

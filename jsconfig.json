@@ -1,4 +1,3 @@
-// for vscode typings (vetur)
 {
   "compilerOptions": {
     "baseUrl": ".",
