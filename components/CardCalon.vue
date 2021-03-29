@@ -23,8 +23,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="title">Organogram</div>
-                <div class="organogram"> <img :src="organogram" alt=""></div>
+                <!-- <div class="title">Organogram</div>
+                <div class="organogram"> <img :src="organogram" alt=""></div> -->
             </div>
         </div>
     </div>

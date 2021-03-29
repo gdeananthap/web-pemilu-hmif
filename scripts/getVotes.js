@@ -16,6 +16,15 @@ async function getAllDpt() {
   }
 }
 
+async function deleteAllDpt(dpt) {
+  const datas = await getAllDpt();
+  const collection = db.collection("dpt")
+  async function deleteDpt(nim) {
+    await collection.doc(nim).delete()
+  }
+  await datas.forEach(async (data) => await deleteDpt(data.nim))
+}
+
 function saveAllDpt(dpt) {
   const stringDpt = JSON.stringify(dpt);
   fs.writeFileSync("votes.json", stringDpt);
@@ -23,7 +32,7 @@ function saveAllDpt(dpt) {
 
 getAllDpt()
   .then(datas => {
-    saveAllDpt(datas);
+    deleteAllDpt(datas);
   })
   .catch(err => {
     //pass;

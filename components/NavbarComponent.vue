@@ -14,7 +14,7 @@
         <b-navbar-toggle target="navbarNav"></b-navbar-toggle>
         <b-collapse class="text-center" id="navbarNav" is-nav>
           <b-navbar-nav class="ml-auto d-flex">
-            <b-nav-item to="/result" exact active-class="active" class="my-auto">
+            <b-nav-item to="/" exact active-class="active" class="my-auto">
               Home
             </b-nav-item>
             <b-nav-item to="/info" class="my-auto" active-class="active">

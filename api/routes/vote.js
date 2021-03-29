@@ -14,7 +14,7 @@ const dateMiddleware = require("../middleware/dateMiddleware");
 const emailAndNIMMiddleware = require("../middleware/emailAndNIMMiddleware");
 
 // too lazy to seperate this to a file
-const candidates = ["13518042", "18218005", "kosong"]; // bagas, alim
+const candidates = ["13519154", "18219105"]; // rafi, ghifari
 
 // get all candidates
 router.get("/candidates", (req, res, next) => {

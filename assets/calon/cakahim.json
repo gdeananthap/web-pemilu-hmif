@@ -1,29 +1,32 @@
 {
     "01": [
         {
-            "status": "CAKAHIM - 01",
-            "nama": "Bagas Setyo Wicaksono",
-            "jurusan": "IF'18", 
-            "visi": "HMIF sebagai Katalisator Karya dalam Harmoni",
-            "misi": ["Membangun rumah aspirasi dengan berlandaskan empati.", 
-                    "Optimalisasi potensi warga HMIF berdasarkan minat dan bakat dari warganya", 
-                    "Mengembangkan wadah untuk berkarya sebagai bentuk aktualisasi diri yang berasaskan profesionalitas."],
+            "status": "Calon Ketua SPARTA 2020 - 01",
+            "nama": "Rafi Raihansyah Munandar",
+            "jurusan": "IF'19", 
+            "visi": "SPARTA 2020 sebagai sarana dalam mempersiapkan dan mengembangkan kader yang berkompeten dan berkarakter serta berlandaskan pergerakan yang sinergis",
+            "misi": ["Memperkenalkan HMIF kepada calon anggota dengan cara yang kreatif dan menarik", 
+                    "Menumbuhkan rasa kepedulian pada calon anggota", 
+                    "Membantu calon anggota dalam mengenal dan memaknai konsep diri sebagai wujud pemahaman peran",
+                    "Membimbing calon anggota untuk menjadi mahasiswa yang dapat berpikir sistematis guna memahami dan menjalankan tanggung jawabnya",
+                    "Menciptakan suasana SPARTA 2020 yang hangat dan profesional sebagai wujud internalisasi untuk calon anggota dan anggota",
+                    "Memberi wadah bagi ASYNC untuk eskalasi diri dan memperkuat hubungan antar sesamanya"],
             "foto": "bagas.webp",
             "organogram": "organorgram-bagas.webp"
         }
     ],
     "02": [
         {
-            "status": "CAKAHIM - 02",
-            "nama": "Naufal Alim Wahib",
-            "jurusan": "STI'18", 
-            "visi": "Membentuk HMIF yang menjunjung sifat tanggung jawab dan profesionalisme",
+            "status": "Calon Ketua SPARTA 2020 - 02",
+            "nama": "Ghifari Farras Azhar",
+            "jurusan": "STI'19", 
+            "visi": "Mewujudkan SPARTA HMIF ITB 2020 sebagai wadah pembangkit semangat berkontribusi berlandaskan rasa empati demi mencapai tujuan HMIF ITB",
             "misi": [
-                "Menciptakan HMIF yang dapat beradaptasi sesuai dengan situasi dan kondisi apapun", 
-                "Menjadi wadah yang dapat mengakomodasi kebutuhan dan mengembangkan potensi anggotanya", 
-                "Menciptakan lingkungan yang nyaman dengan menerapkan prinsip – prinsip profesionalisme", 
-                "Menumbuhkan rasa kepemilikan terhadap himpunan terhadap seluruh anggotanya", 
-                "Menciptakan karya sebagai bentuk aktualisasi diri dan kontribusi terhadap perkembangan Teknologi Informasi di dalam dan luar ITB"
+                "Memberikan arahan untuk mengenali diri sendiri lebih dalam dan memetakan langkah diri dengan berpegang teguh terhadap idealismenya", 
+                "Menginisiasi dan membangun rasa kekeluargaan terhadap warga HMIF berlandaskan rasa empati", 
+                "Mengenalkan organisasi HMIF ITB sebagai wadah untuk berkembang dan berkontribusi beserta urgensi dan konsekuensi dalam berorganisasi", 
+                "Menanamkan semangat untuk berkontribusi dan memberikan manfaat kepada lingkungan sekitar berlandaskan rasa empati", 
+                "Mengamalkan budaya apresiasi dalam rangkaian acara"
             ],
             "foto": "alim.webp",
             "organogram": "organogram-alim.webp"

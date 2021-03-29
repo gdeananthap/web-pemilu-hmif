@@ -6,8 +6,7 @@
           <div class="col-sm-12">
             <h2>Countdown</h2>
             <p>
-              Pemungutan suara baru akan dilakukan pada tanggal 26 Februari 2021
-              - 1 Maret 2021. Stay tuned!
+              Pemungutan suara baru akan dilakukan pada tanggal 7 April 2021 - 9 April 2021. Stay tuned!
             </p>
             <div class="timer">
               <div class="days-wrapper">
@@ -98,7 +97,7 @@ export default {
     showRemaining() {
       const timer = setInterval(() => {
         const now = new Date();
-        const end = new Date(2021, 1, 26, 7, 0, 0);
+        const end = new Date(2021, 2, 29, 7, 0, 0);
         const distance = end.getTime() - now.getTime();
 
         if (distance <= 0) {

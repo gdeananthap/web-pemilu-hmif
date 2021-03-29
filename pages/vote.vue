@@ -86,7 +86,7 @@
                 <b-card-body>
                   <b-card-text>
                     Pemungutan suara akan dilakukan pada tanggal
-                    <b>26 Februari 2021 - 1 Maret 2021.</b> Pastikan kamu telah
+                    <b>7 April 2021 - 9 April 2021.</b> Pastikan kamu telah
                     memahami tata cara pemilu dan menentukan pilihanmu sebelum
                     tanggal tersebut
                   </b-card-text>
@@ -206,7 +206,7 @@
           <div class="calonKetua">
             <div class="container">
               <h2>Surat Suara Pemilihan Umum</h2>
-              <h2>Ketua Himpunan Mahasiswa Informatika ITB</h2>
+              <h2>Ketua SPARTA 2020 HMIF ITB</h2>
               <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                   <div class="calon">
@@ -215,12 +215,12 @@
                     </div>
                     <img src="bagas.webp" alt="" />
                     <div class="nama-calon">
-                      <h4>Bagas Setyo Wicaksono</h4>
+                      <h4>Rafi Raihansyah Munandar</h4>
                     </div>
                     <a
                       v-if="isDpt === true"
                       class="btn btn-lg"
-                      @click="openModalAndVote('13518042')"
+                      @click="openModalAndVote('13519154')"
                       :disabled="!!hasVoted"
                       >VOTE</a
                     >
@@ -233,18 +233,18 @@
                     </div>
                     <img src="alim.webp" alt="" />
                     <div class="nama-calon">
-                      <h4>Naufal Alim Wahib</h4>
+                      <h4>Ghifari Farras Azhar</h4>
                     </div>
                     <a
                       v-if="isDpt === true"
                       class="btn btn-warning btn-lg"
-                      @click="openModalAndVote('18218005')"
+                      @click="openModalAndVote('18219105')"
                       :disabled="!!hasVoted"
                       >VOTE</a
                     >
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <!-- <div class="col-md-6 col-lg-4">
                   <div class="calon">
                     <div class="nomor-calon">
                       <h2>03</h2>
@@ -261,7 +261,7 @@
                       >VOTE</a
                     >
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -389,7 +389,7 @@ export default {
     checkVotingDuration() {
       const timer = setInterval(() => {
         const now = new Date();
-        const end = new Date(2021, 2, 1, 23, 0, 0);
+        const end = new Date(2021, 3, 9, 23, 0, 0);
         const distance = end.getTime() - now.getTime();
 
         if (distance <= 0) {
