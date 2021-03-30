@@ -66,7 +66,7 @@
                       </div>
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     class="container-left left"
                     data-aos="fade-right"
                     data-aos-delay="500"
@@ -93,7 +93,7 @@
                         <p>22 Feb 2021</p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div
                     class="container-left left"
                     data-aos="fade-right"
@@ -104,7 +104,7 @@
                         <p>Masa Tenang</p>
                       </div>
                       <div class="timeline-time">
-                        <p>23-25 Feb 2021</p>
+                        <p>5-7 Apr 2021</p>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
                         <p>Pemungutan Suara</p>
                       </div>
                       <div class="timeline-time">
-                        <p>26 Feb - 1 Mar 2021</p>
+                        <p>7-9 Apr 2021</p>
                       </div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@
                         <p>Penghitungan Suara</p>
                       </div>
                       <div class="timeline-time">
-                        <p>2 Mar 2021</p>
+                        <p>10 Apr 2021</p>
                       </div>
                     </div>
                   </div>
@@ -146,7 +146,7 @@
                         <p>Pengumuman</p>
                       </div>
                       <div class="timeline-time">
-                        <p>3 Mar 2021 <i class="d-sm-none fa fa-calendar"></i></p>
+                        <p>11 Apr 2021 <i class="d-sm-none fa fa-calendar"></i></p>
                       </div>
                     </div>
                   </div>

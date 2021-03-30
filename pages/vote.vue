@@ -213,7 +213,7 @@
                     <div class="nomor-calon">
                       <h2>01</h2>
                     </div>
-                    <img src="bagas.webp" alt="" />
+                    <img src="rafi.webp" alt="" />
                     <div class="nama-calon">
                       <h4>Rafi Raihansyah Munandar</h4>
                     </div>
@@ -231,7 +231,7 @@
                     <div class="nomor-calon">
                       <h2>02</h2>
                     </div>
-                    <img src="alim.webp" alt="" />
+                    <img src="ghifari.webp" alt="" />
                     <div class="nama-calon">
                       <h4>Ghifari Farras Azhar</h4>
                     </div>
@@ -365,9 +365,8 @@ export default {
     success: { state: false, message: null },
     hasVoted: false,
     nimToNameMap: {
-      "13518042": "Bagas Setyo Wicaksono",
-      "18218005": "Naufal Alim",
-      kosong: "Kotak Kosong"
+      "13519154": "Rafi Raihansyah Munandar",
+      "18219105": "Ghifari Farras Azhar",
     }
   }),
   components: {
