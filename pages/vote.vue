@@ -213,14 +213,14 @@
                     <div class="nomor-calon">
                       <h2>01</h2>
                     </div>
-                    <img src="rafi.webp" alt="" />
+                    <img src="ghifari.webp" alt="" />
                     <div class="nama-calon">
-                      <h4>Rafi Raihansyah Munandar</h4>
+                      <h4>Ghifari Farras Azhar</h4>
                     </div>
                     <a
                       v-if="isDpt === true"
                       class="btn btn-lg"
-                      @click="openModalAndVote('13519154')"
+                      @click="openModalAndVote('18219105')"
                       :disabled="!!hasVoted"
                       >VOTE</a
                     >
@@ -231,14 +231,14 @@
                     <div class="nomor-calon">
                       <h2>02</h2>
                     </div>
-                    <img src="ghifari.webp" alt="" />
+                    <img src="rafi.webp" alt="" />
                     <div class="nama-calon">
-                      <h4>Ghifari Farras Azhar</h4>
+                      <h4>Rafi Raihansyah Munandar</h4>
                     </div>
                     <a
                       v-if="isDpt === true"
                       class="btn btn-warning btn-lg"
-                      @click="openModalAndVote('18219105')"
+                      @click="openModalAndVote('13519154')"
                       :disabled="!!hasVoted"
                       >VOTE</a
                     >

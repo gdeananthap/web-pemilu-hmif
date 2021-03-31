@@ -2,22 +2,6 @@
     "01": [
         {
             "status": "Calon Ketua SPARTA 2020 - 01",
-            "nama": "Rafi Raihansyah Munandar",
-            "jurusan": "IF'19", 
-            "visi": "SPARTA 2020 sebagai sarana dalam mempersiapkan dan mengembangkan kader yang berkompeten dan berkarakter serta berlandaskan pergerakan yang sinergis",
-            "misi": ["Memperkenalkan HMIF kepada calon anggota dengan cara yang kreatif dan menarik", 
-                    "Menumbuhkan rasa kepedulian pada calon anggota", 
-                    "Membantu calon anggota dalam mengenal dan memaknai konsep diri sebagai wujud pemahaman peran",
-                    "Membimbing calon anggota untuk menjadi mahasiswa yang dapat berpikir sistematis guna memahami dan menjalankan tanggung jawabnya",
-                    "Menciptakan suasana SPARTA 2020 yang hangat dan profesional sebagai wujud internalisasi untuk calon anggota dan anggota",
-                    "Memberi wadah bagi ASYNC untuk eskalasi diri dan memperkuat hubungan antar sesamanya"],
-            "foto": "rafi.webp",
-            "organogram": "organorgram-bagas.webp"
-        }
-    ],
-    "02": [
-        {
-            "status": "Calon Ketua SPARTA 2020 - 02",
             "nama": "Ghifari Farras Azhar",
             "jurusan": "STI'19", 
             "visi": "Mewujudkan SPARTA HMIF ITB 2020 sebagai wadah pembangkit semangat berkontribusi berlandaskan rasa empati demi mencapai tujuan HMIF ITB",
@@ -30,6 +14,22 @@
             ],
             "foto": "ghifari.webp",
             "organogram": "organogram-alim.webp"
+        }
+    ],
+    "02": [
+        {
+            "status": "Calon Ketua SPARTA 2020 - 02",
+            "nama": "Rafi Raihansyah Munandar",
+            "jurusan": "IF'19", 
+            "visi": "SPARTA 2020 sebagai sarana dalam mempersiapkan dan mengembangkan kader yang berkompeten dan berkarakter serta berlandaskan pergerakan yang sinergis",
+            "misi": ["Memperkenalkan HMIF kepada calon anggota dengan cara yang kreatif dan menarik", 
+                    "Menumbuhkan rasa kepedulian pada calon anggota", 
+                    "Membantu calon anggota dalam mengenal dan memaknai konsep diri sebagai wujud pemahaman peran",
+                    "Membimbing calon anggota untuk menjadi mahasiswa yang dapat berpikir sistematis guna memahami dan menjalankan tanggung jawabnya",
+                    "Menciptakan suasana SPARTA 2020 yang hangat dan profesional sebagai wujud internalisasi untuk calon anggota dan anggota",
+                    "Memberi wadah bagi ASYNC untuk eskalasi diri dan memperkuat hubungan antar sesamanya"],
+            "foto": "rafi.webp",
+            "organogram": "organorgram-bagas.webp"
         }
     ]
 }
