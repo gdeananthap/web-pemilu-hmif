@@ -97,7 +97,7 @@ export default {
   ],
 
   axios: {
-    baseURL: development ? "http://localhost:3000" : "http://pemiluhmif.tech"
+    baseURL: development ? "http://localhost:3000" : "https://tesvote.herokuapp.com"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
